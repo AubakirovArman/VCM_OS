@@ -34,6 +34,15 @@ _runner: Optional[ExperimentRunner] = None
 _verifier: Optional[ResponseVerifier] = None
 
 
+def _enum_value(value: Any) -> Any:
+    """Return the raw enum value while keeping plain strings unchanged."""
+    return getattr(value, "value", value)
+
+
+def _clip(text: str, limit: int = 500) -> str:
+    return text if len(text) <= limit else text[: limit - 3] + "..."
+
+
 def _init():
     global _store, _vec, _sparse, _writer, _runner, _verifier
     if _store is None:
@@ -167,7 +176,7 @@ def vcm_search_memory(
         text = (mem.raw_text or mem.compressed_summary or "")[:200]
         results.append({
             "memory_id": mem.memory_id,
-            "type": str(mem.memory_type),
+            "type": _enum_value(mem.memory_type),
             "score": round(score, 3),
             "text": text,
         })
@@ -192,23 +201,29 @@ def vcm_get_project_state(project_id: str) -> str:
     """Get the current state of a project (decisions, errors, active goals)."""
     _init()
     mems = _store.get_memories(project_id=project_id, limit=100)
-    decisions = [m for m in mems if str(m.memory_type) == "decision"]
-    errors = [m for m in mems if str(m.memory_type) == "error"]
-    goals = [m for m in mems if str(m.memory_type) == "goal"]
+    decisions = [m for m in mems if _enum_value(m.memory_type) == "decision"]
+    errors = [m for m in mems if _enum_value(m.memory_type) == "error"]
+    goals = [m for m in mems if _enum_value(m.memory_type) == "goal"]
 
     return json.dumps({
         "project_id": project_id,
         "total_memories": len(mems),
         "active_decisions": [
-            {"id": m.memory_id, "text": (m.raw_text or "")[:100]}
-            for m in decisions if getattr(m, "validity", "active") == "active"
+            {
+                "id": m.memory_id,
+                "text": _clip(
+                    m.decisions[0].statement if getattr(m, "decisions", None)
+                    else (m.raw_text or "")
+                ),
+            }
+            for m in decisions if _enum_value(getattr(m, "validity", "active")) == "active"
         ],
         "recent_errors": [
-            {"id": m.memory_id, "text": (m.raw_text or "")[:100]}
+            {"id": m.memory_id, "text": _clip(m.raw_text or "")}
             for m in errors[:5]
         ],
         "active_goals": [
-            {"id": m.memory_id, "text": (m.raw_text or "")[:100]}
+            {"id": m.memory_id, "text": _clip(m.raw_text or "")}
             for m in goals[:5]
         ],
     }, indent=2)
