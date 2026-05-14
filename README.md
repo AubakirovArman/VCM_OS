@@ -2,6 +2,10 @@
 
 Реализация v0.1–v0.5 исследовательского blueprint для системы виртуализации контекста памяти LLM-агентов.
 
+## Roadmap
+
+Текущее техническое видение и backlog live integration: [`docs/DEVELOPMENT_ROADMAP.md`](docs/DEVELOPMENT_ROADMAP.md).
+
 ## Архитектура
 
 ```
