@@ -1,0 +1,94 @@
+#!/usr/bin/env python3
+"""VCM-Kimi wrapper — launch Kimi Code CLI with VCM MCP integration.
+
+Usage:
+    vcm-kimi term                    # Launch Kimi TUI with VCM MCP
+    vcm-kimi term --work-dir ./proj  # Specify project directory
+    vcm-kimi web                     # Launch Kimi Web with VCM MCP
+
+Prerequisites:
+    - VCM-OS API server running (vcm serve)
+    - kimi CLI installed
+"""
+import argparse
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+VCM_DIR = Path(__file__).parent.parent.resolve()
+MCP_CONFIG = VCM_DIR / "kimi-vcm-mcp.json"
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        prog="vcm-kimi",
+        description="Launch Kimi Code CLI with VCM-OS memory integration",
+    )
+    parser.add_argument(
+        "command",
+        choices=["term", "web", "acp"],
+        default="term",
+        nargs="?",
+        help="Kimi command to run (term/web/acp)",
+    )
+    parser.add_argument(
+        "--work-dir", "-w",
+        default=".",
+        help="Working directory for the agent",
+    )
+    parser.add_argument(
+        "--mcp-config",
+        default=str(MCP_CONFIG),
+        help="MCP config file path",
+    )
+    parser.add_argument(
+        "--session", "-S",
+        default=None,
+        help="Resume session ID",
+    )
+    parser.add_argument(
+        "--continue", "-C",
+        dest="continue_",
+        action="store_true",
+        help="Continue previous session",
+    )
+
+    args, extra = parser.parse_known_args()
+
+    # Verify VCM server is running
+    try:
+        import urllib.request
+        urllib.request.urlopen("http://localhost:8123/health", timeout=2)
+        print("✓ VCM-OS server connected (localhost:8123)")
+    except Exception:
+        print("⚠ VCM-OS server not detected. Start it with: vcm serve")
+        print("  Continuing anyway...")
+
+    # Build kimi command
+    kimi_args = ["kimi", args.command]
+
+    if args.work_dir:
+        kimi_args.extend(["--work-dir", args.work_dir])
+
+    if args.mcp_config and Path(args.mcp_config).exists():
+        kimi_args.extend(["--mcp-config-file", args.mcp_config])
+
+    if args.session:
+        kimi_args.extend(["--session", args.session])
+
+    if args.continue_:
+        kimi_args.append("--continue")
+
+    kimi_args.extend(extra)
+
+    print(f"Launching: {' '.join(kimi_args)}")
+    print("-" * 60)
+
+    # Run kimi
+    result = subprocess.run(kimi_args)
+    sys.exit(result.returncode)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,92 @@
+{
+  "baseline": {
+    "restore": 0.9416666666666667,
+    "tokens": 67.2,
+    "keywords": 0.9583333333333334,
+    "stale": 0.0,
+    "quality": 1.9
+  },
+  "ablations": [
+    {
+      "component": "no_pso",
+      "restore": 0.9416666666666667,
+      "quality": 1.9,
+      "tokens": 51.65,
+      "delta_restore": 0.0,
+      "delta_quality": 0.0,
+      "delta_tokens": -15.550000000000004
+    },
+    {
+      "component": "no_symbol_vault",
+      "restore": 0.9416666666666667,
+      "quality": 1.875,
+      "tokens": 65.7,
+      "delta_restore": 0.0,
+      "delta_quality": -0.02499999999999991,
+      "delta_tokens": -1.5
+    },
+    {
+      "component": "no_reranker",
+      "restore": 0.9416666666666667,
+      "quality": 1.9,
+      "tokens": 67.2,
+      "delta_restore": 0.0,
+      "delta_quality": 0.0,
+      "delta_tokens": 0.0
+    },
+    {
+      "component": "no_stale_filter",
+      "restore": 0.9416666666666667,
+      "quality": 1.6,
+      "tokens": 68.55,
+      "delta_restore": 0.0,
+      "delta_quality": -0.2999999999999998,
+      "delta_tokens": 1.3499999999999943
+    },
+    {
+      "component": "no_goals",
+      "restore": 0.9416666666666667,
+      "quality": 1.9,
+      "tokens": 67.2,
+      "delta_restore": 0.0,
+      "delta_quality": 0.0,
+      "delta_tokens": 0.0
+    },
+    {
+      "component": "no_decisions",
+      "restore": 0.9416666666666667,
+      "quality": 1.9,
+      "tokens": 67.2,
+      "delta_restore": 0.0,
+      "delta_quality": 0.0,
+      "delta_tokens": 0.0
+    },
+    {
+      "component": "no_rationales",
+      "restore": 0.9416666666666667,
+      "quality": 1.9,
+      "tokens": 67.2,
+      "delta_restore": 0.0,
+      "delta_quality": 0.0,
+      "delta_tokens": 0.0
+    },
+    {
+      "component": "no_adaptive_cap",
+      "restore": 0.925,
+      "quality": 1.8333333333333333,
+      "tokens": 67.2,
+      "delta_restore": -0.016666666666666607,
+      "delta_quality": -0.06666666666666665,
+      "delta_tokens": 0.0
+    },
+    {
+      "component": "no_compact_assembly",
+      "restore": 0.9416666666666667,
+      "quality": 1.9,
+      "tokens": 67.2,
+      "delta_restore": 0.0,
+      "delta_quality": 0.0,
+      "delta_tokens": 0.0
+    }
+  ]
+}

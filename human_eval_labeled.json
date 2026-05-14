@@ -1,0 +1,884 @@
+[
+  {
+    "scenario": "holdout_stale_migration",
+    "expected": "keep MySQL",
+    "pack_text": "s=MySQL s=PostgreSQL s=MySQL d=Decision: actually, keep MySQL. Postg... b=Error (runtime_error): Migration fail... f=db/schema.sql p=proj_holdout_01 q=What database should actually, keep MySQL. PostgreSQL migration is too risky. Migration failed: foreign key constraints violated. Files: db/schema.sql. Terms: Created, PostgreSQL ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_stale_migration",
+    "expected": "keep MySQL",
+    "pack_text": "s=MySQL s=PostgreSQL s=MySQL d=Decision: actually, keep MySQL. Postg... b=Error (runtime_error): Migration fail... f=db/schema.sql p=proj_holdout_01 q=What database should actually, keep MySQL. PostgreSQL migration is too risky. Migration failed: foreign key constraints violated. Files: db/schema.sql. Terms: Created, PostgreSQL ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_exact_env_var",
+    "expected": "production config",
+    "pack_text": "s=DATABASE_URL s=DATABASE_URL s=REDIS_URL g=Requirement: Decision: REDIS_URL must... d=Decision: set DATABASE_URL=postgres:/... f=.env.production p=proj_holdout_02 q=What is the producti set DATABASE_URL=postgres://prod:5432/app.\nREDIS_URL must be redis://cache:6379/0.  Files: .env.production. Terms: Updated  Decision: STRIPE_SECRET_KEY starts with sk_live_.",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_exact_env_var",
+    "expected": "set DATABASE_URL",
+    "pack_text": "s=DATABASE_URL s=DATABASE_URL s=REDIS_URL g=Requirement: Decision: REDIS_URL must... d=Decision: set DATABASE_URL=postgres:/... f=.env.production p=proj_holdout_02 q=What is the producti set DATABASE_URL=postgres://prod:5432/app.\nREDIS_URL must be redis://cache:6379/0.  Files: .env.production. Terms: Updated  Decision: STRIPE_SECRET_KEY starts with sk_live_.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_superseded_cache",
+    "expected": "switch to Memcached",
+    "pack_text": "s=Memcached s=Redis s=Memcached d=Decision: switch to Memcached. Better... b=Error (runtime_error): Redis memory u... f=src/cache/redis.py,src/cache/memcached.py p=proj_holdout_03 q=What cache should we switch to Memcached. Better memory management. Redis memory usage spiked to 90%. Eviction policy losing hot Files: src/cache/redis.py ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_superseded_cache",
+    "expected": "switch to Memcached",
+    "pack_text": "s=Memcached s=Redis s=Memcached d=Decision: switch to Memcached. Better... b=Error (runtime_error): Redis memory u... f=src/cache/redis.py,src/cache/memcached.py p=proj_holdout_03 q=What cache should we switch to Memcached. Better memory management. Redis memory usage spiked to 90%. Eviction policy losing hot Files: src/cache/redis.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_exact_function_name",
+    "expected": "idempotent payments",
+    "pack_text": "s=processPaymentV2() s=processPaymentV2() s=validateInput() ph=testing g=Requirement: Decision: validateInput(... d=Decision: rename processPayment() to ... f=src/payment/core.ts,src/utils/validation.ts p=proj_holdout_04 q=What is the payment  validateInput() must check XSS before processing.\nrename processPayment() to processPaymentV2() for idempotency.  Files: src/payment/core.ts. Terms: Renamed, processPayment,   ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_exact_function_name",
+    "expected": "rename processPayment() to processPaymentV2()",
+    "pack_text": "s=processPaymentV2() s=processPaymentV2() s=validateInput() ph=testing g=Requirement: Decision: validateInput(... d=Decision: rename processPayment() to ... f=src/payment/core.ts,src/utils/validation.ts p=proj_holdout_04 q=What is the payment  validateInput() must check XSS before processing.\nrename processPayment() to processPaymentV2() for idempotency.  Files: src/payment/core.ts. Terms: Renamed, processPayment,   ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_multi_session_auth",
+    "expected": "secure auth",
+    "pack_text": "s=JWT s=refresh token rotation s=src/auth/jwt.py t=Task: Decision: add refresh token rot... d=Decision: use JWT with 15min expiry. b=Error (security): Refresh token reuse... f=src/auth/jwt.py,src/auth/refresh.py p=proj_holdout_05 q=What auth decisions  add refresh token rotation.\nuse JWT with 15min expiry. Refresh token reuse detected: possible theft. Files: src/auth/jwt.py  ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_multi_session_auth",
+    "expected": "use JWT with 15min expiry",
+    "pack_text": "s=JWT s=refresh token rotation s=src/auth/jwt.py t=Task: Decision: add refresh token rot... d=Decision: use JWT with 15min expiry. b=Error (security): Refresh token reuse... f=src/auth/jwt.py,src/auth/refresh.py p=proj_holdout_05 q=What auth decisions  add refresh token rotation.\nuse JWT with 15min expiry. Refresh token reuse detected: possible theft. Files: src/auth/jwt.py  ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_multi_session_auth",
+    "expected": "add refresh token rotation",
+    "pack_text": "s=JWT s=refresh token rotation s=src/auth/jwt.py t=Task: Decision: add refresh token rot... d=Decision: use JWT with 15min expiry. b=Error (security): Refresh token reuse... f=src/auth/jwt.py,src/auth/refresh.py p=proj_holdout_05 q=What auth decisions  add refresh token rotation.\nuse JWT with 15min expiry. Refresh token reuse detected: possible theft. Files: src/auth/jwt.py  ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_exact_cve_patch",
+    "expected": "patch CVE-2024-9999",
+    "pack_text": "s=CVE-2024-9999 s=django>=4.2.10 s=requirements.txt t=Assistant plan: Will upgrade Django a... f=requirements.txt p=proj_holdout_06 q=What was the patch f   Files: requirements.txt. Terms: 4.2.10, Updated, django>=4.2.10  Will upgrade Django and run security audit.",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_exact_cve_patch",
+    "expected": "upgrade Django",
+    "pack_text": "s=CVE-2024-9999 s=django>=4.2.10 s=requirements.txt t=Assistant plan: Will upgrade Django a... f=requirements.txt p=proj_holdout_06 q=What was the patch f   Files: requirements.txt. Terms: 4.2.10, Updated, django>=4.2.10  Will upgrade Django and run security audit.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_code_change_only",
+    "expected": "rate limiting",
+    "pack_text": "s=RateLimiter s=src/rate/limiter.py s=src/rate/config.py g=Requirement: We need to handle rate l... f=src/rate/limiter.py,src/rate/config.py p=proj_holdout_07 q=How is rate limiting   Files: src/rate/limiter.py. Terms: RateLimiter Goal: We need to handle rate limiting properly.   Configured 1000 req/min for /api/v1, 100 req/min for /api/v2.",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_code_change_only",
+    "expected": "Added RateLimiter class with token bucket algorithm",
+    "pack_text": "s=RateLimiter s=src/rate/limiter.py s=src/rate/config.py g=Requirement: We need to handle rate l... f=src/rate/limiter.py,src/rate/config.py p=proj_holdout_07 q=How is rate limiting   Files: src/rate/limiter.py. Terms: RateLimiter Goal: We need to handle rate limiting properly.   Configured 1000 req/min for /api/v1, 100 req/min for /api/v2.",
+    "type": "decision",
+    "label": "no_match"
+  },
+  {
+    "scenario": "holdout_error_only_debugging",
+    "expected": "fix NPE",
+    "pack_text": "s=Optional<> s=UserService.java s=getProfile() d=Decision: rewrite getProfile() to use... b=Error (runtime_error): NullPointerExc... f=src/service/UserService.java p=proj_holdout_08 q=What was the final f rewrite getProfile() to use Optional<> instead of null checks. Same NPE in getProfile() after fix. Line 142 still null.\nNullPointerException in UserService.getProfile() at line 142. Files: src/service/UserService.java. Terms: getProfile",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_error_only_debugging",
+    "expected": "rewrite getProfile() to use Optional<>",
+    "pack_text": "s=Optional<> s=UserService.java s=getProfile() d=Decision: rewrite getProfile() to use... b=Error (runtime_error): NullPointerExc... f=src/service/UserService.java p=proj_holdout_08 q=What was the final f rewrite getProfile() to use Optional<> instead of null checks. Same NPE in getProfile() after fix. Line 142 still null.\nNullPointerException in UserService.getProfile() at line 142. Files: src/service/UserService.java. Terms: getProfile",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_long_text_budget_stress",
+    "expected": "full-text search under 50ms",
+    "pack_text": "s=reduce shards to 1 per node s=src/search/mapping.json s=Elasticsearch ph=development g=Requirement: Decision: implement full... t=Task: Decision: implement full-text s... d=Decision: implement full-text search ... b=Error (performance): Search latency 1... f=src/search/mapping.json p=proj_holdout_09 q=What was the shard c implement full-text search with Elasticsearch. Must support \nreduce shards to 1 per node. Accept eventual consistency for Search latency 120ms: too many shards causing overhead. Files: src/search/mapping.json. Terms: Created, Elasticsearc ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_long_text_budget_stress",
+    "expected": "reduce shards to 1 per node",
+    "pack_text": "s=reduce shards to 1 per node s=src/search/mapping.json s=Elasticsearch ph=development g=Requirement: Decision: implement full... t=Task: Decision: implement full-text s... d=Decision: implement full-text search ... b=Error (performance): Search latency 1... f=src/search/mapping.json p=proj_holdout_09 q=What was the shard c implement full-text search with Elasticsearch. Must support \nreduce shards to 1 per node. Accept eventual consistency for Search latency 120ms: too many shards causing overhead. Files: src/search/mapping.json. Terms: Created, Elasticsearc ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_contradiction_same_file",
+    "expected": "gradual TypeScript strict mode",
+    "pack_text": "s=strict mode s=disable strict mode s=tsconfig.json d=Decision: disable strict mode. Enable... b=Error (build_failure): Build broke: 5... f=tsconfig.json p=proj_holdout_10 q=What is the TypeScri disable strict mode. Enable gradually per module. Build broke: 500+ type errors in legacy code. Files: tsconfig.json. Terms: Enabled ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_contradiction_same_file",
+    "expected": "disable strict mode",
+    "pack_text": "s=strict mode s=disable strict mode s=tsconfig.json d=Decision: disable strict mode. Enable... b=Error (build_failure): Build broke: 5... f=tsconfig.json p=proj_holdout_10 q=What is the TypeScri disable strict mode. Enable gradually per module. Build broke: 500+ type errors in legacy code. Files: tsconfig.json. Terms: Enabled ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_exact_version",
+    "expected": "version pinning",
+    "pack_text": "s=20.11.0 s=20.11.0 s=3.12.2 d=Decision: upgrade Node.js to 20.11.0 ... f=.nvmrc,pyproject.toml p=proj_holdout_11 q=What Node.js version upgrade Node.js to 20.11.0 LTS.\npin Python to 3.12.2 for reproducibility.  Files: pyproject.toml. Terms: 3.12.2, Updated ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_exact_version",
+    "expected": "upgrade Node.js to 20.11.0 LTS",
+    "pack_text": "s=20.11.0 s=20.11.0 s=3.12.2 d=Decision: upgrade Node.js to 20.11.0 ... f=.nvmrc,pyproject.toml p=proj_holdout_11 q=What Node.js version upgrade Node.js to 20.11.0 LTS.\npin Python to 3.12.2 for reproducibility.  Files: pyproject.toml. Terms: 3.12.2, Updated ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_multi_tenant_config",
+    "expected": "secure multi-tenancy",
+    "pack_text": "s=row-level security s=src/tenant/schema.py s=src/tenant/rls.py d=Decision: use row-level security inst... b=Error (security): Cross-tenant data l... f=src/tenant/schema.py,src/tenant/rls.py p=proj_holdout_12 q=How is tenant isolat use row-level security instead of schemas. Cross-tenant data leak: schema routing failed on concurrent  Files: src/tenant/schema.py ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_multi_tenant_config",
+    "expected": "use row-level security instead of schemas",
+    "pack_text": "s=row-level security s=src/tenant/schema.py s=src/tenant/rls.py d=Decision: use row-level security inst... b=Error (security): Cross-tenant data l... f=src/tenant/schema.py,src/tenant/rls.py p=proj_holdout_12 q=How is tenant isolat use row-level security instead of schemas. Cross-tenant data leak: schema routing failed on concurrent  Files: src/tenant/schema.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_migration_rollback",
+    "expected": "fixed migration",
+    "pack_text": "s=2024_002 s=migrations/2024_001_add_user_table.sql s=migrations/2024_002_add_user_table_fixed.sql ph=deployment d=Decision: rollback migration 2024_001... b=Error (runtime_error): Migration fail... f=migrations/2024_001_add_user_table.sql,migrations/2024_002_add_user_table_fixed.sql p=proj_holdout_13 q=What migration shoul rollback migration 2024_001. Fix and redeploy as 2024_002. Migration failed: duplicate column name in production. Files: migrations/2024_001_add_user_table.sql. Terms: Create ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_migration_rollback",
+    "expected": "rollback migration 2024_001",
+    "pack_text": "s=2024_002 s=migrations/2024_001_add_user_table.sql s=migrations/2024_002_add_user_table_fixed.sql ph=deployment d=Decision: rollback migration 2024_001... b=Error (runtime_error): Migration fail... f=migrations/2024_001_add_user_table.sql,migrations/2024_002_add_user_table_fixed.sql p=proj_holdout_13 q=What migration shoul rollback migration 2024_001. Fix and redeploy as 2024_002. Migration failed: duplicate column name in production. Files: migrations/2024_001_add_user_table.sql. Terms: Create ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_exact_api_version",
+    "expected": "GraphQL v3",
+    "pack_text": "s=/api/v3/graphql s=/api/v3/graphql s=/api/v1 d=Decision: API v3 uses /api/v3/graphql... f=src/api/graphql.py p=proj_holdout_14 q=What API version use API v3 uses /api/v3/graphql instead of REST.\nkeep REST for /api/v1 and /api/v2. v3 is GraphQL only.  Files: src/api/graphql.py ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_exact_api_version",
+    "expected": "API v3 uses /api/v3/graphql",
+    "pack_text": "s=/api/v3/graphql s=/api/v3/graphql s=/api/v1 d=Decision: API v3 uses /api/v3/graphql... f=src/api/graphql.py p=proj_holdout_14 q=What API version use API v3 uses /api/v3/graphql instead of REST.\nkeep REST for /api/v1 and /api/v2. v3 is GraphQL only.  Files: src/api/graphql.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_test_flake",
+    "expected": "fix flaky test",
+    "pack_text": "s=mock payment webhook s=tests/e2e/test_checkout.py s=payment webhook ph=testing t=Task: Decision: add retry logic with ... d=Decision: add retry logic with expone... b=Error (test_failure): Flaky test: tes... f=tests/e2e/test_checkout.py p=proj_holdout_15 q=What was the fix for mock payment webhook in e2e tests. Use contract tests for we\nadd retry logic with exponential backoff in test. Flaky test: test_checkout_flow fails 30% of runs. Terms: tes\nFlaky test still fails: root cause is race condition in paym Files: tests/e2e/test_checkout.py. Terms: test_checkout_flow",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_test_flake",
+    "expected": "mock payment webhook in e2e tests",
+    "pack_text": "s=mock payment webhook s=tests/e2e/test_checkout.py s=payment webhook ph=testing t=Task: Decision: add retry logic with ... d=Decision: add retry logic with expone... b=Error (test_failure): Flaky test: tes... f=tests/e2e/test_checkout.py p=proj_holdout_15 q=What was the fix for mock payment webhook in e2e tests. Use contract tests for we\nadd retry logic with exponential backoff in test. Flaky test: test_checkout_flow fails 30% of runs. Terms: tes\nFlaky test still fails: root cause is race condition in paym Files: tests/e2e/test_checkout.py. Terms: test_checkout_flow",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_config_key_stress",
+    "expected": "feature toggles",
+    "pack_text": "s=FEATURE_DARK_MODE_V2 s=FEATURE_DARK_MODE_V2 s=FEATURE_DARK_MODE_V1 ph=development g=Requirement: Decision: FEATURE_LEGACY... d=Decision: enable FEATURE_DARK_MODE_V2... f=src/features/toggles.py,src/features/consent.py p=proj_holdout_16 q=What is the current  enable FEATURE_DARK_MODE_V2 for all users.\nFEATURE_LEGACY_EXPORT must be disabled by 2026-06-01.  Files: src/features/toggles.py. Terms: FEATURE_DARK_MODE_V2  FEATURE_BETA_AI_SUGGESTIONS requires opt-in consent.",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_config_key_stress",
+    "expected": "enable FEATURE_DARK_MODE_V2",
+    "pack_text": "s=FEATURE_DARK_MODE_V2 s=FEATURE_DARK_MODE_V2 s=FEATURE_DARK_MODE_V1 ph=development g=Requirement: Decision: FEATURE_LEGACY... d=Decision: enable FEATURE_DARK_MODE_V2... f=src/features/toggles.py,src/features/consent.py p=proj_holdout_16 q=What is the current  enable FEATURE_DARK_MODE_V2 for all users.\nFEATURE_LEGACY_EXPORT must be disabled by 2026-06-01.  Files: src/features/toggles.py. Terms: FEATURE_DARK_MODE_V2  FEATURE_BETA_AI_SUGGESTIONS requires opt-in consent.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_dependency_conflict",
+    "expected": "resolve dependency conflict",
+    "pack_text": "s=urllib3 s=urllib3==2.0.7 s=requests==2.31.0 d=Decision: pin urllib3==2.0.7 and upgr... b=Error (build_failure): Dependency con... f=requirements.txt p=proj_holdout_17 q=How was the urllib3  pin urllib3==2.0.7 and upgrade requests to 2.32.0. Dependency conflict: requests==2.31.0 requires urllib3<2, but boto3 requires url. Terms: urllib3>=2. Files: requirements.txt. Terms: Updated",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_dependency_conflict",
+    "expected": "pin urllib3==2.0.7",
+    "pack_text": "s=urllib3 s=urllib3==2.0.7 s=requests==2.31.0 d=Decision: pin urllib3==2.0.7 and upgr... b=Error (build_failure): Dependency con... f=requirements.txt p=proj_holdout_17 q=How was the urllib3  pin urllib3==2.0.7 and upgrade requests to 2.32.0. Dependency conflict: requests==2.31.0 requires urllib3<2, but boto3 requires url. Terms: urllib3>=2. Files: requirements.txt. Terms: Updated",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_security_remediation",
+    "expected": "fix SQL injection",
+    "pack_text": "s=SQL injection s=parameterized queries s=src/search/query.py d=Decision: use parameterized queries e... f=src/search/query.py p=proj_holdout_18 q=What was the SQL inj use parameterized queries everywhere. No raw SQL in search.  Files: src/search/query.py. Terms: ORM, Replaced, SQL ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_security_remediation",
+    "expected": "use parameterized queries everywhere",
+    "pack_text": "s=SQL injection s=parameterized queries s=src/search/query.py d=Decision: use parameterized queries e... f=src/search/query.py p=proj_holdout_18 q=What was the SQL inj use parameterized queries everywhere. No raw SQL in search.  Files: src/search/query.py. Terms: ORM, Replaced, SQL ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_schema_evolution",
+    "expected": "fast JSONB queries",
+    "pack_text": "s=JSONB s=GIN index s=migrations/2024_003_add_metadata.sql t=Task: Decision: add JSONB metadata co... d=Decision: add JSONB metadata column t... b=Error (performance): Query performanc... f=migrations/2024_003_add_metadata.sql,migrations/2024_004_add_metadata_index.sql p=proj_holdout_19 q=How was the JSONB me add JSONB metadata column to users table.\ncreate GIN index on metadata and cache hot keys in Redis. Query performance degraded: JSONB metadata causing sequential scans. Files: migrations/2024_004_add_metadata_index.sql. Terms: Created, GIN Added migration: ALTER TABLE users ADD COLUMN metadata JSONB.",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_schema_evolution",
+    "expected": "create GIN index on metadata",
+    "pack_text": "s=JSONB s=GIN index s=migrations/2024_003_add_metadata.sql t=Task: Decision: add JSONB metadata co... d=Decision: add JSONB metadata column t... b=Error (performance): Query performanc... f=migrations/2024_003_add_metadata.sql,migrations/2024_004_add_metadata_index.sql p=proj_holdout_19 q=How was the JSONB me add JSONB metadata column to users table.\ncreate GIN index on metadata and cache hot keys in Redis. Query performance degraded: JSONB metadata causing sequential scans. Files: migrations/2024_004_add_metadata_index.sql. Terms: Created, GIN Added migration: ALTER TABLE users ADD COLUMN metadata JSONB.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "holdout_exact_package_name",
+    "expected": "lodash replacement",
+    "pack_text": "s=lodash s=remeda s=remeda d=Decision: use remeda instead of radas... b=Error (build_failure): Build failed: ... f=package.json p=proj_holdout_20 q=What lodash replacem use remeda instead of radash. It has deepMerge and tree-shak Build failed: radash does not have deepMerge function. Files: package.json. Terms: Replaced ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "holdout_exact_package_name",
+    "expected": "use remeda instead of radash",
+    "pack_text": "s=lodash s=remeda s=remeda d=Decision: use remeda instead of radas... b=Error (build_failure): Build failed: ... f=package.json p=proj_holdout_20 q=What lodash replacem use remeda instead of radash. It has deepMerge and tree-shak Build failed: radash does not have deepMerge function. Files: package.json. Terms: Replaced ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "auth_refresh_loop",
+    "expected": "fix auth refresh loop",
+    "pack_text": "ph=maintenance t=passing g=Requirement: We need to fix the auth ... t=Assistant plan: I'll investigate vali... d=Decision: use httpOnly cookie for ref... b=Error (test_failure): tests/auth.test... f=src/auth/session.ts,src/auth/middleware.ts p=proj_auth q=middleware must not  use httpOnly cookie for refresh token. Rationale: reduces XSS exposure. Middleware must not refresh  pytest auth suite: 12 passed, 0 failed.\ntests/auth.test.ts still failing: refreshSession called repeatedly. Terms: test_failure Files: src/auth/middleware.ts. Terms: Updated Goal: We need to fix the auth refresh token loop. It must wo ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "auth_refresh_loop",
+    "expected": "use httpOnly cookie",
+    "pack_text": "ph=maintenance t=passing g=Requirement: We need to fix the auth ... t=Assistant plan: I'll investigate vali... d=Decision: use httpOnly cookie for ref... b=Error (test_failure): tests/auth.test... f=src/auth/session.ts,src/auth/middleware.ts p=proj_auth q=middleware must not  use httpOnly cookie for refresh token. Rationale: reduces XSS exposure. Middleware must not refresh  pytest auth suite: 12 passed, 0 failed.\ntests/auth.test.ts still failing: refreshSession called repeatedly. Terms: test_failure Files: src/auth/middleware.ts. Terms: Updated Goal: We need to fix the auth refresh token loop. It must wo ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "auth_refresh_loop",
+    "expected": "middleware must not refresh",
+    "pack_text": "ph=maintenance t=passing g=Requirement: We need to fix the auth ... t=Assistant plan: I'll investigate vali... d=Decision: use httpOnly cookie for ref... b=Error (test_failure): tests/auth.test... f=src/auth/session.ts,src/auth/middleware.ts p=proj_auth q=middleware must not  use httpOnly cookie for refresh token. Rationale: reduces XSS exposure. Middleware must not refresh  pytest auth suite: 12 passed, 0 failed.\ntests/auth.test.ts still failing: refreshSession called repeatedly. Terms: test_failure Files: src/auth/middleware.ts. Terms: Updated Goal: We need to fix the auth refresh token loop. It must wo ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "payment_rewrite",
+    "expected": "payment rewrite",
+    "pack_text": "t=Assistant plan: Will create src/payme... d=Decision: partial refunds require adm... b=Error (test_failure): Refund test fai... f=src/payment/stripe.ts,src/payment/refund.ts p=proj_payment q=What are the refund  partial refunds require admin approval above $100. Refund test failed: amount must be positive integer. Terms:  Files: src/payment/refund.ts. Terms: $100, 100  ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "payment_rewrite",
+    "expected": "partial refunds require admin approval above $100",
+    "pack_text": "t=Assistant plan: Will create src/payme... d=Decision: partial refunds require adm... b=Error (test_failure): Refund test fai... f=src/payment/stripe.ts,src/payment/refund.ts p=proj_payment q=What are the refund  partial refunds require admin approval above $100. Refund test failed: amount must be positive integer. Terms:  Files: src/payment/refund.ts. Terms: $100, 100  ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "db_migration",
+    "expected": "migrate MongoDB to PostgreSQL",
+    "pack_text": "t=passing g=Requirement: Migrate from MongoDB to ... t=Assistant plan: Plan: dump MongoDB, t... d=Decision: map ObjectId to UUIDv5 with... b=Error (runtime_error): Migration fail... f=scripts/migrate_v1.py,scripts/migrate_v2.py p=proj_db q=How do we handle Obj map ObjectId to UUIDv5 with namespace.\nv1 migration script is deprecated. Use v2 only. Migration failed: ObjectId cannot convert to UUID. Files: scripts/migrate_v1.py. Terms: Created ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "db_migration",
+    "expected": "map ObjectId to UUIDv5",
+    "pack_text": "t=passing g=Requirement: Migrate from MongoDB to ... t=Assistant plan: Plan: dump MongoDB, t... d=Decision: map ObjectId to UUIDv5 with... b=Error (runtime_error): Migration fail... f=scripts/migrate_v1.py,scripts/migrate_v2.py p=proj_db q=How do we handle Obj map ObjectId to UUIDv5 with namespace.\nv1 migration script is deprecated. Use v2 only. Migration failed: ObjectId cannot convert to UUID. Files: scripts/migrate_v1.py. Terms: Created ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "db_migration",
+    "expected": "v1 migration script is deprecated",
+    "pack_text": "t=passing g=Requirement: Migrate from MongoDB to ... t=Assistant plan: Plan: dump MongoDB, t... d=Decision: map ObjectId to UUIDv5 with... b=Error (runtime_error): Migration fail... f=scripts/migrate_v1.py,scripts/migrate_v2.py p=proj_db q=How do we handle Obj map ObjectId to UUIDv5 with namespace.\nv1 migration script is deprecated. Use v2 only. Migration failed: ObjectId cannot convert to UUID. Files: scripts/migrate_v1.py. Terms: Created ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "api_versioning",
+    "expected": "API v2 with breaking changes",
+    "pack_text": "s=What is the v1 sunset policy? s=v1 must ignore unknown fields g=Requirement: Decision: v1 must ignore... t=Assistant plan: Will create /v2/users... d=Decision: v1 must ignore unknown fiel... b=Error (runtime_error): v1 clients get... f=src/api/v2/users.ts,src/api/v1/validator.ts p=proj_api q=sunset v1 sunset v1 on 2027-01-01. Announce deprecation now.\nv1 must ignore unknown fields, not reject them. v1 clients getting 400 on profile update: missing new 'prefe Files: src/api/v1/validator.ts. Terms: Updated ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "api_versioning",
+    "expected": "v1 must ignore unknown fields",
+    "pack_text": "s=What is the v1 sunset policy? s=v1 must ignore unknown fields g=Requirement: Decision: v1 must ignore... t=Assistant plan: Will create /v2/users... d=Decision: v1 must ignore unknown fiel... b=Error (runtime_error): v1 clients get... f=src/api/v2/users.ts,src/api/v1/validator.ts p=proj_api q=sunset v1 sunset v1 on 2027-01-01. Announce deprecation now.\nv1 must ignore unknown fields, not reject them. v1 clients getting 400 on profile update: missing new 'prefe Files: src/api/v1/validator.ts. Terms: Updated ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "api_versioning",
+    "expected": "sunset v1 on 2027-01-01",
+    "pack_text": "s=What is the v1 sunset policy? s=v1 must ignore unknown fields g=Requirement: Decision: v1 must ignore... t=Assistant plan: Will create /v2/users... d=Decision: v1 must ignore unknown fiel... b=Error (runtime_error): v1 clients get... f=src/api/v2/users.ts,src/api/v1/validator.ts p=proj_api q=sunset v1 sunset v1 on 2027-01-01. Announce deprecation now.\nv1 must ignore unknown fields, not reject them. v1 clients getting 400 on profile update: missing new 'prefe Files: src/api/v1/validator.ts. Terms: Updated ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "microservices_decomposition",
+    "expected": "split monolith",
+    "pack_text": "t=Assistant plan: Extracting user domai... d=Decision: shared models go to common-... b=Error (runtime_error): Circular depen... f=services/user/main.py,libs/common/models.py p=proj_micro q=common-lib shared models go to common-lib. No cross-service imports.\nuse event bus for async communication, not direct gRPC for e Circular dependency: order-service imports user-service and  Files: libs/common/models.py. Terms: Extracted",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "microservices_decomposition",
+    "expected": "shared models go to common-lib",
+    "pack_text": "t=Assistant plan: Extracting user domai... d=Decision: shared models go to common-... b=Error (runtime_error): Circular depen... f=services/user/main.py,libs/common/models.py p=proj_micro q=common-lib shared models go to common-lib. No cross-service imports.\nuse event bus for async communication, not direct gRPC for e Circular dependency: order-service imports user-service and  Files: libs/common/models.py. Terms: Extracted",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "microservices_decomposition",
+    "expected": "use event bus for async communication",
+    "pack_text": "t=Assistant plan: Extracting user domai... d=Decision: shared models go to common-... b=Error (runtime_error): Circular depen... f=services/user/main.py,libs/common/models.py p=proj_micro q=common-lib shared models go to common-lib. No cross-service imports.\nuse event bus for async communication, not direct gRPC for e Circular dependency: order-service imports user-service and  Files: libs/common/models.py. Terms: Extracted",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "cache_invalidation",
+    "expected": "fix cache invalidation",
+    "pack_text": "ph=maintenance t=Assistant plan: Checking Redis TTL an... d=Decision: use cache-aside with probab... b=Error (runtime_error): Cache stampede... f=src/cache/bust.py,src/cache/expire.py p=proj_cache q=How do we prevent ca use cache-aside with probabilistic early expiration. Cache stampede: 1000 requests hit DB after invalidation. Files: src/cache/bust.py ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "cache_invalidation",
+    "expected": "use cache-aside with probabilistic early expiration",
+    "pack_text": "ph=maintenance t=Assistant plan: Checking Redis TTL an... d=Decision: use cache-aside with probab... b=Error (runtime_error): Cache stampede... f=src/cache/bust.py,src/cache/expire.py p=proj_cache q=How do we prevent ca use cache-aside with probabilistic early expiration. Cache stampede: 1000 requests hit DB after invalidation. Files: src/cache/bust.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "race_condition",
+    "expected": "fix race condition",
+    "pack_text": "t=Assistant plan: Checking database iso... d=Decision: use optimistic locking with... b=Error (runtime_error): Deadlock: two ... f=src/inventory/lock.py,src/inventory/allocate.py p=proj_race q=version column use optimistic locking with version column. Deadlock: two transactions waiting for each other's inventor Files: src/inventory/lock.py ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "race_condition",
+    "expected": "use optimistic locking with version column",
+    "pack_text": "t=Assistant plan: Checking database iso... d=Decision: use optimistic locking with... b=Error (runtime_error): Deadlock: two ... f=src/inventory/lock.py,src/inventory/allocate.py p=proj_race q=version column use optimistic locking with version column. Deadlock: two transactions waiting for each other's inventor Files: src/inventory/lock.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "security_patch",
+    "expected": "patch SQL injection",
+    "pack_text": "s=What is the query security policy? s=parameterized ph=maintenance g=Requirement: CVE-2026-1234: SQL injec... t=Assistant plan: Found unsanitized que... d=Decision: use prepared statements but... b=Error: Decision: all DB queries must ... f=src/search/query.py p=proj_sec q=LIKE use prepared statements but preserve wildcard support via LIKE.\nall DB queries must use parameterized statements. No excepti Regression: search stopped supporting wildcard patterns. Ter Files: src/search/query.py ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "security_patch",
+    "expected": "use prepared statements",
+    "pack_text": "s=What is the query security policy? s=parameterized ph=maintenance g=Requirement: CVE-2026-1234: SQL injec... t=Assistant plan: Found unsanitized que... d=Decision: use prepared statements but... b=Error: Decision: all DB queries must ... f=src/search/query.py p=proj_sec q=LIKE use prepared statements but preserve wildcard support via LIKE.\nall DB queries must use parameterized statements. No excepti Regression: search stopped supporting wildcard patterns. Ter Files: src/search/query.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "security_patch",
+    "expected": "all DB queries must use parameterized statements",
+    "pack_text": "s=What is the query security policy? s=parameterized ph=maintenance g=Requirement: CVE-2026-1234: SQL injec... t=Assistant plan: Found unsanitized que... d=Decision: use prepared statements but... b=Error: Decision: all DB queries must ... f=src/search/query.py p=proj_sec q=LIKE use prepared statements but preserve wildcard support via LIKE.\nall DB queries must use parameterized statements. No excepti Regression: search stopped supporting wildcard patterns. Ter Files: src/search/query.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "feature_flags",
+    "expected": "feature flags",
+    "pack_text": "ph=maintenance g=Requirement: Implement feature flags ... t=Assistant plan: Using LaunchDarkly-li... d=Decision: use Pub/Sub for flag update... b=Error (runtime_error): Flags not sync... f=src/flags/evaluator.py,src/flags/sync.py p=proj_flags q=100ms SLA use Pub/Sub for flag updates with 100ms propagation SLA. Flags not syncing: Redis cache shows old values for 30s. Files: src/flags/evaluator.py  ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "feature_flags",
+    "expected": "use Pub/Sub for flag updates",
+    "pack_text": "ph=maintenance g=Requirement: Implement feature flags ... t=Assistant plan: Using LaunchDarkly-li... d=Decision: use Pub/Sub for flag update... b=Error (runtime_error): Flags not sync... f=src/flags/evaluator.py,src/flags/sync.py p=proj_flags q=100ms SLA use Pub/Sub for flag updates with 100ms propagation SLA. Flags not syncing: Redis cache shows old values for 30s. Files: src/flags/evaluator.py  ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "cicd_migration",
+    "expected": "Jenkins to GitHub Actions",
+    "pack_text": "ph=testing g=Requirement: Migrate from Jenkins to ... t=Assistant plan: Will parallelize test... d=Decision: split integration tests int... b=Error (test_failure): Build time 18 m... f=.github/workflows/ci.yml p=proj_cicd q=What is the CI build split integration tests into 4 shards. Run unit tests in par Build time 18 minutes: integration tests not parallelized. T Files: .github/workflows/ci.yml. Terms: Actions, Created ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "cicd_migration",
+    "expected": "split integration tests into 4 shards",
+    "pack_text": "ph=testing g=Requirement: Migrate from Jenkins to ... t=Assistant plan: Will parallelize test... d=Decision: split integration tests int... b=Error (test_failure): Build time 18 m... f=.github/workflows/ci.yml p=proj_cicd q=What is the CI build split integration tests into 4 shards. Run unit tests in par Build time 18 minutes: integration tests not parallelized. T Files: .github/workflows/ci.yml. Terms: Actions, Created ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "frontend_migration",
+    "expected": "Angular to React",
+    "pack_text": "ph=development g=Requirement: Migrate from Angular to ... t=Task: Decision: implement auth guards... d=Decision: implement auth guards in Re... b=Error (test_failure): Route guards no... f=frontend/src/App.tsx,frontend/src/router/guards.ts p=proj_fe q=React Router loaders implement auth guards in React Router loaders. Route guards not working: unauthorized users accessing admin Files: frontend/src/router/guards.ts ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "frontend_migration",
+    "expected": "implement auth guards in React Router loaders",
+    "pack_text": "ph=development g=Requirement: Migrate from Angular to ... t=Task: Decision: implement auth guards... d=Decision: implement auth guards in Re... b=Error (test_failure): Route guards no... f=frontend/src/App.tsx,frontend/src/router/guards.ts p=proj_fe q=React Router loaders implement auth guards in React Router loaders. Route guards not working: unauthorized users accessing admin Files: frontend/src/router/guards.ts ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "logging_overhaul",
+    "expected": "structured JSON logging",
+    "pack_text": "t=Assistant plan: Will add correlation-... d=Decision: redact email, phone, SSN fr... b=Error (runtime_error): Log volume inc... f=src/middleware/correlation.py,src/logging/redact.py p=proj_logs q=redact redact email, phone, SSN from all log fields automatically. Log volume increased 10x: PII leaking into logs. Files: src/logging/redact.py. Terms: PII Logs are unstructured and missing trace IDs. Use structured JSON logging.",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "logging_overhaul",
+    "expected": "redact email, phone, SSN",
+    "pack_text": "t=Assistant plan: Will add correlation-... d=Decision: redact email, phone, SSN fr... b=Error (runtime_error): Log volume inc... f=src/middleware/correlation.py,src/logging/redact.py p=proj_logs q=redact redact email, phone, SSN from all log fields automatically. Log volume increased 10x: PII leaking into logs. Files: src/logging/redact.py. Terms: PII Logs are unstructured and missing trace IDs. Use structured JSON logging.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "config_management",
+    "expected": "centralized config",
+    "pack_text": "g=Requirement: Move config from env var... t=Assistant plan: Using Consul for conf... d=Decision: fallback to local config fi... b=Error (runtime_error): Config not rel... f=src/config/consul.py,src/config/fallback.py p=proj_config q=30s fallback to local config file if Consul unavailable for >30s Config not reloading: watches timing out during network part Files: src/config/consul.py  ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "config_management",
+    "expected": "fallback to local config file",
+    "pack_text": "g=Requirement: Move config from env var... t=Assistant plan: Using Consul for conf... d=Decision: fallback to local config fi... b=Error (runtime_error): Config not rel... f=src/config/consul.py,src/config/fallback.py p=proj_config q=30s fallback to local config file if Consul unavailable for >30s Config not reloading: watches timing out during network part Files: src/config/consul.py  ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "oauth_to_saml",
+    "expected": "OAuth2 to SAML",
+    "pack_text": "t=Assistant plan: Will support both via... d=Decision: allow clock skew up to 10 m... b=Error (runtime_error): SAML assertion... f=src/auth/saml.py p=proj_auth2 q=What auth methods do OAuth2 stays for non-enterprise. SAML only for enterprise tier.\nallow clock skew up to 10 minutes. Log warnings if > 5 minut SAML assertion validation failing: clock skew > 5 minutes. Files: src/auth/saml.py",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "oauth_to_saml",
+    "expected": "allow clock skew up to 10 minutes",
+    "pack_text": "t=Assistant plan: Will support both via... d=Decision: allow clock skew up to 10 m... b=Error (runtime_error): SAML assertion... f=src/auth/saml.py p=proj_auth2 q=What auth methods do OAuth2 stays for non-enterprise. SAML only for enterprise tier.\nallow clock skew up to 10 minutes. Log warnings if > 5 minut SAML assertion validation failing: clock skew > 5 minutes. Files: src/auth/saml.py",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "oauth_to_saml",
+    "expected": "OAuth2 stays for non-enterprise",
+    "pack_text": "t=Assistant plan: Will support both via... d=Decision: allow clock skew up to 10 m... b=Error (runtime_error): SAML assertion... f=src/auth/saml.py p=proj_auth2 q=What auth methods do OAuth2 stays for non-enterprise. SAML only for enterprise tier.\nallow clock skew up to 10 minutes. Log warnings if > 5 minut SAML assertion validation failing: clock skew > 5 minutes. Files: src/auth/saml.py",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "rate_limiting",
+    "expected": "sliding window",
+    "pack_text": "ph=maintenance t=Assistant plan: Using token bucket in... d=Decision: use sliding window, not fix... b=Error (runtime_error): Rate limiter a... f=src/rate/limiter.py p=proj_rate q=not fixed window use sliding window, not fixed window. Rate limiter allowing bursts > 1000: window reset race condi Files: src/rate/limiter.py Add rate limiting to public API. 100 req/min per key, 1000 req/min per IP.",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "rate_limiting",
+    "expected": "use sliding window, not fixed window",
+    "pack_text": "ph=maintenance t=Assistant plan: Using token bucket in... d=Decision: use sliding window, not fix... b=Error (runtime_error): Rate limiter a... f=src/rate/limiter.py p=proj_rate q=not fixed window use sliding window, not fixed window. Rate limiter allowing bursts > 1000: window reset race condi Files: src/rate/limiter.py Add rate limiting to public API. 100 req/min per key, 1000 req/min per IP.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "data_export",
+    "expected": "GDPR export",
+    "pack_text": "ph=development g=Requirement: Implement GDPR data expo... t=Assistant plan: Will generate JSON ex... d=Decision: use cursor-based pagination... b=Error (runtime_error): Export timing ... f=src/export/generator.py,src/export/queue.py p=proj_export q=background job use cursor-based pagination and background job for large exp Export timing out for users with >10k orders: O(n^2) query. Files: src/export/generator.py  ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "data_export",
+    "expected": "use cursor-based pagination",
+    "pack_text": "ph=development g=Requirement: Implement GDPR data expo... t=Assistant plan: Will generate JSON ex... d=Decision: use cursor-based pagination... b=Error (runtime_error): Export timing ... f=src/export/generator.py,src/export/queue.py p=proj_export q=background job use cursor-based pagination and background job for large exp Export timing out for users with >10k orders: O(n^2) query. Files: src/export/generator.py  ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "search_optimization",
+    "expected": "search <200ms",
+    "pack_text": "g=Requirement: Search is too slow. Aver... t=Assistant plan: Will add Elasticsearc... d=Decision: use CDC with Debezium from ... b=Error (runtime_error): Index out of s... f=src/search/elastic.py,src/search/cdc.py p=proj_search q=Debezium use CDC with Debezium from PostgreSQL to Elasticsearch. Index out of sync: deleted products still appearing in searc Files: src/search/elastic.py. Terms: Elasticsearch ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "search_optimization",
+    "expected": "use CDC",
+    "pack_text": "g=Requirement: Search is too slow. Aver... t=Assistant plan: Will add Elasticsearc... d=Decision: use CDC with Debezium from ... b=Error (runtime_error): Index out of s... f=src/search/elastic.py,src/search/cdc.py p=proj_search q=Debezium use CDC with Debezium from PostgreSQL to Elasticsearch. Index out of sync: deleted products still appearing in searc Files: src/search/elastic.py. Terms: Elasticsearch ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "search_optimization_regression",
+    "expected": "search <200ms",
+    "pack_text": "s=Debezium g=Requirement: Search is too slow. Aver... t=Assistant plan: Will add Elasticsearc... d=Decision: use CDC from PostgreSQL to ... b=Error (runtime_error): Index out of s... f=src/search/elastic.py,src/search/cdc.py p=proj_search_reg q=Debezium use CDC from PostgreSQL to Elasticsearch. Index out of sync: deleted products still appearing in searc Files: src/search/elastic.py. Terms: Elasticsearch ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "search_optimization_regression",
+    "expected": "use CDC",
+    "pack_text": "s=Debezium g=Requirement: Search is too slow. Aver... t=Assistant plan: Will add Elasticsearc... d=Decision: use CDC from PostgreSQL to ... b=Error (runtime_error): Index out of s... f=src/search/elastic.py,src/search/cdc.py p=proj_search_reg q=Debezium use CDC from PostgreSQL to Elasticsearch. Index out of sync: deleted products still appearing in searc Files: src/search/elastic.py. Terms: Elasticsearch ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "job_queue_migration",
+    "expected": "Celery to Temporal",
+    "pack_text": "g=Requirement: Decision: all workflows ... t=Assistant plan: Will model each job a... d=Decision: all workflows must be idemp... b=Error (runtime_error): Duplicate emai... f=src/workflows/email.py p=proj_queue q=idempotency keys all workflows must be idempotent. Use idempotency keys. Duplicate emails sent: workflow replay not idempotent. Files: src/workflows/email.py. Terms: Temporal ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "job_queue_migration",
+    "expected": "all workflows must be idempotent",
+    "pack_text": "g=Requirement: Decision: all workflows ... t=Assistant plan: Will model each job a... d=Decision: all workflows must be idemp... b=Error (runtime_error): Duplicate emai... f=src/workflows/email.py p=proj_queue q=idempotency keys all workflows must be idempotent. Use idempotency keys. Duplicate emails sent: workflow replay not idempotent. Files: src/workflows/email.py. Terms: Temporal ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "multi_tenancy",
+    "expected": "multi-tenancy",
+    "pack_text": "ph=development g=Requirement: Decision: ALL queries mu... t=Assistant plan: Will add tenant middl... d=Decision: ALL queries must include te... b=Error (runtime_error): Tenant A seein... f=src/tenant/middleware.py,src/db/builder.py p=proj_tenant q=query builder ALL queries must include tenant_id. Use query builder that enforces this.\ntenant_id must be set in request context. Fail if missing. Tenant A seeing Tenant B data: missing tenant filter in admi Files: src/db/builder.py ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "multi_tenancy",
+    "expected": "ALL queries must include tenant_id",
+    "pack_text": "ph=development g=Requirement: Decision: ALL queries mu... t=Assistant plan: Will add tenant middl... d=Decision: ALL queries must include te... b=Error (runtime_error): Tenant A seein... f=src/tenant/middleware.py,src/db/builder.py p=proj_tenant q=query builder ALL queries must include tenant_id. Use query builder that enforces this.\ntenant_id must be set in request context. Fail if missing. Tenant A seeing Tenant B data: missing tenant filter in admi Files: src/db/builder.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "multi_tenancy",
+    "expected": "tenant_id must be set in request context",
+    "pack_text": "ph=development g=Requirement: Decision: ALL queries mu... t=Assistant plan: Will add tenant middl... d=Decision: ALL queries must include te... b=Error (runtime_error): Tenant A seein... f=src/tenant/middleware.py,src/db/builder.py p=proj_tenant q=query builder ALL queries must include tenant_id. Use query builder that enforces this.\ntenant_id must be set in request context. Fail if missing. Tenant A seeing Tenant B data: missing tenant filter in admi Files: src/db/builder.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "false_memory_s05",
+    "expected": "correct database choice",
+    "pack_text": "t=Assistant plan: We use PostgreSQL wit... d=Decision: primary DB is SQLite. No re... p=proj_false q=SQLite primary DB is SQLite. No replicas needed.  Actually we never decided that. We use SQLite. ",
+    "type": "goal",
+    "label": "no_match"
+  },
+  {
+    "scenario": "false_memory_s05",
+    "expected": "SQLite",
+    "pack_text": "t=Assistant plan: We use PostgreSQL wit... d=Decision: primary DB is SQLite. No re... p=proj_false q=SQLite primary DB is SQLite. No replicas needed.  Actually we never decided that. We use SQLite. ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "superseded_decision",
+    "expected": "switch to Memcached for session store",
+    "pack_text": "d=Decision: use Redis for session store... b=Error (runtime_error): Redis connecti... f=src/auth/session.ts p=proj_super q=What is the current  switch to Memcached for session store. Redis caused unaccept Redis connection timeout under load: 500ms latency on sessio Files: src/auth/session.ts ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "superseded_decision",
+    "expected": "switch to Memcached for session store",
+    "pack_text": "d=Decision: use Redis for session store... b=Error (runtime_error): Redis connecti... f=src/auth/session.ts p=proj_super q=What is the current  switch to Memcached for session store. Redis caused unaccept Redis connection timeout under load: 500ms latency on sessio Files: src/auth/session.ts ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "superseded_decision",
+    "expected": "Redis caused unacceptable latency",
+    "pack_text": "d=Decision: use Redis for session store... b=Error (runtime_error): Redis connecti... f=src/auth/session.ts p=proj_super q=What is the current  switch to Memcached for session store. Redis caused unaccept Redis connection timeout under load: 500ms latency on sessio Files: src/auth/session.ts ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "exact_config_key",
+    "expected": "disable FEATURE_AUTH_REFRESH_V2 in staging",
+    "pack_text": "s=FEATURE_AUTH_REFRESH_V2 ph=development t=passing g=Requirement: Requirement: disable FEA... t=Assistant plan: Decision: I'll update... d=Proposed decision: I'll update the en... f=config/staging.yml p=proj_exact_cfg q=Why is FEATURE_AUTH_ I'll update the environment config to set FEATURE_AUTH_REFRESH_V2=false for staging only. Terms: Pro  Files: config/staging.yml. Terms: FEATURE_AUTH_REFRESH_V2, Updated ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "exact_config_key",
+    "expected": "set FEATURE_AUTH_REFRESH_V2=false for staging only",
+    "pack_text": "s=FEATURE_AUTH_REFRESH_V2 ph=development t=passing g=Requirement: Requirement: disable FEA... t=Assistant plan: Decision: I'll update... d=Proposed decision: I'll update the en... f=config/staging.yml p=proj_exact_cfg q=Why is FEATURE_AUTH_ I'll update the environment config to set FEATURE_AUTH_REFRESH_V2=false for staging only. Terms: Pro  Files: config/staging.yml. Terms: FEATURE_AUTH_REFRESH_V2, Updated ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "exact_api_endpoint",
+    "expected": "The /api/v2/export/bulk endpoint needs rate limiting",
+    "pack_text": "s=/api/v2/export/bulk ph=maintenance d=Decision: Fix: use token bucket inste... b=Error (runtime_error): Load test show... f=src/api/v2/export.py p=proj_exact_api q=What decision affect Fix: use token bucket instead of fixed window for /api/v2/export/bulk. Load test shows /api/v2/export/bulk still allows burst traffic. Files: src/api/v2/export.py. Terms: /api/v2/export/bulk",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "exact_api_endpoint",
+    "expected": "use token bucket instead of fixed window for /api/v2/export/bulk",
+    "pack_text": "s=/api/v2/export/bulk ph=maintenance d=Decision: Fix: use token bucket inste... b=Error (runtime_error): Load test show... f=src/api/v2/export.py p=proj_exact_api q=What decision affect Fix: use token bucket instead of fixed window for /api/v2/export/bulk. Load test shows /api/v2/export/bulk still allows burst traffic. Files: src/api/v2/export.py. Terms: /api/v2/export/bulk",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "exact_cicd_job",
+    "expected": "The deploy-preview-h200 job is failing after the GitHub Actions migration",
+    "pack_text": "s=deploy-preview-h200 s=h200-large s=h200-standard ph=deployment t=Assistant plan: Decision: The runner ... d=Proposed decision: The runner label c... b=Error: The deploy-preview-h200 job is... f=.github/workflows/preview.yml p=proj_exact_cicd q=Why did deploy-previ The runner label changed from h200-large to h200-standard. I The deploy-preview-h200 job is failing after the GitHub Actions migration. It ca Files: .github/workflows/preview.yml. Terms: 200, Updated",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "exact_cicd_job",
+    "expected": "The runner label changed from h200-large to h200-standard",
+    "pack_text": "s=deploy-preview-h200 s=h200-large s=h200-standard ph=deployment t=Assistant plan: Decision: The runner ... d=Proposed decision: The runner label c... b=Error: The deploy-preview-h200 job is... f=.github/workflows/preview.yml p=proj_exact_cicd q=Why did deploy-previ The runner label changed from h200-large to h200-standard. I The deploy-preview-h200 job is failing after the GitHub Actions migration. It ca Files: .github/workflows/preview.yml. Terms: 200, Updated",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "exact_cve",
+    "expected": "CVE-2026-1234 affects our numpy dependency",
+    "pack_text": "s=CVE-2026-1234 s=numpy>=1.26.4 g=Requirement: Security alert: CVE-2026... t=Assistant plan: Decision: pin numpy>=... d=Proposed decision: pin numpy>=1.26.4 ... f=requirements.txt p=proj_exact_cve q=What patch decision  pin numpy>=1.26.4 and run security audit for CVE-2026-1234. Terms: Proposed  Files: requirements.txt. Terms: 1.26.4, Updated, numpy>=1.26.4 Goal: Security alert: CVE-2026-1234 affects our numpy dependency. Terms: 1.26.4 ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "exact_cve",
+    "expected": "pin numpy>=1.26.4 and run security audit for CVE-2026-1234",
+    "pack_text": "s=CVE-2026-1234 s=numpy>=1.26.4 g=Requirement: Security alert: CVE-2026... t=Assistant plan: Decision: pin numpy>=... d=Proposed decision: pin numpy>=1.26.4 ... f=requirements.txt p=proj_exact_cve q=What patch decision  pin numpy>=1.26.4 and run security audit for CVE-2026-1234. Terms: Proposed  Files: requirements.txt. Terms: 1.26.4, Updated, numpy>=1.26.4 Goal: Security alert: CVE-2026-1234 affects our numpy dependency. Terms: 1.26.4 ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "h03_project_A",
+    "expected": "use PostgreSQL",
+    "pack_text": "d=Decision: Project A: Use PostgreSQL w... f=src/db/postgres.py p=proj_switch_A q=What database does P Project A: Use PostgreSQL with read replicas.  Files: src/db/postgres.py. Terms: PostgreSQL, SQL ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "h03_project_A",
+    "expected": "PostgreSQL with read replicas",
+    "pack_text": "d=Decision: Project A: Use PostgreSQL w... f=src/db/postgres.py p=proj_switch_A q=What database does P Project A: Use PostgreSQL with read replicas.  Files: src/db/postgres.py. Terms: PostgreSQL, SQL ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "h03_project_B",
+    "expected": "use SQLite",
+    "pack_text": "d=Decision: Project B: Use SQLite for s... f=src/db/sqlite.py p=proj_switch_B q=What database does P Project B: Use SQLite for simplicity.  Files: src/db/sqlite.py ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "h03_project_B",
+    "expected": "SQLite for simplicity",
+    "pack_text": "d=Decision: Project B: Use SQLite for s... f=src/db/sqlite.py p=proj_switch_B q=What database does P Project B: Use SQLite for simplicity.  Files: src/db/sqlite.py ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "h03_project_C",
+    "expected": "use MongoDB",
+    "pack_text": "d=Decision: Project C: Use MongoDB for ... f=src/db/mongo.py p=proj_switch_C q=What database does P Project C: Use MongoDB for flexibility.  Files: src/db/mongo.py. Terms: MongoDB ",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "h03_project_C",
+    "expected": "MongoDB for flexibility",
+    "pack_text": "d=Decision: Project C: Use MongoDB for ... f=src/db/mongo.py p=proj_switch_C q=What database does P Project C: Use MongoDB for flexibility.  Files: src/db/mongo.py. Terms: MongoDB ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "adversarial_hard_export_endpoint",
+    "expected": "set export endpoint to /api/v1/exports/bulk",
+    "pack_text": "s=/api/v1/exports/bulk s=/api/v1/exports/bulk s=config/final.yaml g=Requirement: Decision: export endpoin... d=Decision: export endpoint must be /ap... f=config/_api_v1_sessions.yaml,config/_api_v1_tokens.yaml p=proj_adv_hard_01 q=What is the bulk exp export endpoint is now /api/v1/exports/bulk. Override all previous configs.    Configured export endpoint = /api/v1/alerts.\nConfigured export endpoint = /api/v1/analytics.",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "adversarial_hard_export_endpoint",
+    "expected": "export endpoint is now /api/v1/exports/bulk",
+    "pack_text": "s=/api/v1/exports/bulk s=/api/v1/exports/bulk s=config/final.yaml g=Requirement: Decision: export endpoin... d=Decision: export endpoint must be /ap... f=config/_api_v1_sessions.yaml,config/_api_v1_tokens.yaml p=proj_adv_hard_01 q=What is the bulk exp export endpoint is now /api/v1/exports/bulk. Override all previous configs.    Configured export endpoint = /api/v1/alerts.\nConfigured export endpoint = /api/v1/analytics.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "adversarial_hard_primary_database_host",
+    "expected": "set primary database host to DB_HOST_PROD_RW",
+    "pack_text": "s=DB_HOST_PROD_RW s=DB_HOST_PROD_RW s=config/final.yaml g=Requirement: Decision: primary databa... d=Decision: primary database host must ... f=config/DB_HOST_16.yaml,config/DB_HOST_17.yaml p=proj_adv_hard_02 q=What is the primary  primary database host is now DB_HOST_PROD_RW. Override all previous configs.   Decision: primary database host must be DB_HOST_0.",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "adversarial_hard_primary_database_host",
+    "expected": "primary database host is now DB_HOST_PROD_RW",
+    "pack_text": "s=DB_HOST_PROD_RW s=DB_HOST_PROD_RW s=config/final.yaml g=Requirement: Decision: primary databa... d=Decision: primary database host must ... f=config/DB_HOST_16.yaml,config/DB_HOST_17.yaml p=proj_adv_hard_02 q=What is the primary  primary database host is now DB_HOST_PROD_RW. Override all previous configs.   Decision: primary database host must be DB_HOST_0.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "adversarial_hard_checkout_flow_feature_flag",
+    "expected": "set checkout flow feature flag to FEATURE_ENABLE_CHECKOUT_V2",
+    "pack_text": "s=FEATURE_ENABLE_CHECKOUT_V2 s=FEATURE_ENABLE_CHECKOUT_V2 s=config/final.yaml ph=development g=Requirement: Decision: checkout flow ... d=Decision: checkout flow feature flag ... f=config/FEATURE_ENABLE_rate_limit.yaml,config/FEATURE_ENABLE_webhooks.yaml p=proj_adv_hard_03 q=What feature flag co checkout flow feature flag is now FEATURE_ENABLE_CHECKOUT_V2. Override all previous configs.  ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "adversarial_hard_checkout_flow_feature_flag",
+    "expected": "checkout flow feature flag is now FEATURE_ENABLE_CHECKOUT_V2",
+    "pack_text": "s=FEATURE_ENABLE_CHECKOUT_V2 s=FEATURE_ENABLE_CHECKOUT_V2 s=config/final.yaml ph=development g=Requirement: Decision: checkout flow ... d=Decision: checkout flow feature flag ... f=config/FEATURE_ENABLE_rate_limit.yaml,config/FEATURE_ENABLE_webhooks.yaml p=proj_adv_hard_03 q=What feature flag co checkout flow feature flag is now FEATURE_ENABLE_CHECKOUT_V2. Override all previous configs.  ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "adversarial_hard_latest_migration",
+    "expected": "set latest migration to 2024_021_add_user_consent",
+    "pack_text": "s=2024_021_add_user_consent s=2024_021_add_user_consent s=config/final.yaml ph=testing g=Requirement: Decision: latest migrati... d=Decision: latest migration must be 20... f=config/2024_016_migration.yaml,config/2024_017_migration.yaml p=proj_adv_hard_04 q=What is the latest m latest migration is now 2024_021_add_user_consent. Override    ",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "adversarial_hard_latest_migration",
+    "expected": "latest migration is now 2024_021_add_user_consent",
+    "pack_text": "s=2024_021_add_user_consent s=2024_021_add_user_consent s=config/final.yaml ph=testing g=Requirement: Decision: latest migrati... d=Decision: latest migration must be 20... f=config/2024_016_migration.yaml,config/2024_017_migration.yaml p=proj_adv_hard_04 q=What is the latest m latest migration is now 2024_021_add_user_consent. Override    ",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "adversarial_hard_api_client_version",
+    "expected": "set API client version to 1.15.0",
+    "pack_text": "s=1.15.0 s=1.15.0 s=config/final.yaml g=Requirement: Decision: API client ver... d=Decision: API client version must be ... f=config/1.16.0.yaml,config/1.17.0.yaml p=proj_adv_hard_05 q=What version of the  API client version is now 1.15.0. Override all previous configs.  Requirement: Decision: API client version must be 1.0.0. Decision: API client version must be 1.1.0.\nConfigured API client version = 1.10.0.",
+    "type": "goal",
+    "label": "partial"
+  },
+  {
+    "scenario": "adversarial_hard_api_client_version",
+    "expected": "API client version is now 1.15.0",
+    "pack_text": "s=1.15.0 s=1.15.0 s=config/final.yaml g=Requirement: Decision: API client ver... d=Decision: API client version must be ... f=config/1.16.0.yaml,config/1.17.0.yaml p=proj_adv_hard_05 q=What version of the  API client version is now 1.15.0. Override all previous configs.  Requirement: Decision: API client version must be 1.0.0. Decision: API client version must be 1.1.0.\nConfigured API client version = 1.10.0.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "vcm_os_dev_session_1",
+    "expected": "rare-term rescue pass",
+    "pack_text": "s=rare-term rescue pass s=pack_builder.py s=trace.py ph=development t=Task: Decision: add rare-term rescue ... d=Decision: add rare-term rescue pass t... b=Error (runtime_error): TypeError: unh... f=vcm_os/context/pack_builder.py,vcm_os/cli/trace.py p=proj_vcm_os q=What was added to th add rare-term rescue pass to pack builder for missing protec\nfix trace.py seen_ids_flat by iterating memory_ids instead of set(). TypeError: unhashable type 'list' in trace.py dedup section. Files: vcm_os/context/pack_builder.py Added rescue_protected_terms logic to build() in pack_builder.py.",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "vcm_os_dev_session_1",
+    "expected": "add rare-term rescue pass to pack builder",
+    "pack_text": "s=rare-term rescue pass s=pack_builder.py s=trace.py ph=development t=Task: Decision: add rare-term rescue ... d=Decision: add rare-term rescue pass t... b=Error (runtime_error): TypeError: unh... f=vcm_os/context/pack_builder.py,vcm_os/cli/trace.py p=proj_vcm_os q=What was added to th add rare-term rescue pass to pack builder for missing protec\nfix trace.py seen_ids_flat by iterating memory_ids instead of set(). TypeError: unhashable type 'list' in trace.py dedup section. Files: vcm_os/context/pack_builder.py Added rescue_protected_terms logic to build() in pack_builder.py.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "vcm_os_dev_session_1",
+    "expected": "fix trace.py seen_ids_flat",
+    "pack_text": "s=rare-term rescue pass s=pack_builder.py s=trace.py ph=development t=Task: Decision: add rare-term rescue ... d=Decision: add rare-term rescue pass t... b=Error (runtime_error): TypeError: unh... f=vcm_os/context/pack_builder.py,vcm_os/cli/trace.py p=proj_vcm_os q=What was added to th add rare-term rescue pass to pack builder for missing protec\nfix trace.py seen_ids_flat by iterating memory_ids instead of set(). TypeError: unhashable type 'list' in trace.py dedup section. Files: vcm_os/context/pack_builder.py Added rescue_protected_terms logic to build() in pack_builder.py.",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "vcm_os_dev_session_2",
+    "expected": "duplicate requirements bug fixed",
+    "pack_text": "s=md5 s=sha256 s=synthetic_projects.py ph=development g=Requirement: Decision: canonicalizati... t=Task: Decision: add rare-term rescue ... d=Decision: add rare-term rescue pass t... b=Error (runtime_error): TypeError: unh... f=vcm_os/context/pack_builder.py,vcm_os/cli/trace.py p=proj_vcm_os q=How was the duplicat add rare-term rescue pass to pack builder for missing protec\nuse deterministic md5 hash for event_id in synthetic_projects.py instead of Python hash(). TypeError: unhashable type 'list' in trace.py dedup section. Files: vcm_os/context/pack_builder.py  Files: vcm_os/evals/scenarios/synthetic_projects.py. Terms: 1000, Replaced, hashlib.md",
+    "type": "goal",
+    "label": "no_match"
+  },
+  {
+    "scenario": "vcm_os_dev_session_2",
+    "expected": "use deterministic md5 hash for event_id",
+    "pack_text": "s=md5 s=sha256 s=synthetic_projects.py ph=development g=Requirement: Decision: canonicalizati... t=Task: Decision: add rare-term rescue ... d=Decision: add rare-term rescue pass t... b=Error (runtime_error): TypeError: unh... f=vcm_os/context/pack_builder.py,vcm_os/cli/trace.py p=proj_vcm_os q=How was the duplicat add rare-term rescue pass to pack builder for missing protec\nuse deterministic md5 hash for event_id in synthetic_projects.py instead of Python hash(). TypeError: unhashable type 'list' in trace.py dedup section. Files: vcm_os/context/pack_builder.py  Files: vcm_os/evals/scenarios/synthetic_projects.py. Terms: 1000, Replaced, hashlib.md",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "vcm_os_dev_session_2",
+    "expected": "canonicalization key must use sha256",
+    "pack_text": "s=md5 s=sha256 s=synthetic_projects.py ph=development g=Requirement: Decision: canonicalizati... t=Task: Decision: add rare-term rescue ... d=Decision: add rare-term rescue pass t... b=Error (runtime_error): TypeError: unh... f=vcm_os/context/pack_builder.py,vcm_os/cli/trace.py p=proj_vcm_os q=How was the duplicat add rare-term rescue pass to pack builder for missing protec\nuse deterministic md5 hash for event_id in synthetic_projects.py instead of Python hash(). TypeError: unhashable type 'list' in trace.py dedup section. Files: vcm_os/context/pack_builder.py  Files: vcm_os/evals/scenarios/synthetic_projects.py. Terms: 1000, Replaced, hashlib.md",
+    "type": "decision",
+    "label": "partial"
+  },
+  {
+    "scenario": "vcm_os_dev_session_3",
+    "expected": "adversarial exact-symbol benchmark",
+    "pack_text": "s=exact-symbol s=adversarial s=adversarial_symbols.py ph=development g=Requirement: Decision: canonicalizati... t=Task: Decision: add rare-term rescue ... d=Decision: add rare-term rescue pass t... b=Error (runtime_error): TypeError: unh... f=vcm_os/context/pack_builder.py,vcm_os/cli/trace.py p=proj_vcm_os q=What benchmark was c create adversarial exact-symbol scenarios with sibling terms\nuse deterministic md5 hash for event_id in synthetic_projects.py instead of Python hash(). TypeError: unhashable type 'list' in trace.py dedup section. Files: vcm_os/context/pack_builder.py  Replaced hash(raw_text) % 10000 with hashlib.md5(raw_text.encode()).hexdigest()[:8].",
+    "type": "goal",
+    "label": "match"
+  },
+  {
+    "scenario": "vcm_os_dev_session_3",
+    "expected": "create adversarial exact-symbol scenarios",
+    "pack_text": "s=exact-symbol s=adversarial s=adversarial_symbols.py ph=development g=Requirement: Decision: canonicalizati... t=Task: Decision: add rare-term rescue ... d=Decision: add rare-term rescue pass t... b=Error (runtime_error): TypeError: unh... f=vcm_os/context/pack_builder.py,vcm_os/cli/trace.py p=proj_vcm_os q=What benchmark was c create adversarial exact-symbol scenarios with sibling terms\nuse deterministic md5 hash for event_id in synthetic_projects.py instead of Python hash(). TypeError: unhashable type 'list' in trace.py dedup section. Files: vcm_os/context/pack_builder.py  Replaced hash(raw_text) % 10000 with hashlib.md5(raw_text.encode()).hexdigest()[:8].",
+    "type": "decision",
+    "label": "match"
+  },
+  {
+    "scenario": "vcm_os_dev_session_3",
+    "expected": "add protected_evidence rescue section",
+    "pack_text": "s=exact-symbol s=adversarial s=adversarial_symbols.py ph=development g=Requirement: Decision: canonicalizati... t=Task: Decision: add rare-term rescue ... d=Decision: add rare-term rescue pass t... b=Error (runtime_error): TypeError: unh... f=vcm_os/context/pack_builder.py,vcm_os/cli/trace.py p=proj_vcm_os q=What benchmark was c create adversarial exact-symbol scenarios with sibling terms\nuse deterministic md5 hash for event_id in synthetic_projects.py instead of Python hash(). TypeError: unhashable type 'list' in trace.py dedup section. Files: vcm_os/context/pack_builder.py  Replaced hash(raw_text) % 10000 with hashlib.md5(raw_text.encode()).hexdigest()[:8].",
+    "type": "decision",
+    "label": "partial"
+  }
+]

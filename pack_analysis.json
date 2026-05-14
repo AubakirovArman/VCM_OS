@@ -1,0 +1,858 @@
+{
+  "task_success_rates": {
+    "TaskType.GENERAL": {
+      "success_rate": 0.44,
+      "total_scenarios": 25
+    },
+    "TaskType.FEATURE": {
+      "success_rate": 0.5,
+      "total_scenarios": 2
+    },
+    "TaskType.DEBUGGING": {
+      "success_rate": 0.5,
+      "total_scenarios": 2
+    }
+  },
+  "memory_type_success_rates": {
+    "decision": {
+      "success_rate": 0.46875,
+      "total_inclusions": 32
+    },
+    "error": {
+      "success_rate": 0.43478260869565216,
+      "total_inclusions": 23
+    },
+    "code_change": {
+      "success_rate": 0.4642857142857143,
+      "total_inclusions": 28
+    },
+    "intent": {
+      "success_rate": 0.6666666666666666,
+      "total_inclusions": 3
+    }
+  },
+  "section_success_rates": {
+    "project_state": {
+      "success_rate": 0.4482758620689655,
+      "total_occurrences": 29
+    },
+    "system_task": {
+      "success_rate": 0.4482758620689655,
+      "total_occurrences": 29
+    },
+    "decisions": {
+      "success_rate": 0.4482758620689655,
+      "total_occurrences": 29
+    },
+    "errors": {
+      "success_rate": 0.4482758620689655,
+      "total_occurrences": 29
+    },
+    "code_context": {
+      "success_rate": 0.4642857142857143,
+      "total_occurrences": 28
+    },
+    "requirements": {
+      "success_rate": 0.4,
+      "total_occurrences": 15
+    },
+    "exact_symbols": {
+      "success_rate": 0.5714285714285714,
+      "total_occurrences": 7
+    },
+    "intents": {
+      "success_rate": 0.4444444444444444,
+      "total_occurrences": 9
+    },
+    "protected_evidence": {
+      "success_rate": 1.0,
+      "total_occurrences": 2
+    }
+  },
+  "per_scenario": [
+    {
+      "name": "auth_refresh_loop",
+      "task": "TaskType.GENERAL",
+      "query": "middleware must not refresh",
+      "restore": 0.6666666666666666,
+      "tokens": 90,
+      "success": false,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "error": 2,
+        "intent": 3,
+        "requirement": 3,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "payment_rewrite",
+      "task": "TaskType.GENERAL",
+      "query": "What are the refund rules?",
+      "restore": 0.6666666666666666,
+      "tokens": 68,
+      "success": false,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context"
+      ]
+    },
+    {
+      "name": "db_migration",
+      "task": "TaskType.GENERAL",
+      "query": "How do we handle ObjectId during migration?",
+      "restore": 0.6666666666666666,
+      "tokens": 82,
+      "success": false,
+      "included_types": {
+        "decision": 2,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 2,
+        "intent": 3,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "api_versioning",
+      "task": "TaskType.GENERAL",
+      "query": "sunset v1",
+      "restore": 1.0,
+      "tokens": 91,
+      "success": true,
+      "included_types": {
+        "decision": 2,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 2,
+        "intent": 3,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "exact_symbols",
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "microservices_decomposition",
+      "task": "TaskType.GENERAL",
+      "query": "common-lib",
+      "restore": 0.6666666666666666,
+      "tokens": 85,
+      "success": false,
+      "included_types": {
+        "decision": 2,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 2,
+        "intent": 3,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context"
+      ]
+    },
+    {
+      "name": "cache_invalidation",
+      "task": "TaskType.GENERAL",
+      "query": "How do we prevent cache stampedes?",
+      "restore": 0.6666666666666666,
+      "tokens": 65,
+      "success": false,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "intents"
+      ]
+    },
+    {
+      "name": "race_condition",
+      "task": "TaskType.GENERAL",
+      "query": "version column",
+      "restore": 0.6666666666666666,
+      "tokens": 61,
+      "success": false,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "intents"
+      ]
+    },
+    {
+      "name": "security_patch",
+      "task": "TaskType.GENERAL",
+      "query": "LIKE",
+      "restore": 1.0,
+      "tokens": 94,
+      "success": true,
+      "included_types": {
+        "decision": 2,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 2,
+        "error": 2,
+        "intent": 3,
+        "requirement": 2,
+        "code_change": 2
+      },
+      "sections_present": [
+        "exact_symbols",
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "feature_flags",
+      "task": "TaskType.GENERAL",
+      "query": "100ms SLA",
+      "restore": 1.0,
+      "tokens": 74,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "cicd_migration",
+      "task": "TaskType.FEATURE",
+      "query": "What is the CI build time target?",
+      "restore": 1.0,
+      "tokens": 87,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "frontend_migration",
+      "task": "TaskType.GENERAL",
+      "query": "React Router loaders",
+      "restore": 1.0,
+      "tokens": 78,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "logging_overhaul",
+      "task": "TaskType.GENERAL",
+      "query": "redact",
+      "restore": 1.0,
+      "tokens": 85,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1,
+        "intent": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "protected_evidence"
+      ]
+    },
+    {
+      "name": "config_management",
+      "task": "TaskType.GENERAL",
+      "query": "30s",
+      "restore": 0.6666666666666666,
+      "tokens": 75,
+      "success": false,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "oauth_to_saml",
+      "task": "TaskType.GENERAL",
+      "query": "What auth methods do we support?",
+      "restore": 0.6666666666666666,
+      "tokens": 82,
+      "success": false,
+      "included_types": {
+        "decision": 2,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 2,
+        "intent": 3,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context"
+      ]
+    },
+    {
+      "name": "rate_limiting",
+      "task": "TaskType.DEBUGGING",
+      "query": "not fixed window",
+      "restore": 1.0,
+      "tokens": 78,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1,
+        "intent": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "protected_evidence"
+      ]
+    },
+    {
+      "name": "data_export",
+      "task": "TaskType.GENERAL",
+      "query": "background job",
+      "restore": 0.6666666666666666,
+      "tokens": 78,
+      "success": false,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "search_optimization",
+      "task": "TaskType.GENERAL",
+      "query": "Debezium",
+      "restore": 0.6666666666666666,
+      "tokens": 81,
+      "success": false,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "search_optimization_regression",
+      "task": "TaskType.GENERAL",
+      "query": "Debezium",
+      "restore": 1.0,
+      "tokens": 78,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "exact_symbols",
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "job_queue_migration",
+      "task": "TaskType.GENERAL",
+      "query": "idempotency keys",
+      "restore": 0.6666666666666666,
+      "tokens": 78,
+      "success": false,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "requirement": 1,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "multi_tenancy",
+      "task": "TaskType.GENERAL",
+      "query": "query builder",
+      "restore": 0.6666666666666666,
+      "tokens": 96,
+      "success": false,
+      "included_types": {
+        "decision": 2,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 2,
+        "intent": 3,
+        "requirement": 2,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements"
+      ]
+    },
+    {
+      "name": "false_memory_s05",
+      "task": "TaskType.GENERAL",
+      "query": "SQLite",
+      "restore": 0.6666666666666666,
+      "tokens": 39,
+      "success": false,
+      "included_types": {
+        "decision": 1,
+        "intent": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 3
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "intents"
+      ]
+    },
+    {
+      "name": "superseded_decision",
+      "task": "TaskType.GENERAL",
+      "query": "What is the current session store decision?",
+      "restore": 0.8333333333333334,
+      "tokens": 62,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "error": 1,
+        "code_change": 2
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "intents"
+      ]
+    },
+    {
+      "name": "exact_config_key",
+      "task": "TaskType.FEATURE",
+      "query": "Why is FEATURE_AUTH_REFRESH_V2 disabled?",
+      "restore": 0.6666666666666666,
+      "tokens": 48,
+      "success": false,
+      "included_types": {
+        "code_change": 1
+      },
+      "total_types": {
+        "intent": 1,
+        "requirement": 1,
+        "code_change": 1
+      },
+      "sections_present": [
+        "exact_symbols",
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements",
+        "intents"
+      ]
+    },
+    {
+      "name": "exact_api_endpoint",
+      "task": "TaskType.GENERAL",
+      "query": "What decision affects /api/v2/export/bulk?",
+      "restore": 1.0,
+      "tokens": 72,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 2,
+        "error": 1,
+        "code_change": 1
+      },
+      "sections_present": [
+        "exact_symbols",
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context"
+      ]
+    },
+    {
+      "name": "exact_cicd_job",
+      "task": "TaskType.DEBUGGING",
+      "query": "Why did deploy-preview-h200 fail after migration?",
+      "restore": 0.3333333333333333,
+      "tokens": 72,
+      "success": false,
+      "included_types": {
+        "error": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "error": 1,
+        "intent": 1,
+        "code_change": 1
+      },
+      "sections_present": [
+        "exact_symbols",
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context"
+      ]
+    },
+    {
+      "name": "exact_cve",
+      "task": "TaskType.GENERAL",
+      "query": "What patch decision was made for CVE-2026-1234?",
+      "restore": 0.6666666666666666,
+      "tokens": 49,
+      "success": false,
+      "included_types": {
+        "code_change": 1
+      },
+      "total_types": {
+        "intent": 1,
+        "requirement": 1,
+        "code_change": 1
+      },
+      "sections_present": [
+        "exact_symbols",
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "requirements",
+        "intents"
+      ]
+    },
+    {
+      "name": "h03_project_A",
+      "task": "TaskType.GENERAL",
+      "query": "What database does Project A use?",
+      "restore": 1.0,
+      "tokens": 41,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 1,
+        "code_change": 1
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "intents"
+      ]
+    },
+    {
+      "name": "h03_project_B",
+      "task": "TaskType.GENERAL",
+      "query": "What database does Project B use?",
+      "restore": 1.0,
+      "tokens": 31,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 1,
+        "code_change": 1
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "intents"
+      ]
+    },
+    {
+      "name": "h03_project_C",
+      "task": "TaskType.GENERAL",
+      "query": "What database does Project C use?",
+      "restore": 1.0,
+      "tokens": 35,
+      "success": true,
+      "included_types": {
+        "decision": 1,
+        "code_change": 1
+      },
+      "total_types": {
+        "decision": 1,
+        "intent": 1,
+        "code_change": 1
+      },
+      "sections_present": [
+        "project_state",
+        "system_task",
+        "decisions",
+        "errors",
+        "code_context",
+        "intents"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,974 @@
+{
+  "vcm": [
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 61,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 61,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 56,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 64,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 61,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 45,
+      "quality": 2.0
+    },
+    {
+      "restore": 0.6667,
+      "verbatim": 0.6667,
+      "exact": 0.6667,
+      "semantic": 1.0,
+      "tokens": 58,
+      "quality": 1.3333
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 79,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 96,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 59,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 48,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 56,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 64,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 49,
+      "quality": 2.0
+    },
+    {
+      "restore": 0.8333,
+      "verbatim": 0.5,
+      "exact": 0.8333,
+      "semantic": 1.0,
+      "tokens": 107,
+      "quality": 1.8333
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 70,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 69,
+      "quality": 2.0
+    },
+    {
+      "restore": 0.6667,
+      "verbatim": 0.3333,
+      "exact": 0.6667,
+      "semantic": 1.0,
+      "tokens": 48,
+      "quality": 1.1667
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 104,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 62,
+      "quality": 2.0
+    }
+  ],
+  "full": [
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 212,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 219,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 222,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 223,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 201,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 120,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 140,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 195,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 500,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 217,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 162,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 223,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 239,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 154,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 287,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 345,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 150,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 165,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 296,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 235,
+      "quality": 1.0
+    }
+  ],
+  "rag": [
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 53,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 50,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 56,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 52,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 44,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 33,
+      "quality": 1.5
+    },
+    {
+      "restore": 0.6667,
+      "verbatim": 0.6667,
+      "exact": 0.6667,
+      "semantic": 1.0,
+      "tokens": 47,
+      "quality": 1.3333
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 54,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 38,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 49,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 37,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 57,
+      "quality": 2.0
+    },
+    {
+      "restore": 0.6667,
+      "verbatim": 0.3333,
+      "exact": 0.6667,
+      "semantic": 1.0,
+      "tokens": 49,
+      "quality": 1.6667
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 40,
+      "quality": 2.0
+    },
+    {
+      "restore": 0.8333,
+      "verbatim": 0.5,
+      "exact": 0.8333,
+      "semantic": 1.0,
+      "tokens": 82,
+      "quality": 1.8333
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 58,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 47,
+      "quality": 2.0
+    },
+    {
+      "restore": 0.6667,
+      "verbatim": 0.3333,
+      "exact": 0.6667,
+      "semantic": 0.0,
+      "tokens": 35,
+      "quality": 1.6667
+    },
+    {
+      "restore": 0.6667,
+      "verbatim": 0.3333,
+      "exact": 0.6667,
+      "semantic": 1.0,
+      "tokens": 52,
+      "quality": 0.6667
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 50,
+      "quality": 2.0
+    }
+  ],
+  "summary": [
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 46,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 38,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 40,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 33,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 34,
+      "quality": 2.0
+    },
+    {
+      "restore": 0.3333,
+      "verbatim": 0.3333,
+      "exact": 0.3333,
+      "semantic": 0.0,
+      "tokens": 0,
+      "quality": 0.3333
+    },
+    {
+      "restore": 0.3333,
+      "verbatim": 0.3333,
+      "exact": 0.3333,
+      "semantic": 0.0,
+      "tokens": 0,
+      "quality": 0.3333
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 54,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 52,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 42,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 23,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 42,
+      "quality": 1.5
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 46,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 28,
+      "quality": 2.0
+    },
+    {
+      "restore": 0.8333,
+      "verbatim": 0.5,
+      "exact": 0.8333,
+      "semantic": 1.0,
+      "tokens": 61,
+      "quality": 1.8333
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 59,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 36,
+      "quality": 2.0
+    },
+    {
+      "restore": 0.6667,
+      "verbatim": 0.3333,
+      "exact": 0.6667,
+      "semantic": 0.0,
+      "tokens": 17,
+      "quality": 1.1667
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 45,
+      "quality": 1.5
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 45,
+      "quality": 2.0
+    }
+  ],
+  "raw_verbatim": [
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 48,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 43,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 55,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 50,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 42,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 43,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 38,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 54,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 93,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 53,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 38,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 57,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 57,
+      "quality": 1.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 34,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 74,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 62,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 37,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 56,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 70,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 55,
+      "quality": 1.0
+    }
+  ],
+  "strong_rag": [
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 105,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 148,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 113,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 147,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 124,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 73,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 1.0,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 91,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 143,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 405,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 103,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 89,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 110,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 128,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 106,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 213,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 139,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 97,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 118,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 1.0,
+      "tokens": 204,
+      "quality": 2.0
+    },
+    {
+      "restore": 1.0,
+      "verbatim": 0.6667,
+      "exact": 1.0,
+      "semantic": 0.0,
+      "tokens": 98,
+      "quality": 2.0
+    }
+  ]
+}

@@ -1,0 +1,520 @@
+{
+  "budgets": [
+    70,
+    150,
+    300,
+    500,
+    1000,
+    1500,
+    3000
+  ],
+  "tasks": [
+    "simple_state",
+    "auth_middleware",
+    "cache_migration",
+    "error_handling",
+    "multi_file_refactor",
+    "debug_timeline"
+  ],
+  "results": [
+    {
+      "task": "simple_state",
+      "budget": 70,
+      "latency_ms": 34.7,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 1.0,
+      "final_score": 1.0,
+      "tokens": 31,
+      "sections": 5
+    },
+    {
+      "task": "simple_state",
+      "budget": 150,
+      "latency_ms": 26.8,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 1.0,
+      "final_score": 1.0,
+      "tokens": 31,
+      "sections": 5
+    },
+    {
+      "task": "simple_state",
+      "budget": 300,
+      "latency_ms": 27.0,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 1.0,
+      "final_score": 1.0,
+      "tokens": 31,
+      "sections": 5
+    },
+    {
+      "task": "simple_state",
+      "budget": 500,
+      "latency_ms": 27.6,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 1.0,
+      "final_score": 1.0,
+      "tokens": 31,
+      "sections": 5
+    },
+    {
+      "task": "simple_state",
+      "budget": 1000,
+      "latency_ms": 28.7,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 1.0,
+      "final_score": 1.0,
+      "tokens": 31,
+      "sections": 5
+    },
+    {
+      "task": "simple_state",
+      "budget": 1500,
+      "latency_ms": 29.4,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 1.0,
+      "final_score": 1.0,
+      "tokens": 31,
+      "sections": 5
+    },
+    {
+      "task": "simple_state",
+      "budget": 3000,
+      "latency_ms": 27.0,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 1.0,
+      "final_score": 1.0,
+      "tokens": 31,
+      "sections": 5
+    },
+    {
+      "task": "auth_middleware",
+      "budget": 70,
+      "latency_ms": 40.0,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 67,
+      "sections": 8
+    },
+    {
+      "task": "auth_middleware",
+      "budget": 150,
+      "latency_ms": 40.0,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 71,
+      "sections": 8
+    },
+    {
+      "task": "auth_middleware",
+      "budget": 300,
+      "latency_ms": 41.2,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 71,
+      "sections": 8
+    },
+    {
+      "task": "auth_middleware",
+      "budget": 500,
+      "latency_ms": 41.2,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 71,
+      "sections": 8
+    },
+    {
+      "task": "auth_middleware",
+      "budget": 1000,
+      "latency_ms": 41.5,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 71,
+      "sections": 8
+    },
+    {
+      "task": "auth_middleware",
+      "budget": 1500,
+      "latency_ms": 40.3,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 71,
+      "sections": 8
+    },
+    {
+      "task": "auth_middleware",
+      "budget": 3000,
+      "latency_ms": 37.8,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 71,
+      "sections": 8
+    },
+    {
+      "task": "cache_migration",
+      "budget": 70,
+      "latency_ms": 49.5,
+      "expected_recall": 0.67,
+      "verifier_passed": false,
+      "verifier_score": 0.35,
+      "final_score": 0.57,
+      "tokens": 62,
+      "sections": 8
+    },
+    {
+      "task": "cache_migration",
+      "budget": 150,
+      "latency_ms": 45.5,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 67,
+      "sections": 8
+    },
+    {
+      "task": "cache_migration",
+      "budget": 300,
+      "latency_ms": 45.9,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 67,
+      "sections": 8
+    },
+    {
+      "task": "cache_migration",
+      "budget": 500,
+      "latency_ms": 48.0,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 67,
+      "sections": 8
+    },
+    {
+      "task": "cache_migration",
+      "budget": 1000,
+      "latency_ms": 44.9,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 67,
+      "sections": 8
+    },
+    {
+      "task": "cache_migration",
+      "budget": 1500,
+      "latency_ms": 45.7,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 67,
+      "sections": 8
+    },
+    {
+      "task": "cache_migration",
+      "budget": 3000,
+      "latency_ms": 46.6,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 67,
+      "sections": 8
+    },
+    {
+      "task": "error_handling",
+      "budget": 70,
+      "latency_ms": 49.8,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 46,
+      "sections": 6
+    },
+    {
+      "task": "error_handling",
+      "budget": 150,
+      "latency_ms": 49.2,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 46,
+      "sections": 6
+    },
+    {
+      "task": "error_handling",
+      "budget": 300,
+      "latency_ms": 50.5,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 64,
+      "sections": 6
+    },
+    {
+      "task": "error_handling",
+      "budget": 500,
+      "latency_ms": 49.1,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 64,
+      "sections": 6
+    },
+    {
+      "task": "error_handling",
+      "budget": 1000,
+      "latency_ms": 49.1,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 64,
+      "sections": 6
+    },
+    {
+      "task": "error_handling",
+      "budget": 1500,
+      "latency_ms": 49.0,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 64,
+      "sections": 6
+    },
+    {
+      "task": "error_handling",
+      "budget": 3000,
+      "latency_ms": 48.9,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 64,
+      "sections": 6
+    },
+    {
+      "task": "multi_file_refactor",
+      "budget": 70,
+      "latency_ms": 55.6,
+      "expected_recall": 0.4,
+      "verifier_passed": false,
+      "verifier_score": 0.0,
+      "final_score": 0.3,
+      "tokens": 78,
+      "sections": 6
+    },
+    {
+      "task": "multi_file_refactor",
+      "budget": 150,
+      "latency_ms": 56.9,
+      "expected_recall": 0.4,
+      "verifier_passed": false,
+      "verifier_score": 0.0,
+      "final_score": 0.3,
+      "tokens": 86,
+      "sections": 8
+    },
+    {
+      "task": "multi_file_refactor",
+      "budget": 300,
+      "latency_ms": 56.0,
+      "expected_recall": 0.6,
+      "verifier_passed": false,
+      "verifier_score": 0.0,
+      "final_score": 0.5,
+      "tokens": 102,
+      "sections": 8
+    },
+    {
+      "task": "multi_file_refactor",
+      "budget": 500,
+      "latency_ms": 56.4,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.0,
+      "final_score": 0.9,
+      "tokens": 134,
+      "sections": 8
+    },
+    {
+      "task": "multi_file_refactor",
+      "budget": 1000,
+      "latency_ms": 61.3,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.0,
+      "final_score": 0.9,
+      "tokens": 134,
+      "sections": 8
+    },
+    {
+      "task": "multi_file_refactor",
+      "budget": 1500,
+      "latency_ms": 57.9,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.0,
+      "final_score": 0.9,
+      "tokens": 134,
+      "sections": 8
+    },
+    {
+      "task": "multi_file_refactor",
+      "budget": 3000,
+      "latency_ms": 62.0,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.0,
+      "final_score": 0.9,
+      "tokens": 134,
+      "sections": 8
+    },
+    {
+      "task": "debug_timeline",
+      "budget": 70,
+      "latency_ms": 55.1,
+      "expected_recall": 0.75,
+      "verifier_passed": false,
+      "verifier_score": 0.35,
+      "final_score": 0.65,
+      "tokens": 78,
+      "sections": 5
+    },
+    {
+      "task": "debug_timeline",
+      "budget": 150,
+      "latency_ms": 59.5,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 82,
+      "sections": 7
+    },
+    {
+      "task": "debug_timeline",
+      "budget": 300,
+      "latency_ms": 95.9,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 82,
+      "sections": 7
+    },
+    {
+      "task": "debug_timeline",
+      "budget": 500,
+      "latency_ms": 54.9,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 82,
+      "sections": 7
+    },
+    {
+      "task": "debug_timeline",
+      "budget": 1000,
+      "latency_ms": 54.2,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 82,
+      "sections": 7
+    },
+    {
+      "task": "debug_timeline",
+      "budget": 1500,
+      "latency_ms": 53.9,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 82,
+      "sections": 7
+    },
+    {
+      "task": "debug_timeline",
+      "budget": 3000,
+      "latency_ms": 55.3,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 82,
+      "sections": 7
+    }
+  ],
+  "summary": {
+    "70": {
+      "avg_score": 0.72,
+      "avg_recall": 0.803,
+      "avg_tokens": 60.3
+    },
+    "150": {
+      "avg_score": 0.817,
+      "avg_recall": 0.9,
+      "avg_tokens": 63.8
+    },
+    "300": {
+      "avg_score": 0.85,
+      "avg_recall": 0.933,
+      "avg_tokens": 69.5
+    },
+    "500": {
+      "avg_score": 0.917,
+      "avg_recall": 1.0,
+      "avg_tokens": 74.8
+    },
+    "1000": {
+      "avg_score": 0.917,
+      "avg_recall": 1.0,
+      "avg_tokens": 74.8
+    },
+    "1500": {
+      "avg_score": 0.917,
+      "avg_recall": 1.0,
+      "avg_tokens": 74.8
+    },
+    "3000": {
+      "avg_score": 0.917,
+      "avg_recall": 1.0,
+      "avg_tokens": 74.8
+    }
+  }
+}

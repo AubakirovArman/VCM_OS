@@ -1,0 +1,353 @@
+{
+  "tasks": [
+    {
+      "task": "auth_jwt",
+      "category": "auth",
+      "latency_ms": 23.7,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 62
+    },
+    {
+      "task": "auth_oauth2",
+      "category": "auth",
+      "latency_ms": 28.9,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.25,
+      "final_score": 0.9,
+      "tokens": 79
+    },
+    {
+      "task": "auth_rbac",
+      "category": "auth",
+      "latency_ms": 26.6,
+      "expected_recall": 0.6,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.5,
+      "tokens": 49
+    },
+    {
+      "task": "cache_redis",
+      "category": "cache",
+      "latency_ms": 26.3,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 58
+    },
+    {
+      "task": "cache_migration_memcached",
+      "category": "cache",
+      "latency_ms": 26.4,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 61
+    },
+    {
+      "task": "cache_cdn",
+      "category": "cache",
+      "latency_ms": 26.3,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 1.0,
+      "tokens": 54
+    },
+    {
+      "task": "db_postgres",
+      "category": "database",
+      "latency_ms": 26.4,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.6,
+      "final_score": 0.9,
+      "tokens": 62
+    },
+    {
+      "task": "db_migration",
+      "category": "database",
+      "latency_ms": 50.1,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 1.0,
+      "tokens": 55
+    },
+    {
+      "task": "db_indexing",
+      "category": "database",
+      "latency_ms": 49.7,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 1.0,
+      "tokens": 68
+    },
+    {
+      "task": "api_rest",
+      "category": "api",
+      "latency_ms": 50.0,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 63
+    },
+    {
+      "task": "api_graphql",
+      "category": "api",
+      "latency_ms": 49.9,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 65
+    },
+    {
+      "task": "api_versioning",
+      "category": "api",
+      "latency_ms": 48.8,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 1.0,
+      "tokens": 63
+    },
+    {
+      "task": "test_unit",
+      "category": "testing",
+      "latency_ms": 48.6,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.6,
+      "final_score": 0.9,
+      "tokens": 55
+    },
+    {
+      "task": "test_integration",
+      "category": "testing",
+      "latency_ms": 51.1,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 68
+    },
+    {
+      "task": "test_e2e",
+      "category": "testing",
+      "latency_ms": 50.3,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.6,
+      "final_score": 0.9,
+      "tokens": 60
+    },
+    {
+      "task": "deploy_docker",
+      "category": "deployment",
+      "latency_ms": 49.5,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 1.0,
+      "tokens": 47
+    },
+    {
+      "task": "deploy_k8s",
+      "category": "deployment",
+      "latency_ms": 48.6,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.95,
+      "final_score": 1.0,
+      "tokens": 35
+    },
+    {
+      "task": "deploy_ci",
+      "category": "deployment",
+      "latency_ms": 51.5,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.95,
+      "final_score": 1.0,
+      "tokens": 30
+    },
+    {
+      "task": "error_exceptions",
+      "category": "error_handling",
+      "latency_ms": 50.3,
+      "expected_recall": 1.0,
+      "verifier_passed": false,
+      "verifier_score": 0.3,
+      "final_score": 0.9,
+      "tokens": 63
+    },
+    {
+      "task": "error_logging",
+      "category": "error_handling",
+      "latency_ms": 48.6,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 1.0,
+      "tokens": 55
+    },
+    {
+      "task": "error_retries",
+      "category": "error_handling",
+      "latency_ms": 49.2,
+      "expected_recall": 0.5,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 0.5,
+      "tokens": 46
+    },
+    {
+      "task": "refactor_cleanup",
+      "category": "refactoring",
+      "latency_ms": 49.4,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.95,
+      "final_score": 1.0,
+      "tokens": 53
+    },
+    {
+      "task": "refactor_performance",
+      "category": "refactoring",
+      "latency_ms": 50.9,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 1.0,
+      "tokens": 55
+    },
+    {
+      "task": "refactor_dedup",
+      "category": "refactoring",
+      "latency_ms": 50.3,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.85,
+      "final_score": 1.0,
+      "tokens": 53
+    },
+    {
+      "task": "arch_microservices",
+      "category": "architecture",
+      "latency_ms": 50.9,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.95,
+      "final_score": 1.0,
+      "tokens": 52
+    },
+    {
+      "task": "arch_event_driven",
+      "category": "architecture",
+      "latency_ms": 50.1,
+      "expected_recall": 0.75,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 0.75,
+      "tokens": 61
+    },
+    {
+      "task": "arch_cqrs",
+      "category": "architecture",
+      "latency_ms": 50.1,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 1.0,
+      "tokens": 53
+    },
+    {
+      "task": "debug_memory_leak",
+      "category": "debugging",
+      "latency_ms": 52.5,
+      "expected_recall": 0.75,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 0.75,
+      "tokens": 42
+    },
+    {
+      "task": "debug_race_condition",
+      "category": "debugging",
+      "latency_ms": 51.3,
+      "expected_recall": 0.5,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 0.5,
+      "tokens": 41
+    },
+    {
+      "task": "debug_timeout",
+      "category": "debugging",
+      "latency_ms": 28.4,
+      "expected_recall": 1.0,
+      "verifier_passed": true,
+      "verifier_score": 0.9,
+      "final_score": 1.0,
+      "tokens": 52
+    }
+  ],
+  "category_summary": {
+    "auth": {
+      "avg": 0.767,
+      "count": 3
+    },
+    "cache": {
+      "avg": 0.933,
+      "count": 3
+    },
+    "database": {
+      "avg": 0.967,
+      "count": 3
+    },
+    "api": {
+      "avg": 0.933,
+      "count": 3
+    },
+    "testing": {
+      "avg": 0.9,
+      "count": 3
+    },
+    "deployment": {
+      "avg": 1.0,
+      "count": 3
+    },
+    "error_handling": {
+      "avg": 0.8,
+      "count": 3
+    },
+    "refactoring": {
+      "avg": 1.0,
+      "count": 3
+    },
+    "architecture": {
+      "avg": 0.917,
+      "count": 3
+    },
+    "debugging": {
+      "avg": 0.75,
+      "count": 3
+    }
+  },
+  "overall": {
+    "avg_score": 0.897,
+    "avg_recall": 0.937,
+    "avg_latency_ms": 43.8,
+    "passed": 25,
+    "total": 30
+  }
+}

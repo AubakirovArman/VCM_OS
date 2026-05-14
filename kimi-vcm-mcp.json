@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "vcm": {
+      "command": "python3",
+      "args": [
+        "/mnt/hf_model_weights/arman/3bit/VCM_OS/scripts/vcm-mcp-stdio"
+      ],
+      "env": {}
+    }
+  }
+}

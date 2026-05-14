@@ -1,0 +1,356 @@
+version: v1.0-rc1
+freeze_date: '2026-05-10'
+evaluator_version: v0.10
+runner_version: vcm_os.evals.runner.BenchmarkRunner
+splits:
+  holdout_20:
+    description: 20 frozen scenarios, never tuned on
+    count: 20
+    scenarios:
+    - id: 1
+      name: holdout_stale_migration
+      hash: c39c820ff8b5f716
+      events: 5
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 2
+      name: holdout_exact_env_var
+      hash: 74267bb02ce109fc
+      events: 5
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 3
+      name: holdout_superseded_cache
+      hash: 77fa78ba45ab4b85
+      events: 5
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 4
+      name: holdout_exact_function_name
+      hash: 72013dac55da9e73
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 5
+      name: holdout_multi_session_auth
+      hash: fe29e4a905f82998
+      events: 5
+      expected_goals: 1
+      expected_decisions: 2
+      expected_errors: 1
+    - id: 6
+      name: holdout_exact_cve_patch
+      hash: 6a73d9a037a2efe4
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 7
+      name: holdout_code_change_only
+      hash: 283fe6a40cd4e2dc
+      events: 3
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 8
+      name: holdout_error_only_debugging
+      hash: 699ab9e5e16c854d
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 9
+      name: holdout_long_text_budget_stress
+      hash: d4b6b4ed582fb2c8
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 10
+      name: holdout_contradiction_same_file
+      hash: 96ab7002ad712696
+      events: 5
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 11
+      name: holdout_exact_version
+      hash: b984c219a25a2c68
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 12
+      name: holdout_multi_tenant_config
+      hash: 5d46ccc504004371
+      events: 5
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 13
+      name: holdout_migration_rollback
+      hash: 60194fa5c66953a2
+      events: 5
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 14
+      name: holdout_exact_api_version
+      hash: 17fcfc1a864af3d4
+      events: 3
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 15
+      name: holdout_test_flake
+      hash: 6f2afa6047c0bb24
+      events: 5
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 2
+    - id: 16
+      name: holdout_config_key_stress
+      hash: 21f93e5224f9f6e1
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 17
+      name: holdout_dependency_conflict
+      hash: d766dc9935429549
+      events: 3
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 18
+      name: holdout_security_remediation
+      hash: 728ab7553c8d6d91
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 19
+      name: holdout_schema_evolution
+      hash: c2dcd3723b28ea68
+      events: 5
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 20
+      name: holdout_exact_package_name
+      hash: b15cfb6eab51ef71
+      events: 5
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+  tuning_29:
+    description: 29 tuning scenarios (includes H03 triple, S05, exact-symbol scenarios)
+    count: 29
+    scenarios:
+    - id: 1
+      name: auth_refresh_loop
+      hash: 3b0e0954c6eebded
+      events: 7
+      expected_goals: 1
+      expected_decisions: 2
+      expected_errors: 1
+    - id: 2
+      name: payment_rewrite
+      hash: 4be42bb6c96ba256
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 3
+      name: db_migration
+      hash: 482700f817fd6660
+      events: 8
+      expected_goals: 1
+      expected_decisions: 2
+      expected_errors: 1
+    - id: 4
+      name: api_versioning
+      hash: dfa0f261f9cdd7ea
+      events: 7
+      expected_goals: 1
+      expected_decisions: 2
+      expected_errors: 1
+    - id: 5
+      name: microservices_decomposition
+      hash: 4368befedcfc6631
+      events: 7
+      expected_goals: 1
+      expected_decisions: 2
+      expected_errors: 1
+    - id: 6
+      name: cache_invalidation
+      hash: b5de489d0c7a633d
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 7
+      name: race_condition
+      hash: e86e15165679a63c
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 8
+      name: security_patch
+      hash: 326f2cb22c6bb339
+      events: 7
+      expected_goals: 1
+      expected_decisions: 2
+      expected_errors: 1
+    - id: 9
+      name: feature_flags
+      hash: 001a76df2c4aa62c
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 10
+      name: cicd_migration
+      hash: 6a72ca104023fe76
+      events: 7
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 11
+      name: frontend_migration
+      hash: 625dc26d98bd3c52
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 12
+      name: logging_overhaul
+      hash: 4578758542fe9019
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 13
+      name: config_management
+      hash: 3c6f3cd48c5ae3ea
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 14
+      name: oauth_to_saml
+      hash: 40bd0d5b8e4ba692
+      events: 7
+      expected_goals: 1
+      expected_decisions: 2
+      expected_errors: 1
+    - id: 15
+      name: rate_limiting
+      hash: cf219bf3baaad34e
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 16
+      name: data_export
+      hash: 8195408c15fa8e63
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 17
+      name: search_optimization
+      hash: c7814f27e055f1e5
+      events: 7
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 18
+      name: search_optimization_regression
+      hash: b97dcadee86ead42
+      events: 7
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 19
+      name: job_queue_migration
+      hash: d6df84a44b74c091
+      events: 6
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 20
+      name: multi_tenancy
+      hash: ab7400d41927095f
+      events: 7
+      expected_goals: 1
+      expected_decisions: 2
+      expected_errors: 1
+    - id: 21
+      name: false_memory_s05
+      hash: f1a6a1783403c326
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 22
+      name: superseded_decision
+      hash: 6bc56f1eab7e5109
+      events: 6
+      expected_goals: 1
+      expected_decisions: 2
+      expected_errors: 1
+    - id: 23
+      name: exact_config_key
+      hash: 01692683d7878171
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 24
+      name: exact_api_endpoint
+      hash: 6f84142a2125e014
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 25
+      name: exact_cicd_job
+      hash: cae124de4814780d
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 1
+    - id: 26
+      name: exact_cve
+      hash: 7bd1186cb2d71325
+      events: 4
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 27
+      name: h03_project_A
+      hash: 634eb1f85158c7ce
+      events: 2
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 28
+      name: h03_project_B
+      hash: 67c83a37c9b54b00
+      events: 2
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0
+    - id: 29
+      name: h03_project_C
+      hash: a4627441960719dd
+      events: 2
+      expected_goals: 1
+      expected_decisions: 1
+      expected_errors: 0

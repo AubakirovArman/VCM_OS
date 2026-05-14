@@ -1,0 +1,365 @@
+{
+  "audit": {
+    "audit_passed": true,
+    "inclusion": {
+      "all_frozen_scenarios_ran": true,
+      "errors": [
+        "Extra scenarios not in manifest: ['holdout_code_change_only', 'holdout_config_key_stress', 'holdout_contradiction_same_file', 'holdout_dependency_conflict', 'holdout_error_only_debugging', 'holdout_exact_api_version', 'holdout_exact_cve_patch', 'holdout_exact_env_var', 'holdout_exact_function_name', 'holdout_exact_package_name', 'holdout_exact_version', 'holdout_long_text_budget_stress', 'holdout_migration_rollback', 'holdout_multi_session_auth', 'holdout_multi_tenant_config', 'holdout_schema_evolution', 'holdout_security_remediation', 'holdout_stale_migration', 'holdout_superseded_cache', 'holdout_test_flake']"
+      ],
+      "extra_scenarios": [
+        "holdout_code_change_only",
+        "holdout_config_key_stress",
+        "holdout_contradiction_same_file",
+        "holdout_dependency_conflict",
+        "holdout_error_only_debugging",
+        "holdout_exact_api_version",
+        "holdout_exact_cve_patch",
+        "holdout_exact_env_var",
+        "holdout_exact_function_name",
+        "holdout_exact_package_name",
+        "holdout_exact_version",
+        "holdout_long_text_budget_stress",
+        "holdout_migration_rollback",
+        "holdout_multi_session_auth",
+        "holdout_multi_tenant_config",
+        "holdout_schema_evolution",
+        "holdout_security_remediation",
+        "holdout_stale_migration",
+        "holdout_superseded_cache",
+        "holdout_test_flake"
+      ],
+      "locked_violations": [],
+      "missing_scenarios": [],
+      "scenario_mutations_after_freeze": 1
+    },
+    "mutation_log_check": {
+      "all_frozen_present": true,
+      "extra_not_frozen": [],
+      "frozen_ids": [
+        "holdout_code_change_only",
+        "holdout_config_key_stress",
+        "holdout_contradiction_same_file",
+        "holdout_dependency_conflict",
+        "holdout_error_only_debugging",
+        "holdout_exact_api_version",
+        "holdout_exact_cve_patch",
+        "holdout_exact_env_var",
+        "holdout_exact_function_name",
+        "holdout_exact_package_name",
+        "holdout_exact_version",
+        "holdout_long_text_budget_stress",
+        "holdout_migration_rollback",
+        "holdout_multi_session_auth",
+        "holdout_multi_tenant_config",
+        "holdout_schema_evolution",
+        "holdout_security_remediation",
+        "holdout_stale_migration",
+        "holdout_superseded_cache",
+        "holdout_test_flake"
+      ],
+      "missing_from_run": [],
+      "ran_ids": [
+        "holdout_code_change_only",
+        "holdout_config_key_stress",
+        "holdout_contradiction_same_file",
+        "holdout_dependency_conflict",
+        "holdout_error_only_debugging",
+        "holdout_exact_api_version",
+        "holdout_exact_cve_patch",
+        "holdout_exact_env_var",
+        "holdout_exact_function_name",
+        "holdout_exact_package_name",
+        "holdout_exact_version",
+        "holdout_long_text_budget_stress",
+        "holdout_migration_rollback",
+        "holdout_multi_session_auth",
+        "holdout_multi_tenant_config",
+        "holdout_schema_evolution",
+        "holdout_security_remediation",
+        "holdout_stale_migration",
+        "holdout_superseded_cache",
+        "holdout_test_flake"
+      ]
+    },
+    "split_purity": {
+      "overlap_scenarios": [],
+      "split_purity_ok": true
+    }
+  },
+  "created_at": "2026-05-11T15:39:41.967087+00:00",
+  "embedding_model": "BGE-small-en-v1.5",
+  "eval_phase": "v0.6-generalization",
+  "evaluator_hash": "37b92275c09d1f25d6568da75cf16c9a32bd257da119aacea5fdb656ab0d749f",
+  "git_commit": "",
+  "llm": "Gemma 4 31B via vLLM",
+  "manifest_version": "v0.7_eval_manifest_001",
+  "metrics_hash": "d9a413df8dd7174e4e89dbb44879745652e9e544bbb1b08d2185f41860954d54",
+  "pack_builder_hash": "b923d31272f839f53b6c94c44f3f744e7081f9e5f1d4d11116ad614510b3dcd6",
+  "random_seed": "",
+  "report_version": "",
+  "retrieval_config_hash": "223f451a263efe417f3af0632024f78dea15b0d40247c4307d51a22ce0554db0",
+  "runner_hash": "",
+  "scenario_sets": {
+    "holdout": {
+      "count": 20,
+      "entries": [
+        {
+          "hash": "ebab45bebea679f10a0e85c6eec21ddcab3d92ee34dac07e0774ab2691e82510",
+          "locked": true,
+          "name": "holdout_stale_migration"
+        },
+        {
+          "hash": "8988b1f6ce5c202201cc139fab5a9cf0f293f069ec5b370e54cc2a1591a971a7",
+          "locked": true,
+          "name": "holdout_exact_env_var"
+        },
+        {
+          "hash": "c334ad811804466b2cbbfe2dfd6a0ca2b4274d8f6981d09f285621280643e035",
+          "locked": true,
+          "name": "holdout_superseded_cache"
+        },
+        {
+          "hash": "e36a4b20606a74489605256386043db2d0011b9cd56251daaaba3a778c82641e",
+          "locked": true,
+          "name": "holdout_exact_function_name"
+        },
+        {
+          "hash": "4f8f2368881037c82a7308b594d8544eea030add3ad2ac0f1dfdd5ef0efe770e",
+          "locked": true,
+          "name": "holdout_multi_session_auth"
+        },
+        {
+          "hash": "5c8ef4bc2b2087629bff8129197018e9a3e872cb729344da001465c41a19d35e",
+          "locked": true,
+          "name": "holdout_exact_cve_patch"
+        },
+        {
+          "hash": "8daf10fce092e920e013c76c7454fa59e6d94413602757501b2c5393ba30654e",
+          "locked": true,
+          "name": "holdout_code_change_only"
+        },
+        {
+          "hash": "dfd1c5fbbd6fef41cf64b7c784a036252a5832ec862e1b4110d515f396d3738e",
+          "locked": true,
+          "name": "holdout_error_only_debugging"
+        },
+        {
+          "hash": "c54fb195b3157c381f5212092d4a9a8a97939d43e06a089b5c271d505a3bdff1",
+          "locked": true,
+          "name": "holdout_long_text_budget_stress"
+        },
+        {
+          "hash": "44a86f0ad849aa81967dbe81c80504bce3a1f11f597ad8037582e692731d81c3",
+          "locked": true,
+          "name": "holdout_contradiction_same_file"
+        },
+        {
+          "hash": "f7f1faf2153b1d047566305cee7c43102094e30f2383bb5842cd029fa888bb6f",
+          "locked": true,
+          "name": "holdout_exact_version"
+        },
+        {
+          "hash": "fc18bb35a8716b29edd4b4b67d6be6e0b24945694326927d3d405cb70521c64a",
+          "locked": true,
+          "name": "holdout_multi_tenant_config"
+        },
+        {
+          "hash": "25e7195109e3a934211423c819ded71546e0dc44c2c43ae7269f1b04a9528c03",
+          "locked": true,
+          "name": "holdout_migration_rollback"
+        },
+        {
+          "hash": "6302d270d4dbb058c5343b737eb5ad8845083e6ece1b648ddbd5d97e4d6e0146",
+          "locked": true,
+          "name": "holdout_exact_api_version"
+        },
+        {
+          "hash": "7aa032ff0db9674f3c1c8cd5510bb926cf63a85fce889973e8bc02b8a66c34dd",
+          "locked": true,
+          "name": "holdout_test_flake"
+        },
+        {
+          "hash": "f3d3999fcddf0208338e46dad8df12afa48778ea424431450e44747bf7d8d6af",
+          "locked": true,
+          "name": "holdout_config_key_stress"
+        },
+        {
+          "hash": "974bc2196a5356e029ec07336bf3dd10d584dae1162437d6dc69dd8d1c3b51b3",
+          "locked": true,
+          "name": "holdout_dependency_conflict"
+        },
+        {
+          "hash": "17e3d382b4eefa0b0d88e33db481cca2a8786bd22e4e1e72828d6a79e8dbce7b",
+          "locked": true,
+          "name": "holdout_security_remediation"
+        },
+        {
+          "hash": "d4e24a654aaa447138a21d83a656c06808f14afce61b0d267e29798bf6347489",
+          "locked": true,
+          "name": "holdout_schema_evolution"
+        },
+        {
+          "hash": "1056a60ceba3ff497c98c8d7601234973712b18e1b39daa5c6af265b432def2b",
+          "locked": true,
+          "name": "holdout_exact_package_name"
+        }
+      ],
+      "name": "holdout",
+      "set_hash": "cbf5e1ac9113bb72c6bf236e9900359c0858277aaeecba7b0c0ea4e863d40e3a"
+    },
+    "tuning_dev": {
+      "count": 29,
+      "entries": [
+        {
+          "hash": "e280da4fc53b5303a6a06f4d400a98c48c8c82c175eefc15fc2fbcc72e928714",
+          "locked": false,
+          "name": "auth_refresh_loop"
+        },
+        {
+          "hash": "d21c797ab6fb142253c7dd0d717ffe2fa0051542e1d2a48a91b90af1d145fec1",
+          "locked": false,
+          "name": "payment_rewrite"
+        },
+        {
+          "hash": "fac38e7f1d7c9df04d19f674470b00e796c8812f45719637f5655ff32b53d985",
+          "locked": false,
+          "name": "db_migration"
+        },
+        {
+          "hash": "9511d930f0c00ec0e25606da863791044d9488eab5e1c2217fe627a049aa3743",
+          "locked": false,
+          "name": "api_versioning"
+        },
+        {
+          "hash": "6299be71c4979f6760c2e837d15e0d51a9fbabffc1fb5fd9906b4761ca4670ce",
+          "locked": false,
+          "name": "microservices_decomposition"
+        },
+        {
+          "hash": "b102620bca59c80169a9fd879b4ca652c59067993efe8188f3cc73ca4f6c365c",
+          "locked": false,
+          "name": "cache_invalidation"
+        },
+        {
+          "hash": "8cdcc5a54851b33493a5fb9d3818c1159c283d96f21dc316b02891015646de86",
+          "locked": false,
+          "name": "race_condition"
+        },
+        {
+          "hash": "8b96dbfa7c4553e5ee21271f40ad68c3e476cc9092d8fa1ce3a94ca1d98b1f6e",
+          "locked": false,
+          "name": "security_patch"
+        },
+        {
+          "hash": "7d117cbd80211043bde97a91b2d6897bd9ee2b451e73688f370db5903f2e770a",
+          "locked": false,
+          "name": "feature_flags"
+        },
+        {
+          "hash": "20ce14581f0dccc716c336771eef76c1dfb3ba1fe9956394c621ef539001bdb3",
+          "locked": false,
+          "name": "cicd_migration"
+        },
+        {
+          "hash": "de3c1e59265b788083f8b81f19a93c6914469e61b72f23a3c467502f1669d017",
+          "locked": false,
+          "name": "frontend_migration"
+        },
+        {
+          "hash": "9ba62c39c463739b494b553160bc9c5ccf48fdd2219cb411ccc08fdfa00aa5fa",
+          "locked": false,
+          "name": "logging_overhaul"
+        },
+        {
+          "hash": "ef416142254ce724784d6d7ef1f931e2fc232b90756eea7c29d7bc043214e98a",
+          "locked": false,
+          "name": "config_management"
+        },
+        {
+          "hash": "cf375d37e41083b4b9acca7138abcdfab6ef932ac1167f1a7c5e0e53952889bc",
+          "locked": false,
+          "name": "oauth_to_saml"
+        },
+        {
+          "hash": "24eef3f66eaac82096d39f96b278278ffa133767d2d889f1f2cb0089bc432988",
+          "locked": false,
+          "name": "rate_limiting"
+        },
+        {
+          "hash": "d9f8cfef137b862db7bb7d75b390c46a204618da339aded9d6e4a9312d1bcab9",
+          "locked": false,
+          "name": "data_export"
+        },
+        {
+          "hash": "cc5e7f6ea67fe7ab8d276e159bc2e3ad3cd18d2088191431a7ecfa0f0f4bdf44",
+          "locked": false,
+          "name": "search_optimization"
+        },
+        {
+          "hash": "1e2b36a489cbe95416b056f63116d72a971755fc1340fece77e046fcc4520f46",
+          "locked": false,
+          "name": "search_optimization_regression"
+        },
+        {
+          "hash": "6d6ef7d68123a3642ec6107d770a13180c932a446aa8a28a64681c4128e8c222",
+          "locked": false,
+          "name": "job_queue_migration"
+        },
+        {
+          "hash": "6386e064d533e84989eeb0af453128a9e3762ffba38d57aec186de45b7c46017",
+          "locked": false,
+          "name": "multi_tenancy"
+        },
+        {
+          "hash": "ee49a4e4ba66483ca227750b85ab0e03918357df0a3713cf5b8188c67e38cb34",
+          "locked": false,
+          "name": "false_memory_s05"
+        },
+        {
+          "hash": "10d7092b3a0ad2eefa8949f600951632ffcfc77005ba0f30c34ae103a84f9c0e",
+          "locked": false,
+          "name": "superseded_decision"
+        },
+        {
+          "hash": "dd5f3f31f58663845e775d8cc41112fddba82fb6e0ee39769991353a7b29253d",
+          "locked": false,
+          "name": "exact_config_key"
+        },
+        {
+          "hash": "0276b56ccf7c759b7bc8e1bffc940583b5e5e267f9326a24e23b1f02e8d93c35",
+          "locked": false,
+          "name": "exact_api_endpoint"
+        },
+        {
+          "hash": "16a48fc6cae923483ddbf68250f009788461e48dd0523979dcaa296b7596f364",
+          "locked": false,
+          "name": "exact_cicd_job"
+        },
+        {
+          "hash": "baa83966af1934b0890db2c1f566d88dcafc11bb9693f35c50ed3f84e0e22c2a",
+          "locked": false,
+          "name": "exact_cve"
+        },
+        {
+          "hash": "8769963193ae869f0a9cc59ee2536ef346d55f147f85bb8cd55d8b434e511b88",
+          "locked": false,
+          "name": "h03_project_A"
+        },
+        {
+          "hash": "ef64b97c8e4171648dd09f78e93da1787546452f6446b30c8ccd9a93ff1a1001",
+          "locked": false,
+          "name": "h03_project_B"
+        },
+        {
+          "hash": "1404b0e4f8e9271b7a6548885d887fb09a744454be415b746d15d63da45d128b",
+          "locked": false,
+          "name": "h03_project_C"
+        }
+      ],
+      "name": "tuning_dev",
+      "set_hash": "a8fed32c0918ca2f55490b04c341c6c5061aa694420a3e2e787e0adc2dfdd59c"
+    }
+  },
+  "system_version": "v0.5-gold",
+  "tokenizer_version": ""
+}

@@ -1,0 +1,231 @@
+{
+  "scenario_count": 24,
+  "repos": [
+    "/mnt/hf_model_weights/arman/3bit/wal",
+    "/mnt/hf_model_weights/arman/3bit/archiv.org"
+  ],
+  "avg_restore": 0.6666666666666666,
+  "median_restore": 0.6666666666666666,
+  "min_restore": 0.6666666666666666,
+  "max_restore": 0.6666666666666666,
+  "avg_quality": 1.2666666666666666,
+  "avg_tokens": 52.958333333333336,
+  "results": [
+    {
+      "scenario": "real_wal_72839e87",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 54,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_a6555cc9",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 54,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_a28f7a4a",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 54,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_c42e9f28",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 54,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_1a8b061a",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 54,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_6c68ee2e",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 52,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_faccbbf3",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 52,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_b906e98b",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 54,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_6571664b",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 54,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_b3787b4f",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 54,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_429695bf",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 55,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_9920b6a5",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 55,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_a7d0b4c8",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 56,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_ce07a7f8",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 56,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_6510210e",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 55,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_c585a589",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 54,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_0776a1d8",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 55,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_0f15c090",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 53,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_71a94e10",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 55,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_476f529d",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 52,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_7be67b83",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 56,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_3ebe4dda",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 55,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_wal_985168d3",
+      "project_id": "real_wal_f25164da",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 37,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.3
+    },
+    {
+      "scenario": "real_archiv_org_0ec7416e",
+      "project_id": "real_archiv_org_2d43cfdb",
+      "restore": 0.6666666666666666,
+      "quality": 1.2666666666666666,
+      "tokens": 41,
+      "keyword_coverage": 0.6,
+      "critical_survival": 0.5
+    }
+  ]
+}

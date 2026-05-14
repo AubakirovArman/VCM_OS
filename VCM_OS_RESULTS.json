@@ -1,0 +1,134 @@
+{
+  "project": "VCM-OS",
+  "version": "0.5.0",
+  "date": "2026-05-10",
+  "summary": "Validated Context Memory Operating System — early production-ready memory runtime for coding agents",
+
+  "test_results": {
+    "total_tests": 116,
+    "passing_tests": 116,
+    "test_modules": {
+      "test_evals": 5,
+      "test_multi_lang_index": 11,
+      "test_redactor": 12,
+      "test_symbol_vault": 7,
+      "test_vcm_os": 6,
+      "test_vcm_os_v2": 6,
+      "test_vcm_os_v3": 5,
+      "test_verifier": 9,
+      "test_auto_linker": 6,
+      "test_memory_correction": 9,
+      "test_auto_expand": 2,
+      "test_cross_project": 3,
+      "test_dashboard": 2,
+      "test_session_extractors": 8,
+      "test_verifier_repair_loop": 2,
+      "test_health_dashboard": 5,
+      "test_pack_sufficiency": 7,
+      "test_tool_ingestor": 11
+    }
+  },
+
+  "regression_gates": {
+    "total_gates": 10,
+    "passing_gates": 10,
+    "gates": {
+      "tests_passing": {"value": 116, "threshold": 80, "status": "PASS"},
+      "holdout_restore": {"value": 1.0, "threshold": 0.8, "status": "PASS"},
+      "holdout_recall": {"value": 0.717, "threshold": 0.6, "status": "PASS"},
+      "holdout_token_avg": {"value": 69.4, "threshold": 120, "status": "PASS"},
+      "pso_score": {"value": 0.65, "threshold": 0.5, "status": "PASS"},
+      "decision_recall": {"value": 1.0, "threshold": 0.9, "status": "PASS"},
+      "error_recall": {"value": 0.65, "threshold": 0.5, "status": "PASS"},
+      "query_latency_ms": {"value": 54.7, "threshold": 200, "status": "PASS"},
+      "ingestion_rate": {"value": 10.4, "threshold": 5.0, "status": "PASS"},
+      "orphan_ratio": {"value": 0.0, "threshold": 0.4, "status": "PASS"}
+    }
+  },
+
+  "load_tests": {
+    "small": {
+      "memories": 200,
+      "query_latency_ms": 54.7,
+      "ingestion_rate": 10.4,
+      "pso_latency_ms": 0.2,
+      "health_snapshot_ms": 3.0
+    },
+    "large": {
+      "events": 10000,
+      "total_memories": 20047,
+      "projects": 50,
+      "ingestion_time_sec": 2310.2,
+      "ingestion_rate": 4.3,
+      "query_latency_ms": 106.6,
+      "query_p95_ms": 117.5,
+      "health_snapshot_ms": 1927.0,
+      "db_size_mb": 99.8,
+      "orphan_ratio": 0.0,
+      "health_score": 1.0
+    }
+  },
+
+  "component_evals": {
+    "pso_field_coverage": 0.65,
+    "decision_recall": 1.0,
+    "decision_v2_enriched": 1.0,
+    "error_recall": 0.65,
+    "error_v2_enriched": 1.0
+  },
+
+  "embedding_experiment": {
+    "bge_small": {"dimensions": 384, "recall": 1.0, "latency_ms": 49.8},
+    "bge_base": {"dimensions": 768, "recall": 1.0, "latency_ms": 50.0}
+  },
+
+  "e2e_benchmark": {
+    "tasks": 3,
+    "avg_score": 0.47,
+    "avg_latency_ms": 42.5,
+    "tasks_detail": [
+      {"name": "auth_middleware", "score": 0.8, "recall": 1.0, "latency_ms": 39.8},
+      {"name": "cache_migration", "score": -0.2, "recall": 0.33, "latency_ms": 40.6},
+      {"name": "error_handling", "score": 0.8, "recall": 1.0, "latency_ms": 47.0}
+    ]
+  },
+
+  "features_implemented": [
+    "Event-sourced typed memory (decision/error/goal/code_change/fact/tool/intent/task)",
+    "SQLite store with vector + sparse indexes",
+    "RRF fusion retrieval",
+    "Context pack builder with adaptive compression",
+    "Response Verifier v2 (10 checks)",
+    "Secret Redaction (7 patterns)",
+    "Multi-language code index (Python/JS/TS/Rust/Go/Java/C/C++)",
+    "Expanded tool ingestion (15+ tool types)",
+    "Auto memory linker (5 link types)",
+    "Human correction API (7 actions)",
+    "Pack sufficiency auto-expand",
+    "Cross-project memory transfer",
+    "Production dashboard (CLI + API)",
+    "Health monitoring (orphan ratio, duplicates, ages)",
+    "Verifier repair loop",
+    "Session goal/error extractors",
+    "v2 field enrichment (rationale/alternatives/tradeoffs/root_cause/fix_attempt)",
+    "CI regression suite (10 gates)",
+    "End-to-end coding task benchmark"
+  ],
+
+  "known_limitations": [
+    "Ingestion bottleneck: BGE embedding dominates time (~80%)",
+    "Health snapshot slow at scale: 1.9s for 20k memories",
+    "No live agent integration yet",
+    "No multimodal support (images/diagrams)",
+    "Single-node SQLite (not distributed)",
+    "Real session-log eval needs tuning (restore 0.167)"
+  ],
+
+  "next_steps": [
+    "Live agent integration (Kimi Code CLI full loop)",
+    "Optimize health snapshot for large stores",
+    "Batch embedding optimization",
+    "Real long-session benchmark",
+    "Multimodal memory support"
+  ]
+}

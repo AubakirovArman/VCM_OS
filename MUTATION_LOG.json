@@ -1,0 +1,166 @@
+{
+  "log_version": "v0.7_mutation_log_001",
+  "created_at": "2026-05-11T08:38:51.706560+00:00",
+  "entries": {
+    "holdout_stale_migration": {
+      "scenario_name": "holdout_stale_migration",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_exact_env_var": {
+      "scenario_name": "holdout_exact_env_var",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_superseded_cache": {
+      "scenario_name": "holdout_superseded_cache",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_exact_function_name": {
+      "scenario_name": "holdout_exact_function_name",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_multi_session_auth": {
+      "scenario_name": "holdout_multi_session_auth",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_exact_cve_patch": {
+      "scenario_name": "holdout_exact_cve_patch",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_code_change_only": {
+      "scenario_name": "holdout_code_change_only",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_error_only_debugging": {
+      "scenario_name": "holdout_error_only_debugging",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_long_text_budget_stress": {
+      "scenario_name": "holdout_long_text_budget_stress",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_contradiction_same_file": {
+      "scenario_name": "holdout_contradiction_same_file",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_exact_version": {
+      "scenario_name": "holdout_exact_version",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_multi_tenant_config": {
+      "scenario_name": "holdout_multi_tenant_config",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_migration_rollback": {
+      "scenario_name": "holdout_migration_rollback",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_exact_api_version": {
+      "scenario_name": "holdout_exact_api_version",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_test_flake": {
+      "scenario_name": "holdout_test_flake",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_config_key_stress": {
+      "scenario_name": "holdout_config_key_stress",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_dependency_conflict": {
+      "scenario_name": "holdout_dependency_conflict",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_security_remediation": {
+      "scenario_name": "holdout_security_remediation",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_schema_evolution": {
+      "scenario_name": "holdout_schema_evolution",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    },
+    "holdout_exact_package_name": {
+      "scenario_name": "holdout_exact_package_name",
+      "first_seen_commit": "",
+      "freeze_date": "2026-05-11T08:38:51.706560+00:00",
+      "frozen": true,
+      "mutation_count": 0,
+      "mutations": []
+    }
+  }
+}

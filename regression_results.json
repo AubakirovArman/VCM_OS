@@ -1,0 +1,15 @@
+{
+  "results": {
+    "tests_passing": 98,
+    "holdout_restore": 1.0,
+    "holdout_recall": 0.7166666666666666,
+    "holdout_token_avg": 69.4,
+    "pso_score": 0.65,
+    "decision_recall": 1.0,
+    "error_recall": 0.65,
+    "query_latency_ms": 54.72,
+    "ingestion_rate": 10.4,
+    "orphan_ratio": 0.0
+  },
+  "all_pass": true
+}

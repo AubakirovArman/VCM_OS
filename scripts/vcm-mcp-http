@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+"""VCM-OS MCP server — HTTP transport for Kimi CLI.
+
+Usage with Kimi CLI:
+    kimi mcp add --transport http vcm http://localhost:8124/mcp
+    kimi mcp test vcm
+
+Or with explicit config file:
+    kimi term --mcp-config-file kimi-vcm-mcp.json
+"""
+import argparse
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from vcm_os.mcp_server import mcp
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--port", type=int, default=8124)
+    args = parser.parse_args()
+
+    print(f"VCM MCP HTTP server starting on port {args.port}...", file=sys.stderr)
+    mcp.run(transport="streamable-http", port=args.port)

@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "model": "bge-small",
+      "model_path": "BAAI/bge-small-en-v1.5",
+      "dimensions": 384,
+      "load_time_sec": 5.66,
+      "avg_recall": 1.0,
+      "avg_latency_ms": 49.8,
+      "avg_tokens": 63.4
+    },
+    {
+      "model": "bge-base",
+      "model_path": "BAAI/bge-base-en-v1.5",
+      "dimensions": 768,
+      "load_time_sec": 5.4,
+      "avg_recall": 1.0,
+      "avg_latency_ms": 50.0,
+      "avg_tokens": 63.4
+    }
+  ]
+}

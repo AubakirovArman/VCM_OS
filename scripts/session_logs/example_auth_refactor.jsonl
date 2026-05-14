@@ -1,0 +1,9 @@
+{"event_type": "user_message", "timestamp": "2026-05-10T09:00:00Z", "raw_text": "We need to refactor the auth system. The refresh token loop is broken — it keeps calling itself recursively. Branch: feature/auth-v2. Milestone: v1.2-security."}
+{"event_type": "assistant_response", "timestamp": "2026-05-10T09:05:00Z", "raw_text": "I'll investigate validateSession in src/auth/session.ts. It seems to call refreshSession recursively. Decision: use httpOnly cookie for refresh token. Rationale: reduces XSS exposure. Middleware must not refresh on every request. Rationale: avoid recursive refresh calls."}
+{"event_type": "code_change", "timestamp": "2026-05-10T09:15:00Z", "raw_text": "Updated middleware to skip refresh during validation. Added httpOnly flag to set-cookie.", "file_path": "src/auth/middleware.ts"}
+{"event_type": "tool_call", "timestamp": "2026-05-10T09:20:00Z", "raw_text": "pytest auth tests: 8 passed, 2 failed (real OAuth missing)", "tool_name": "pytest"}
+{"event_type": "user_message", "timestamp": "2026-05-10T09:25:00Z", "raw_text": "Blocked: OAuth integration tests are failing because the test env lacks Google credentials. Risk: if we ship without real OAuth testing, prod login may break."}
+{"event_type": "assistant_response", "timestamp": "2026-05-10T09:30:00Z", "raw_text": "Decision: use mock OAuth for tests, real OAuth only in staging."}
+{"event_type": "code_change", "timestamp": "2026-05-10T09:35:00Z", "raw_text": "Added mock OAuth provider for test suite.", "file_path": "tests/auth/mock_oauth.py"}
+{"event_type": "tool_call", "timestamp": "2026-05-10T09:40:00Z", "raw_text": "pytest auth tests: 10 passed, 0 failed", "tool_name": "pytest"}
+{"event_type": "user_message", "timestamp": "2026-05-10T09:45:00Z", "raw_text": "Tests green. Ready for security review."}

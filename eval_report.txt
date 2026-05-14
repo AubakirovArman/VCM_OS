@@ -1,0 +1,251 @@
+======================================================================
+VCM-OS v0.5 Evaluation Report
+======================================================================
+
+## T10: VCM vs Baselines
+
+  VCM:
+    Restore accuracy:    0.827
+    Token usage (avg):   79
+    Keyword coverage:    0.967
+    Stale penalty:       0.080
+    Quality score:       1.713
+
+  FULL:
+    Restore accuracy:    0.867
+    Token usage (avg):   306
+    Keyword coverage:    0.967
+    Stale penalty:       0.080
+    Quality score:       1.753
+
+  SUMMARY:
+    Restore accuracy:    0.600
+    Token usage (avg):   36
+    Keyword coverage:    0.813
+    Stale penalty:       0.080
+    Quality score:       1.333
+
+  RAG:
+    Restore accuracy:    0.660
+    Token usage (avg):   69
+    Keyword coverage:    0.793
+    Stale penalty:       0.040
+    Quality score:       1.413
+
+  VCM vs Full Context:
+    Quality delta:       -0.040
+    Token reduction:     74.3%
+    Absolute token OK (≤84): YES
+    Dynamic reduction OK (≥75%): NO
+    VCM beats summary:   YES
+    VCM beats RAG:       YES
+
+## H03: Cross-Session Contamination
+  Total cross-project memories: 0
+  Avg cross per scenario:       0.000
+  Contamination rate:           0.0000
+  Passes threshold (<0.02): YES
+
+## S05: False Memory Insertion
+  False decisions found:    0
+  False decisions rejected: 0
+  SQLite active:            True
+  False memory rate:        0.000
+  Passes threshold (<0.05): YES
+
+## F03: Hybrid Retrieval Benchmark
+  Scenarios tested:     8
+  Avg restore improve:  +0.042
+  Avg quality improve:  +0.042
+  Avg stale reduction:  +0.000
+    auth_refresh_loop              rest_h=0.667 rest_v=0.667 qual_h=1.667 qual_v=1.667 stale_h=0.000 stale_v=0.000
+    payment_rewrite                rest_h=1.000 rest_v=1.000 qual_h=2.000 qual_v=2.000 stale_h=0.000 stale_v=0.000
+    db_migration                   rest_h=0.667 rest_v=0.667 qual_h=1.333 qual_v=1.333 stale_h=0.000 stale_v=0.000
+    superseded_decision            rest_h=1.000 rest_v=0.667 qual_h=1.000 qual_v=0.667 stale_h=1.000 stale_v=1.000
+    exact_config_key               rest_h=0.667 rest_v=0.667 qual_h=1.667 qual_v=1.667 stale_h=0.000 stale_v=0.000
+    exact_api_endpoint             rest_h=0.667 rest_v=0.667 qual_h=1.667 qual_v=1.667 stale_h=0.000 stale_v=0.000
+    exact_cicd_job                 rest_h=0.667 rest_v=0.667 qual_h=1.667 qual_v=1.667 stale_h=0.000 stale_v=0.000
+    exact_cve                      rest_h=0.667 rest_v=0.667 qual_h=1.667 qual_v=1.667 stale_h=0.000 stale_v=0.000
+
+## I01: Project State Restore
+  Scenarios tested:     5
+  Avg restore accuracy: 0.800
+  Passes threshold (0.80): YES
+    Scenario 1: acc=0.667, tokens=104
+    Scenario 2: acc=1.000, tokens=80
+    Scenario 3: acc=0.667, tokens=85
+    Scenario 4: acc=0.667, tokens=76
+    Scenario 5: acc=1.000, tokens=85
+
+## Adversarial: Exact-Symbol Survival
+  VCM:
+    Restore accuracy:    0.444
+    Token usage (avg):   65
+    Keyword coverage:    1.000
+    Stale penalty:       0.000
+    Quality score:       1.444
+  FULL:
+    Restore accuracy:    0.444
+    Token usage (avg):   402
+    Keyword coverage:    1.000
+    Stale penalty:       0.000
+    Quality score:       1.444
+  SUMMARY:
+    Restore accuracy:    0.444
+    Token usage (avg):   62
+    Keyword coverage:    1.000
+    Stale penalty:       0.000
+    Quality score:       1.444
+  RAG:
+    Restore accuracy:    0.444
+    Token usage (avg):   61
+    Keyword coverage:    1.000
+    Stale penalty:       0.000
+    Quality score:       1.444
+  Scenarios: 3
+    adversarial_feature_flags                restore=N/A keywords=N/A
+    adversarial_api_routes                   restore=N/A keywords=N/A
+    adversarial_job_names                    restore=N/A keywords=N/A
+
+## Adversarial Hard: 20+ Distractors
+  VCM:
+    Restore accuracy:    0.333
+    Token usage (avg):   89
+    Keyword coverage:    1.000
+    Stale penalty:       0.000
+    Quality score:       1.333
+  FULL:
+    Restore accuracy:    0.333
+    Token usage (avg):   2477
+    Keyword coverage:    1.000
+    Stale penalty:       0.000
+    Quality score:       1.333
+  SUMMARY:
+    Restore accuracy:    0.000
+    Token usage (avg):   272
+    Keyword coverage:    0.200
+    Stale penalty:       0.000
+    Quality score:       0.200
+  RAG:
+    Restore accuracy:    0.067
+    Token usage (avg):   53
+    Keyword coverage:    0.400
+    Stale penalty:       0.000
+    Quality score:       0.467
+  Scenarios: 5
+    adversarial_hard_export_endpoint         restore=N/A keywords=N/A
+    adversarial_hard_primary_database_host   restore=N/A keywords=N/A
+    adversarial_hard_checkout_flow_feature_flag restore=N/A keywords=N/A
+    adversarial_hard_latest_migration        restore=N/A keywords=N/A
+    adversarial_hard_api_client_version      restore=N/A keywords=N/A
+
+## Real Codebase: Dogfooding
+  VCM:
+    Restore accuracy:    0.500
+    Token usage (avg):   119
+    Keyword coverage:    1.000
+    Stale penalty:       0.000
+    Quality score:       1.500
+  FULL:
+    Restore accuracy:    0.556
+    Token usage (avg):   632
+    Keyword coverage:    1.000
+    Stale penalty:       0.000
+    Quality score:       1.556
+  SUMMARY:
+    Restore accuracy:    0.556
+    Token usage (avg):   98
+    Keyword coverage:    0.778
+    Stale penalty:       0.000
+    Quality score:       1.333
+  RAG:
+    Restore accuracy:    0.222
+    Token usage (avg):   34
+    Keyword coverage:    0.556
+    Stale penalty:       0.000
+    Quality score:       0.778
+  Scenarios: 3
+    vcm_os_dev_session_1                     restore=N/A keywords=N/A
+    vcm_os_dev_session_2                     restore=N/A keywords=N/A
+    vcm_os_dev_session_3                     restore=N/A keywords=N/A
+
+## Multi-Repo: Realistic Projects
+  VCM:
+    Restore accuracy:    0.633
+    Token usage (avg):   77
+    Keyword coverage:    0.883
+    Stale penalty:       0.000
+    Quality score:       1.517
+  FULL:
+    Restore accuracy:    0.633
+    Token usage (avg):   292
+    Keyword coverage:    1.000
+    Stale penalty:       0.000
+    Quality score:       1.633
+  SUMMARY:
+    Restore accuracy:    0.600
+    Token usage (avg):   49
+    Keyword coverage:    0.753
+    Stale penalty:       0.000
+    Quality score:       1.353
+  RAG:
+    Restore accuracy:    0.244
+    Token usage (avg):   43
+    Keyword coverage:    0.587
+    Stale penalty:       0.000
+    Quality score:       0.831
+  Scenarios: 5
+    repo_fastapi_auth                        restore=N/A keywords=N/A
+    repo_cli_tool_config                     restore=N/A keywords=N/A
+    repo_data_pipeline                       restore=N/A keywords=N/A
+    repo_docker_deploy                       restore=N/A keywords=N/A
+    repo_testing_pytest                      restore=N/A keywords=N/A
+
+## Holdout: Frozen Generalization
+  VCM:
+    Restore accuracy:    0.600
+    Token usage (avg):   58
+    Keyword coverage:    0.975
+    Stale penalty:       0.050
+    Quality score:       1.525
+  FULL:
+    Restore accuracy:    0.600
+    Token usage (avg):   224
+    Keyword coverage:    1.000
+    Stale penalty:       0.300
+    Quality score:       1.300
+  SUMMARY:
+    Restore accuracy:    0.525
+    Token usage (avg):   37
+    Keyword coverage:    0.825
+    Stale penalty:       0.200
+    Quality score:       1.150
+  RAG:
+    Restore accuracy:    0.383
+    Token usage (avg):   39
+    Keyword coverage:    0.683
+    Stale penalty:       0.050
+    Quality score:       1.017
+  Scenarios: 20
+    holdout_stale_migration                  restore=N/A keywords=N/A
+    holdout_exact_env_var                    restore=N/A keywords=N/A
+    holdout_superseded_cache                 restore=N/A keywords=N/A
+    holdout_exact_function_name              restore=N/A keywords=N/A
+    holdout_multi_session_auth               restore=N/A keywords=N/A
+    holdout_exact_cve_patch                  restore=N/A keywords=N/A
+    holdout_code_change_only                 restore=N/A keywords=N/A
+    holdout_error_only_debugging             restore=N/A keywords=N/A
+    holdout_long_text_budget_stress          restore=N/A keywords=N/A
+    holdout_contradiction_same_file          restore=N/A keywords=N/A
+    holdout_exact_version                    restore=N/A keywords=N/A
+    holdout_multi_tenant_config              restore=N/A keywords=N/A
+    holdout_migration_rollback               restore=N/A keywords=N/A
+    holdout_exact_api_version                restore=N/A keywords=N/A
+    holdout_test_flake                       restore=N/A keywords=N/A
+    holdout_config_key_stress                restore=N/A keywords=N/A
+    holdout_dependency_conflict              restore=N/A keywords=N/A
+    holdout_security_remediation             restore=N/A keywords=N/A
+    holdout_schema_evolution                 restore=N/A keywords=N/A
+    holdout_exact_package_name               restore=N/A keywords=N/A
+
+======================================================================

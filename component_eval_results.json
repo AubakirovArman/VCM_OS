@@ -1,0 +1,550 @@
+{
+  "pso": {
+    "results": [
+      {
+        "scenario": "pso_auth_refactor",
+        "found": true,
+        "checks": {
+          "project_phase": true,
+          "current_branch": true,
+          "current_milestone": true,
+          "test_status": true,
+          "deployment_status": false,
+          "blocked_tasks": true,
+          "active_experiments": false,
+          "risk_register": true
+        },
+        "score": 0.75
+      },
+      {
+        "scenario": "pso_deployment",
+        "found": true,
+        "checks": {
+          "project_phase": true,
+          "current_branch": true,
+          "current_milestone": true,
+          "test_status": false,
+          "deployment_status": false,
+          "blocked_tasks": true,
+          "active_experiments": false,
+          "risk_register": true
+        },
+        "score": 0.625
+      },
+      {
+        "scenario": "pso_bugfix",
+        "found": true,
+        "checks": {
+          "project_phase": true,
+          "current_branch": true,
+          "current_milestone": true,
+          "test_status": true,
+          "deployment_status": false,
+          "blocked_tasks": true,
+          "active_experiments": false,
+          "risk_register": false
+        },
+        "score": 0.625
+      },
+      {
+        "scenario": "pso_experiment",
+        "found": true,
+        "checks": {
+          "project_phase": true,
+          "current_branch": true,
+          "current_milestone": true,
+          "test_status": true,
+          "deployment_status": false,
+          "blocked_tasks": false,
+          "active_experiments": true,
+          "risk_register": true
+        },
+        "score": 0.75
+      },
+      {
+        "scenario": "pso_multitask",
+        "found": true,
+        "checks": {
+          "project_phase": true,
+          "current_branch": true,
+          "current_milestone": true,
+          "test_status": false,
+          "deployment_status": false,
+          "blocked_tasks": true,
+          "active_experiments": false,
+          "risk_register": false
+        },
+        "score": 0.5
+      }
+    ],
+    "avg_score": 0.65
+  },
+  "decisions": {
+    "results": [
+      {
+        "scenario": "holdout_stale_migration",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_env_var",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_superseded_cache",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_function_name",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_multi_session_auth",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_cve_patch",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_code_change_only",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_error_only_debugging",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": true,
+          "tradeoffs": false
+        },
+        "v2_score": 0.3333333333333333
+      },
+      {
+        "scenario": "holdout_long_text_budget_stress",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_contradiction_same_file",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_version",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_multi_tenant_config",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": true,
+          "tradeoffs": false
+        },
+        "v2_score": 0.3333333333333333
+      },
+      {
+        "scenario": "holdout_migration_rollback",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_api_version",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_test_flake",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_config_key_stress",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_dependency_conflict",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_security_remediation",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_schema_evolution",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": false,
+          "tradeoffs": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_package_name",
+        "decision_recall": 1.0,
+        "v2_fields_present": {
+          "rationale": false,
+          "alternatives": true,
+          "tradeoffs": false
+        },
+        "v2_score": 0.3333333333333333
+      }
+    ],
+    "avg_recall": 1.0,
+    "avg_v2": 0.05
+  },
+  "errors": {
+    "results": [
+      {
+        "scenario": "holdout_stale_migration",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_env_var",
+        "error_recall": 0.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_superseded_cache",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_function_name",
+        "error_recall": 0.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_multi_session_auth",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_cve_patch",
+        "error_recall": 0.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_code_change_only",
+        "error_recall": 0.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_error_only_debugging",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_long_text_budget_stress",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_contradiction_same_file",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_version",
+        "error_recall": 0.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_multi_tenant_config",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_migration_rollback",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_api_version",
+        "error_recall": 0.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_test_flake",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_config_key_stress",
+        "error_recall": 0.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_dependency_conflict",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_security_remediation",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_schema_evolution",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      },
+      {
+        "scenario": "holdout_exact_package_name",
+        "error_recall": 1.0,
+        "v2_fields_present": {
+          "root_cause": false,
+          "fix_attempt": false,
+          "verified_fix": false,
+          "affected_files": false,
+          "recurrence_risk": false
+        },
+        "v2_score": 0.0
+      }
+    ],
+    "avg_recall": 0.65,
+    "avg_v2": 0.0
+  },
+  "v2_enriched": {
+    "decision_v2_score": 1.0,
+    "decision_v2_fields": {
+      "rationale": true,
+      "alternatives": true,
+      "tradeoffs": true
+    },
+    "error_v2_score": 1.0,
+    "error_v2_fields": {
+      "root_cause": true,
+      "fix_attempt": true,
+      "verified_fix": true,
+      "affected_files": true,
+      "recurrence_risk": true
+    }
+  }
+}

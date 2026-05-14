@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+"""VCM-OS MCP server — stdio transport for Kimi CLI.
+
+Usage with Kimi CLI:
+    kimi mcp add --transport stdio vcm -- python3 /path/to/vcm-mcp-stdio
+    kimi mcp test vcm
+"""
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from vcm_os.mcp_server import mcp
+
+if __name__ == "__main__":
+    mcp.run(transport="stdio")

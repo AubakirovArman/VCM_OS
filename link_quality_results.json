@@ -1,0 +1,18 @@
+{
+  "precision": 0.903,
+  "recall": 0.008,
+  "total_links": 359,
+  "good_links": 324,
+  "should_be_linked": 5036,
+  "actually_linked": 40,
+  "by_relationship": {
+    "shared_file": {
+      "total": 314,
+      "good": 293
+    },
+    "same_session": {
+      "total": 45,
+      "good": 31
+    }
+  }
+}

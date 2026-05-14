@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "task": "auth_middleware",
+      "latency_ms": 39.1,
+      "expected_recall": 1.0,
+      "forbidden_penalty": 0.0,
+      "verifier_passed": false,
+      "verifier_score": 0.30000000000000004,
+      "final_score": 0.8,
+      "tokens": 68
+    },
+    {
+      "task": "cache_migration",
+      "latency_ms": 40.3,
+      "expected_recall": 0.67,
+      "forbidden_penalty": 0.0,
+      "verifier_passed": false,
+      "verifier_score": 0.35000000000000003,
+      "final_score": 0.47,
+      "tokens": 63
+    },
+    {
+      "task": "error_handling",
+      "latency_ms": 47.4,
+      "expected_recall": 1.0,
+      "forbidden_penalty": 0.0,
+      "verifier_passed": false,
+      "verifier_score": 0.30000000000000004,
+      "final_score": 0.8,
+      "tokens": 47
+    }
+  ],
+  "avg_score": 0.69,
+  "avg_latency_ms": 42.3
+}

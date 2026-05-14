@@ -1,0 +1,6616 @@
+[
+  {
+    "scenario": "auth_refresh_loop",
+    "query": "middleware must not refresh",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "middleware must not refresh",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 12,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_89d564e8fa784c1f",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_bd45b5fda69c497d",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_903f88c6fd6b4b4b",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b2e36d6408cb47be",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0ff4db1845b34dfd",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f9ac9a7b8a9a410d",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_67a2a545fd6a4d1c",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_43830c1b72a2475e",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_3e0947d6921f4142",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f4cad2ea53494945",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_406010f9029144f5",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a10c8d9cbcd64265",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 12,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_89d564e8fa784c1f",
+        "details": {
+          "score": 0.7350000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_903f88c6fd6b4b4b",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b2e36d6408cb47be",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0ff4db1845b34dfd",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_67a2a545fd6a4d1c",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_3e0947d6921f4142",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f9ac9a7b8a9a410d",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_43830c1b72a2475e",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_bd45b5fda69c497d",
+        "details": {
+          "score": 0.4425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f4cad2ea53494945",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_406010f9029144f5",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a10c8d9cbcd64265",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "payment_rewrite",
+    "query": "What are the refund rules?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "What are the refund rules?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 13,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_672b39cdbe5249d7",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_ec1ce4b2f8d64a45",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1810e7efbab24599",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_87482923c2eb4f8e",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d065061d34c44d33",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_49dab123ebc0428d",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e48c24652f5c4ad5",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b437b8cdcfdc4a89",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a385b1d710a547ed",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d35039f3e2924787",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_75c953c436db422a",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_15338501c144482a",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_929d32a9e12c491d",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 13,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_672b39cdbe5249d7",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_87482923c2eb4f8e",
+        "details": {
+          "score": 0.47500000000000003
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d065061d34c44d33",
+        "details": {
+          "score": 0.47500000000000003
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_49dab123ebc0428d",
+        "details": {
+          "score": 0.47500000000000003
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d35039f3e2924787",
+        "details": {
+          "score": 0.4574999999999999
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_ec1ce4b2f8d64a45",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1810e7efbab24599",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e48c24652f5c4ad5",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b437b8cdcfdc4a89",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a385b1d710a547ed",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_929d32a9e12c491d",
+        "details": {
+          "score": 0.42
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_75c953c436db422a",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_15338501c144482a",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "db_migration",
+    "query": "How do we handle ObjectId during migration?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "How do we handle ObjectId during migration?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 19,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_854c5a79b1c84568",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_3112537cd077434d",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e76535cee3ed4e2f",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_476abf9bd7514b13",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_033f7f11a477413f",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c393e6863dab4c3f",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a7fe030deeaf4361",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_93b480b7056e437c",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_551358ebe35645fa",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_82c1fb37cab84967",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d1d22c1e68d94564",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b33430d40d85413f",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c2359ce29dba4f4b",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b16372a13f944e06",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1c75839dc44847e7",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1468b6be671542aa",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_42976989e7a842d2",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_885ef33e83ab4e75",
+        "details": {
+          "memory_type": "fact",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_3fa917cacbf94ecc",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 19,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_854c5a79b1c84568",
+        "details": {
+          "score": 0.5207142857142857
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_3112537cd077434d",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e76535cee3ed4e2f",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a7fe030deeaf4361",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_93b480b7056e437c",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b16372a13f944e06",
+        "details": {
+          "score": 0.44321428571428567
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_476abf9bd7514b13",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_033f7f11a477413f",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c393e6863dab4c3f",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_551358ebe35645fa",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_82c1fb37cab84967",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d1d22c1e68d94564",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b33430d40d85413f",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c2359ce29dba4f4b",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1c75839dc44847e7",
+        "details": {
+          "score": 0.40499999999999997
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1468b6be671542aa",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_42976989e7a842d2",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_885ef33e83ab4e75",
+        "details": {
+          "score": 0.36999999999999994
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_3fa917cacbf94ecc",
+        "details": {
+          "score": 0.36999999999999994
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "api_versioning",
+    "query": "sunset v1",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "sunset v1",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 17,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_493f956a4b4845e1",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_569d74250a81425a",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e12071a214f74116",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_fce4a9d116fa449c",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_8cf5a6ecfdbe4bc0",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_13b14644e2114a8a",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_50ba8fb1e2ad4bf8",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_254c04a8559045f5",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e958a1bf4b5b43a1",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_96807be543b34660",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a17e13d92a4f4804",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_71d8e73f0e024149",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_645244e94bdf4236",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_cb5c56ede3d14cf0",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_ba0d2713d6fb4e50",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c23f6c513e504baa",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_3c5d43eeaa49465e",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 17,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_493f956a4b4845e1",
+        "details": {
+          "score": 0.7350000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e12071a214f74116",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_50ba8fb1e2ad4bf8",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_569d74250a81425a",
+        "details": {
+          "score": 0.6100000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_fce4a9d116fa449c",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_8cf5a6ecfdbe4bc0",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_13b14644e2114a8a",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_254c04a8559045f5",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e958a1bf4b5b43a1",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_96807be543b34660",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a17e13d92a4f4804",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_71d8e73f0e024149",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_645244e94bdf4236",
+        "details": {
+          "score": 0.5325
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_3c5d43eeaa49465e",
+        "details": {
+          "score": 0.495
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_cb5c56ede3d14cf0",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_ba0d2713d6fb4e50",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c23f6c513e504baa",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "microservices_decomposition",
+    "query": "common-lib",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "common-lib",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 15,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_ee92b08660264c8d",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a49df66182284640",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_818dfaf8b7834196",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_917cee02808e4cd8",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6f7ddf5c72734038",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_11c93dcf47134e81",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c0dc69a7d63f4b17",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6e4320e85077436a",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1646b2cb77a741ac",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6ccc3e2f362e44c0",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6855ecad7a5f4c1f",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_dcc63a963c7d4f92",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_fb2f59a141c148d7",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_4cec981ac8a64d6b",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b8354bb456ad4cd1",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 15,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_ee92b08660264c8d",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a49df66182284640",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_818dfaf8b7834196",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_917cee02808e4cd8",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6f7ddf5c72734038",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_11c93dcf47134e81",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c0dc69a7d63f4b17",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6e4320e85077436a",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1646b2cb77a741ac",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6ccc3e2f362e44c0",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6855ecad7a5f4c1f",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_dcc63a963c7d4f92",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_fb2f59a141c148d7",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_4cec981ac8a64d6b",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b8354bb456ad4cd1",
+        "details": {
+          "score": 0.36999999999999994
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "cache_invalidation",
+    "query": "How do we prevent cache stampedes?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "How do we prevent cache stampedes?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 13,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_4d243142a3f6492f",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_16c3be79b9be4663",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_cc2d135fc0e94008",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_7b7ec2881d30457e",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_7e46e1fc956f41c7",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_497da545afc544ec",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_8db5b244f89a4066",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1445d2a45d4943b7",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6d5573a48ce84f04",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9be025a3a9a54147",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_564867da83de4c24",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_aa8ffc772de34a1d",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9b43b74a76274e7a",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 13,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_4d243142a3f6492f",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_16c3be79b9be4663",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_7b7ec2881d30457e",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_497da545afc544ec",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1445d2a45d4943b7",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6d5573a48ce84f04",
+        "details": {
+          "score": 0.4491666666666666
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_cc2d135fc0e94008",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_7e46e1fc956f41c7",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_8db5b244f89a4066",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9be025a3a9a54147",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9b43b74a76274e7a",
+        "details": {
+          "score": 0.4116666666666666
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_564867da83de4c24",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_aa8ffc772de34a1d",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "race_condition",
+    "query": "version column",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "version column",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 10,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d0b9a488ea43402e",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b08c1b26af384d26",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_01caaabd17a246ca",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c4b8c210c93b4ec8",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_632e278270814e6f",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_06f65de4b68a477a",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0350e137d43d4fa9",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_2c0e8bfdd9ad43f6",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_eceec83e0e5c4e5b",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_52e792b5879e4139",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 10,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d0b9a488ea43402e",
+        "details": {
+          "score": 0.6100000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b08c1b26af384d26",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_01caaabd17a246ca",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c4b8c210c93b4ec8",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_632e278270814e6f",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_06f65de4b68a477a",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0350e137d43d4fa9",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_2c0e8bfdd9ad43f6",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_eceec83e0e5c4e5b",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_52e792b5879e4139",
+        "details": {
+          "score": 0.36999999999999994
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "security_patch",
+    "query": "LIKE",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "LIKE",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 15,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_19bfa10a6b42405f",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e265e39e3046450c",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e85efca40054409d",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b4851f6f644c4f78",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_bc9b2a3751804864",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_aad19dbbf44f4aba",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_dd976feb52124520",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9a486fe2c3684bcd",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0afda5321b544b37",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_65b404798f564945",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1ecabbf3d00249a8",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d3de4d18a5884016",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_aa55afc39c0a4889",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d6c5e0e2eb0e48c8",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c29e7ee7ad354641",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 15,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_bc9b2a3751804864",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_19bfa10a6b42405f",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e265e39e3046450c",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e85efca40054409d",
+        "details": {
+          "score": 0.4625
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b4851f6f644c4f78",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_aad19dbbf44f4aba",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_dd976feb52124520",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9a486fe2c3684bcd",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0afda5321b544b37",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_65b404798f564945",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1ecabbf3d00249a8",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d3de4d18a5884016",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_aa55afc39c0a4889",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d6c5e0e2eb0e48c8",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c29e7ee7ad354641",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "feature_flags",
+    "query": "100ms SLA",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "100ms SLA",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 11,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0b918300c89d4a2b",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d70cbff46dd8458d",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_bbfb7eda447248fa",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f3303dc315bc49d1",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_ee8dee51cf474b54",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_4fa4745f7ba84a42",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_4a0885de7ead40f3",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_fde27afc6cbd4050",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_3ab84e7fa41c45d2",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f6a750a30d9e473a",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_35048d63312144b2",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 11,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0b918300c89d4a2b",
+        "details": {
+          "score": 0.6100000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d70cbff46dd8458d",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_bbfb7eda447248fa",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f3303dc315bc49d1",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_ee8dee51cf474b54",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_4fa4745f7ba84a42",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_4a0885de7ead40f3",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_fde27afc6cbd4050",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_3ab84e7fa41c45d2",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f6a750a30d9e473a",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_35048d63312144b2",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "cicd_migration",
+    "query": "What is the CI build time target?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "What is the CI build time target?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 14,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_efe78ee42b7d42d0",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_505381aa3c994be9",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0823f5634bcc4d58",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a184d774048e4b18",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e018a7021b7243d9",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e3e5c30bf5ac449a",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_5623fbfe068441b3",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_43d3507ee2854727",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e3c7572eeb204e7c",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_bf513cc0eeb24718",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_53433ddeaded4bb5",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e3cacb65ddda4336",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0c775c5786f64001",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1ec056c16b3842df",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 14,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a184d774048e4b18",
+        "details": {
+          "score": 0.49642857142857144
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_efe78ee42b7d42d0",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_5623fbfe068441b3",
+        "details": {
+          "score": 0.47892857142857137
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_505381aa3c994be9",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0823f5634bcc4d58",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e018a7021b7243d9",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_53433ddeaded4bb5",
+        "details": {
+          "score": 0.4407142857142857
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e3e5c30bf5ac449a",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_43d3507ee2854727",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e3c7572eeb204e7c",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_bf513cc0eeb24718",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e3cacb65ddda4336",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0c775c5786f64001",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1ec056c16b3842df",
+        "details": {
+          "score": 0.36999999999999994
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "frontend_migration",
+    "query": "React Router loaders",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "React Router loaders",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 15,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c211b099a0bb4d11",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_433512d70dee449d",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_eaa05011b3d7440a",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_949b38eff05c41c4",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_ff0fd805d5b84e67",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f3ea8ce7f720400b",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6aa21c71a14f4eae",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9377d63e6bfc44f6",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_412944f46fba4655",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_5b8ba7c1b8214533",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_688c1987ad084ebc",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1dce533ad2ad4d0f",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_967b79ed7ae94975",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_fc2c3449b5d54c7f",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_40d2cc9042c14459",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 15,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c211b099a0bb4d11",
+        "details": {
+          "score": 0.6516666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_433512d70dee449d",
+        "details": {
+          "score": 0.5916666666666668
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_ff0fd805d5b84e67",
+        "details": {
+          "score": 0.5916666666666668
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f3ea8ce7f720400b",
+        "details": {
+          "score": 0.5916666666666668
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6aa21c71a14f4eae",
+        "details": {
+          "score": 0.5916666666666668
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_40d2cc9042c14459",
+        "details": {
+          "score": 0.5366666666666666
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_5b8ba7c1b8214533",
+        "details": {
+          "score": 0.5083333333333333
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_eaa05011b3d7440a",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_949b38eff05c41c4",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9377d63e6bfc44f6",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_412944f46fba4655",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_688c1987ad084ebc",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1dce533ad2ad4d0f",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_967b79ed7ae94975",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_fc2c3449b5d54c7f",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "logging_overhaul",
+    "query": "redact",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "redact",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 10,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b71cd1585f3243eb",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_70fbf72822754e25",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_5e5fe43d753e45aa",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_bbaa6fe97e6844c8",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_fe01a0c30aaa4466",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_33f5277cb22447da",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_ccb51136f5fd4e7e",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_4297c9e119bb4830",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c01fb83c588c4e4c",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d0380c1d1bd14b9b",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 10,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b71cd1585f3243eb",
+        "details": {
+          "score": 0.7350000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_70fbf72822754e25",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_5e5fe43d753e45aa",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_bbaa6fe97e6844c8",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_fe01a0c30aaa4466",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_33f5277cb22447da",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_ccb51136f5fd4e7e",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_4297c9e119bb4830",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c01fb83c588c4e4c",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d0380c1d1bd14b9b",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "config_management",
+    "query": "30s",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "30s",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 9,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b7f786fcbff24f6f",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_8c69c7b7bad74b59",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a1152be88cbe4325",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_8b6a811abd6d45cb",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0415af995a204111",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_422869c5c5c64fea",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_204ba97924024912",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_77b144ba96fa48b4",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_2ef6f81eae084c91",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 9,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a1152be88cbe4325",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b7f786fcbff24f6f",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_8c69c7b7bad74b59",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_8b6a811abd6d45cb",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0415af995a204111",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_422869c5c5c64fea",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_204ba97924024912",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_77b144ba96fa48b4",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_2ef6f81eae084c91",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "oauth_to_saml",
+    "query": "What auth methods do we support?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "What auth methods do we support?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 12,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_013881cf144e4e2a",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_fa73678e36334055",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_288a26c25dab4b64",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_94d82f0d87cc496d",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_7fd8bb36436449e5",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a6373ec35ee74457",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_af1874430686439b",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_37b296a0bf5a4542",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c6d88e1d443f4200",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1ca6c93d4b664c52",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_74d8117d75dd41ac",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e4c8f7ae405b46ca",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 12,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_013881cf144e4e2a",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_fa73678e36334055",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_288a26c25dab4b64",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_94d82f0d87cc496d",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_7fd8bb36436449e5",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a6373ec35ee74457",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_af1874430686439b",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_37b296a0bf5a4542",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c6d88e1d443f4200",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1ca6c93d4b664c52",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_74d8117d75dd41ac",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e4c8f7ae405b46ca",
+        "details": {
+          "score": 0.36999999999999994
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "rate_limiting",
+    "query": "not fixed window",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "not fixed window",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 9,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_527a006c881f4d73",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_602e30856e3e4cba",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9614f61e5657433c",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9f78736659d5465d",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a2972d7ef9c24ee2",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_8c24b9155a974b0a",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_939e445f162c4bf5",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_348a7226b16a4bc5",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_deb1593758104f11",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 9,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_527a006c881f4d73",
+        "details": {
+          "score": 0.6516666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_602e30856e3e4cba",
+        "details": {
+          "score": 0.5916666666666668
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9614f61e5657433c",
+        "details": {
+          "score": 0.5916666666666668
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9f78736659d5465d",
+        "details": {
+          "score": 0.5916666666666668
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a2972d7ef9c24ee2",
+        "details": {
+          "score": 0.5083333333333333
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_8c24b9155a974b0a",
+        "details": {
+          "score": 0.49083333333333323
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_939e445f162c4bf5",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_348a7226b16a4bc5",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_deb1593758104f11",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "data_export",
+    "query": "background job",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "background job",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 8,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_8bed7f468d314688",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_8bf9dca16dc04753",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_2a3aef7651334f24",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_828c969487454a11",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e7553391fd5f46f5",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_baa5619ba29b461b",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_76fd755760dd4b4d",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6af0f6a99fca4ced",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 8,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_8bed7f468d314688",
+        "details": {
+          "score": 0.7350000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_8bf9dca16dc04753",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_2a3aef7651334f24",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_828c969487454a11",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e7553391fd5f46f5",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_baa5619ba29b461b",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_76fd755760dd4b4d",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6af0f6a99fca4ced",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "search_optimization",
+    "query": "Debezium",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "Debezium",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 10,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_826cc810e7cb4a67",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_5ac45f595e5a4c96",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_4a7074c2da4e4cb2",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_255bf7f85a2a4930",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_55b5dfa41e6a476b",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_bca9021ca19244c0",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_31981ce6c1414cea",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1291991483b742d8",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_10e527be84ee40e7",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_2ecde9b2cc0645cd",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 10,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_826cc810e7cb4a67",
+        "details": {
+          "score": 0.7350000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_5ac45f595e5a4c96",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_4a7074c2da4e4cb2",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_255bf7f85a2a4930",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_55b5dfa41e6a476b",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_bca9021ca19244c0",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_31981ce6c1414cea",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1291991483b742d8",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_10e527be84ee40e7",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_2ecde9b2cc0645cd",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "search_optimization_regression",
+    "query": "Debezium",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "Debezium",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 9,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_769c98fa8090458c",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6edde609c7214312",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_45330b7867554570",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a6c3ed173f1e45eb",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_00587dcdd46e41c5",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_facb9a736eb14071",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_69ec02cd77ee46cc",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0a62c22c82124f3e",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_3877681dc84e44c0",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 9,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6edde609c7214312",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_769c98fa8090458c",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_45330b7867554570",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a6c3ed173f1e45eb",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_00587dcdd46e41c5",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_facb9a736eb14071",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_69ec02cd77ee46cc",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0a62c22c82124f3e",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_3877681dc84e44c0",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "job_queue_migration",
+    "query": "idempotency keys",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "idempotency keys",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 11,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_4a6bdc9ae0dc494b",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_5b1d5b1f367a498b",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b4f52a8b77bd4cc7",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c4dbdccc988e4918",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f63ed29377c24850",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1775ea33d3444e49",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_080fecae0c524959",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_ed78aab6bc6e40fc",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e15c68db08a6401e",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_66f5c7e853024ca1",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e0ab6441b1704922",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 11,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_4a6bdc9ae0dc494b",
+        "details": {
+          "score": 0.6100000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_5b1d5b1f367a498b",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b4f52a8b77bd4cc7",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c4dbdccc988e4918",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f63ed29377c24850",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1775ea33d3444e49",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_080fecae0c524959",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_ed78aab6bc6e40fc",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e15c68db08a6401e",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_66f5c7e853024ca1",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e0ab6441b1704922",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "multi_tenancy",
+    "query": "query builder",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "query builder",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 15,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_3c3a93b0c2ec4e82",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a898c5a715a64ac5",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_354debe5429344db",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f665f8c7305c49a4",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_48dc772c604348a3",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_60c50977ea7840f7",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6a400b13a9ad44de",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a88d7e339ecb4d0d",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_28cf05b8ffa342cb",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_3073452a4eae470a",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c6fd999171c94c32",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0b5b00e45167492c",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d004b2fe63074691",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a10aa4eaa6ea498b",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_af63adcf9a6149f3",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 15,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_3c3a93b0c2ec4e82",
+        "details": {
+          "score": 0.7350000000000001
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_354debe5429344db",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f665f8c7305c49a4",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_48dc772c604348a3",
+        "details": {
+          "score": 0.675
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_60c50977ea7840f7",
+        "details": {
+          "score": 0.55
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a898c5a715a64ac5",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6a400b13a9ad44de",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_28cf05b8ffa342cb",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_3073452a4eae470a",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c6fd999171c94c32",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0b5b00e45167492c",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a88d7e339ecb4d0d",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d004b2fe63074691",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a10aa4eaa6ea498b",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_af63adcf9a6149f3",
+        "details": {
+          "score": 0.36999999999999994
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "false_memory_s05",
+    "query": "SQLite",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "SQLite",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 9,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_99b36d929a574bf6",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_6f5260bc83ab4f91",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_53d9ab8d9e9845b8",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_70da37b1aea74051",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_5fd8146975474bf7",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_7edca695b00b4630",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0ad81eafc7a449e4",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_48b0adaffdf84ceb",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_5cde37df4f9f48c1",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 9,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_99b36d929a574bf6",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_6f5260bc83ab4f91",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_53d9ab8d9e9845b8",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_70da37b1aea74051",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_5fd8146975474bf7",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_7edca695b00b4630",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0ad81eafc7a449e4",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_48b0adaffdf84ceb",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_5cde37df4f9f48c1",
+        "details": {
+          "score": 0.36999999999999994
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "superseded_decision",
+    "query": "What is the current session store decision?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "What is the current session store decision?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 12,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e9eaadb72c9f4c27",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f0a33ef1da0b4008",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_3cd4366f3dd74b6d",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e5a9390420ba437a",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_ec9eda5dfb23436c",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_06bd0b812b8d4eea",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_13e4ec52f39441cf",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a3b75aefb5f04352",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_fdb9bc8595f7497b",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_05eb8afd446c4496",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1a517c21eb5f421a",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_8fddd2a7f82c4d3c",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 12,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e9eaadb72c9f4c27",
+        "details": {
+          "score": 0.5207142857142857
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f0a33ef1da0b4008",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_3cd4366f3dd74b6d",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e5a9390420ba437a",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_ec9eda5dfb23436c",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a3b75aefb5f04352",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_fdb9bc8595f7497b",
+        "details": {
+          "score": 0.44321428571428567
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_05eb8afd446c4496",
+        "details": {
+          "score": 0.4407142857142857
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_06bd0b812b8d4eea",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_13e4ec52f39441cf",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1a517c21eb5f421a",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_8fddd2a7f82c4d3c",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "exact_config_key",
+    "query": "Why is FEATURE_AUTH_REFRESH_V2 disabled?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "Why is FEATURE_AUTH_REFRESH_V2 disabled?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 8,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_bf021003f99145f6",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e028628a81d34b53",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_bb3abd525ac34312",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b0753039cfe64628",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_2e2093e4cf134f62",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_8e855eb3d15b468d",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_301784d886a948af",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_65445a43a16d464b",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 8,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e028628a81d34b53",
+        "details": {
+          "score": 0.4875
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_bb3abd525ac34312",
+        "details": {
+          "score": 0.4875
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_2e2093e4cf134f62",
+        "details": {
+          "score": 0.4875
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_bf021003f99145f6",
+        "details": {
+          "score": 0.43
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b0753039cfe64628",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_8e855eb3d15b468d",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_301784d886a948af",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_65445a43a16d464b",
+        "details": {
+          "score": 0.36999999999999994
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "exact_api_endpoint",
+    "query": "What decision affects /api/v2/export/bulk?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "What decision affects /api/v2/export/bulk?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 5,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_7ec31e6160814b8c",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e7ff068e70b9400e",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c719f3d6e39a4aa8",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e5361e02c2364771",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_c0f56ced07044706",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 5,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_7ec31e6160814b8c",
+        "details": {
+          "score": 0.485
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e7ff068e70b9400e",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c719f3d6e39a4aa8",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e5361e02c2364771",
+        "details": {
+          "score": 0.4075
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_c0f56ced07044706",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "exact_cicd_job",
+    "query": "Why did deploy-preview-h200 fail after migration?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "Why did deploy-preview-h200 fail after migration?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 9,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_b877f1f675a34ac4",
+        "details": {
+          "memory_type": "error",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9e387ad78a2f47bf",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9e4ae901375d48f9",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e4badf83e1ae489e",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d31e8abc10634db4",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_abd76911f844465b",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d8ee0287a2c94745",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_cfc6d9c6c98542ed",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_98ab028dcc4443e5",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 9,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_b877f1f675a34ac4",
+        "details": {
+          "score": 0.5458333333333333
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9e4ae901375d48f9",
+        "details": {
+          "score": 0.5083333333333333
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e4badf83e1ae489e",
+        "details": {
+          "score": 0.5083333333333333
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9e387ad78a2f47bf",
+        "details": {
+          "score": 0.4716666666666666
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d31e8abc10634db4",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_abd76911f844465b",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d8ee0287a2c94745",
+        "details": {
+          "score": 0.44666666666666666
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_98ab028dcc4443e5",
+        "details": {
+          "score": 0.4116666666666666
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_cfc6d9c6c98542ed",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "exact_cve",
+    "query": "What patch decision was made for CVE-2026-1234?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "What patch decision was made for CVE-2026-1234?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 10,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_bfb1807f28814947",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_72715323519f4870",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_656787d995a949cc",
+        "details": {
+          "memory_type": "requirement",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_315f9a0d3a7241f2",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a62fbf9630c54fb3",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_a709accdffb349d8",
+        "details": {
+          "memory_type": "goal",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_d81e99669aef43cd",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_73c6d067c93242a7",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e55a17a79e874e79",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_105e41b244334cac",
+        "details": {
+          "memory_type": "task",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 10,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_bfb1807f28814947",
+        "details": {
+          "score": 0.46571428571428564
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_315f9a0d3a7241f2",
+        "details": {
+          "score": 0.46071428571428574
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_72715323519f4870",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_656787d995a949cc",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a62fbf9630c54fb3",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_a709accdffb349d8",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_d81e99669aef43cd",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_105e41b244334cac",
+        "details": {
+          "score": 0.4057142857142857
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_73c6d067c93242a7",
+        "details": {
+          "score": 0.40499999999999997
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e55a17a79e874e79",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "h03_project_A",
+    "query": "What database does Project A use?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "What database does Project A use?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 5,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f484d9a7a32b4395",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_ad004d569d5040b8",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_1f88ffcac08f43a9",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9deaec0c6fab49ff",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_9fc3082e0884406d",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 5,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f484d9a7a32b4395",
+        "details": {
+          "score": 0.5266666666666666
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_ad004d569d5040b8",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_1f88ffcac08f43a9",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9deaec0c6fab49ff",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_9fc3082e0884406d",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "h03_project_B",
+    "query": "What database does Project B use?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "What database does Project B use?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 4,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_29b903399a894906",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_21d038adb1514baf",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_e1d521a8d71e4bcb",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_f35d582dd4be4dd9",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 4,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_29b903399a894906",
+        "details": {
+          "score": 0.5266666666666666
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_21d038adb1514baf",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_e1d521a8d71e4bcb",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_f35d582dd4be4dd9",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  },
+  {
+    "scenario": "h03_project_C",
+    "query": "What database does Project C use?",
+    "events": [
+      {
+        "stage": "router",
+        "action": "plan_created",
+        "memory_id": null,
+        "details": {
+          "task_type": "general",
+          "query": "What database does Project C use?",
+          "plan_needs": {
+            "session": true,
+            "project": true,
+            "decisions": true,
+            "errors": true,
+            "code": true,
+            "graph": false
+          }
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "retrieved",
+        "memory_id": null,
+        "details": {
+          "total_candidates": 5,
+          "vector_count": 0,
+          "sparse_count": 0
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_772039b40a024c19",
+        "details": {
+          "memory_type": "decision",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_0502ed5dc70244e0",
+        "details": {
+          "memory_type": "intent",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_185e75b603ef4de3",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_81d19b7d35eb4ec7",
+        "details": {
+          "memory_type": "event",
+          "score": null
+        }
+      },
+      {
+        "stage": "reader",
+        "action": "candidate",
+        "memory_id": "mem_05aaeb8058704116",
+        "details": {
+          "memory_type": "code_change",
+          "score": null
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "reranked",
+        "memory_id": null,
+        "details": {
+          "total_scored": 5,
+          "top_n": 50
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_772039b40a024c19",
+        "details": {
+          "score": 0.5266666666666666
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_0502ed5dc70244e0",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_185e75b603ef4de3",
+        "details": {
+          "score": 0.4666666666666667
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_81d19b7d35eb4ec7",
+        "details": {
+          "score": 0.425
+        }
+      },
+      {
+        "stage": "scorer",
+        "action": "ranked",
+        "memory_id": "mem_05aaeb8058704116",
+        "details": {
+          "score": 0.37749999999999995
+        }
+      }
+    ],
+    "drops": [],
+    "inclusions": []
+  }
+]

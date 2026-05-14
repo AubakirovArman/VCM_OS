@@ -1,0 +1,922 @@
+[
+  {
+    "scenario": "holdout_stale_migration",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 65,
+      "stale": 0.0,
+      "quality": 0.85,
+      "rationale": 0.0,
+      "project_state": 1.0,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 48,
+      "stale": 1.0,
+      "quality": 0.5291666666666667,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.75
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 105,
+      "stale": 0.0,
+      "quality": 0.68,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 212,
+      "stale": 1.0,
+      "quality": 0.539622641509434,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_exact_env_var",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 61,
+      "stale": 0.0,
+      "quality": 0.7416666666666667,
+      "rationale": 0.0,
+      "project_state": 0.5,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 43,
+      "stale": 0.0,
+      "quality": 0.6666666666666666,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 148,
+      "stale": 0.0,
+      "quality": 0.6378378378378379,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 219,
+      "stale": 0.0,
+      "quality": 0.6255707762557078,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_superseded_cache",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 60,
+      "stale": 0.0,
+      "quality": 0.795,
+      "rationale": 0.0,
+      "project_state": 1.0,
+      "exact_symbol": 0.8
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 55,
+      "stale": 1.0,
+      "quality": 0.49,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.6
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 113,
+      "stale": 0.0,
+      "quality": 0.6743362831858407,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 222,
+      "stale": 1.0,
+      "quality": 0.5378378378378379,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_exact_function_name",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 67,
+      "stale": 0.0,
+      "quality": 0.6866666666666666,
+      "rationale": 0.0,
+      "project_state": 0.5,
+      "exact_symbol": 0.8
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 50,
+      "stale": 0.0,
+      "quality": 0.5566666666666666,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.6
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 147,
+      "stale": 0.0,
+      "quality": 0.5830952380952381,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.8
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 223,
+      "stale": 0.0,
+      "quality": 0.6251121076233184,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_multi_session_auth",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 60,
+      "stale": 0.0,
+      "quality": 0.6916666666666667,
+      "rationale": 0.0,
+      "project_state": 0.75,
+      "exact_symbol": 0.75
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 42,
+      "stale": 0.0,
+      "quality": 0.4916666666666667,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.5
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 124,
+      "stale": 0.0,
+      "quality": 0.6451612903225806,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 201,
+      "stale": 0.0,
+      "quality": 0.6278606965174129,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_exact_cve_patch",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 46,
+      "stale": 0.0,
+      "quality": 0.7416666666666667,
+      "rationale": 0.0,
+      "project_state": 0.5,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 43,
+      "stale": 0.0,
+      "quality": 0.6666666666666666,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 73,
+      "stale": 0.0,
+      "quality": 0.6666666666666666,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 120,
+      "stale": 0.0,
+      "quality": 0.6466666666666667,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_code_change_only",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 59,
+      "stale": 0.0,
+      "quality": 0.45,
+      "rationale": 0.0,
+      "project_state": 0.5,
+      "exact_symbol": 0.5
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 38,
+      "stale": 0.0,
+      "quality": 0.5583333333333333,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.5
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 80,
+      "stale": 0.0,
+      "quality": 0.7,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 123,
+      "stale": 0.0,
+      "quality": 0.6682926829268293,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_error_only_debugging",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.3333333333333333,
+      "restore_semantic": 0.6666666666666666,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 67,
+      "stale": 0.0,
+      "quality": 0.6333333333333333,
+      "rationale": 1.0,
+      "project_state": 0.3333333333333333,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 54,
+      "stale": 0.0,
+      "quality": 0.6458333333333334,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.75
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 143,
+      "stale": 0.0,
+      "quality": 0.6891608391608391,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 195,
+      "stale": 0.0,
+      "quality": 0.6787179487179488,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_long_text_budget_stress",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 104,
+      "stale": 0.0,
+      "quality": 0.6830128205128205,
+      "rationale": 0.0,
+      "project_state": 0.6666666666666666,
+      "exact_symbol": 0.75
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 93,
+      "stale": 0.0,
+      "quality": 0.5893817204301075,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.75
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 405,
+      "stale": 0.0,
+      "quality": 0.5429938271604938,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.75
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 500,
+      "stale": 0.0,
+      "quality": 0.6112,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_contradiction_same_file",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 62,
+      "stale": 0.0,
+      "quality": 0.7666666666666666,
+      "rationale": 0.0,
+      "project_state": 0.6666666666666666,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 53,
+      "stale": 1.0,
+      "quality": 0.5666666666666667,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 103,
+      "stale": 0.0,
+      "quality": 0.654368932038835,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 217,
+      "stale": 1.0,
+      "quality": 0.5258064516129032,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_exact_version",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 46,
+      "stale": 0.0,
+      "quality": 0.7416666666666667,
+      "rationale": 0.0,
+      "project_state": 0.5,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 38,
+      "stale": 0.0,
+      "quality": 0.6666666666666666,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 89,
+      "stale": 0.0,
+      "quality": 0.6629213483146068,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 162,
+      "stale": 0.0,
+      "quality": 0.6345679012345679,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_multi_tenant_config",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 65,
+      "stale": 0.0,
+      "quality": 0.675,
+      "rationale": 1.0,
+      "project_state": 0.6666666666666666,
+      "exact_symbol": 0.5
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 57,
+      "stale": 1.0,
+      "quality": 0.475,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.5
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 110,
+      "stale": 0.0,
+      "quality": 0.6300757575757576,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.75
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 223,
+      "stale": 1.0,
+      "quality": 0.5751121076233184,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_migration_rollback",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 68,
+      "stale": 0.0,
+      "quality": 0.6666666666666666,
+      "rationale": 0.0,
+      "project_state": 0.6666666666666666,
+      "exact_symbol": 0.6666666666666666
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 57,
+      "stale": 1.0,
+      "quality": 0.36666666666666664,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.3333333333333333
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 128,
+      "stale": 0.0,
+      "quality": 0.64375,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 239,
+      "stale": 1.0,
+      "quality": 0.5234309623430963,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_exact_api_version",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 50,
+      "stale": 0.0,
+      "quality": 0.7916666666666666,
+      "rationale": 1.0,
+      "project_state": 0.5,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 34,
+      "stale": 0.0,
+      "quality": 0.6616666666666666,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.8
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 106,
+      "stale": 0.0,
+      "quality": 0.7028301886792453,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 154,
+      "stale": 0.0,
+      "quality": 0.6863636363636364,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_test_flake",
+    "vcm": {
+      "restore": 0.8333333333333334,
+      "restore_verbatim": 0.5,
+      "restore_semantic": 0.8333333333333334,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 95,
+      "stale": 0.0,
+      "quality": 0.6317105263157895,
+      "rationale": 0.0,
+      "project_state": 0.25,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 74,
+      "stale": 0.0,
+      "quality": 0.5666666666666667,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.6666666666666666
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 213,
+      "stale": 0.0,
+      "quality": 0.6262910798122066,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 287,
+      "stale": 0.0,
+      "quality": 0.6195121951219512,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_config_key_stress",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 74,
+      "stale": 0.0,
+      "quality": 0.6866666666666666,
+      "rationale": 0.0,
+      "project_state": 0.5,
+      "exact_symbol": 0.8
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 62,
+      "stale": 0.0,
+      "quality": 0.5666666666666667,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 139,
+      "stale": 0.0,
+      "quality": 0.5852877697841726,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.8
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 345,
+      "stale": 0.0,
+      "quality": 0.516231884057971,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_dependency_conflict",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 71,
+      "stale": 0.0,
+      "quality": 0.7666666666666666,
+      "rationale": 0.0,
+      "project_state": 0.6666666666666666,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 37,
+      "stale": 0.0,
+      "quality": 0.6116666666666667,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.8
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 97,
+      "stale": 0.0,
+      "quality": 0.6027319587628867,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.8
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 150,
+      "stale": 0.0,
+      "quality": 0.6373333333333333,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_security_remediation",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.3333333333333333,
+      "restore_semantic": 0.6666666666666666,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 48,
+      "stale": 0.0,
+      "quality": 0.5833333333333334,
+      "rationale": 0.0,
+      "project_state": 0.3333333333333333,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 56,
+      "stale": 0.0,
+      "quality": 0.5666666666666667,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.6666666666666666
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 118,
+      "stale": 0.0,
+      "quality": 0.6474576271186441,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 165,
+      "stale": 0.0,
+      "quality": 0.6339393939393939,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_schema_evolution",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 109,
+      "stale": 0.0,
+      "quality": 0.7013761467889909,
+      "rationale": 0.0,
+      "project_state": 0.3333333333333333,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 70,
+      "stale": 0.0,
+      "quality": 0.525,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.5
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 204,
+      "stale": 0.0,
+      "quality": 0.6274509803921569,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 296,
+      "stale": 0.0,
+      "quality": 0.6189189189189189,
+      "rationale": 0.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  },
+  {
+    "scenario": "holdout_exact_package_name",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic": 1.0,
+      "semantic_goal": 1.0,
+      "semantic_decision": 1.0,
+      "tokens": 67,
+      "stale": 0.0,
+      "quality": 0.8166666666666667,
+      "rationale": 1.0,
+      "project_state": 0.6666666666666666,
+      "exact_symbol": 1.0
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 55,
+      "stale": 1.0,
+      "quality": 0.5716666666666667,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.8333333333333334
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 98,
+      "stale": 0.0,
+      "quality": 0.6621428571428571,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 0.8333333333333334
+    },
+    "full": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 235,
+      "stale": 1.0,
+      "quality": 0.5738297872340425,
+      "rationale": 1.0,
+      "project_state": 0.0,
+      "exact_symbol": 1.0
+    }
+  }
+]

@@ -1,0 +1,370 @@
+#!/usr/bin/env python3
+"""VCM-OS CLI — command-line interface for the memory runtime.
+
+Usage:
+    vcm serve [--port 8123] [--project ./my-app]
+    vcm run <command> [--project <id>] [--session <id>]
+    vcm ingest <file> [--project <id>] [--type auto|git_diff|test|session_log]
+    vcm status [--project <id>]
+    vcm memory search <query> [--project <id>] [--limit 10]
+    vcm memory correct <memory_id> <action> [--reason <text>]
+    vcm benchmark [--suite e2e|budget|load]
+"""
+import argparse
+import os
+import subprocess
+import sys
+import uuid
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from vcm_os.context.pack_builder import ContextPackBuilder
+from vcm_os.evals.experiments import ExperimentRunner
+from vcm_os.memory.writer import MemoryWriter
+from vcm_os.schemas import EventRecord, MemoryRequest
+from vcm_os.storage.sparse_index import SparseIndex
+from vcm_os.storage.sqlite_store import SQLiteStore
+from vcm_os.storage.vector_index import VectorIndex
+from vcm_os.verifier import ResponseVerifier
+
+DEFAULT_DB = "data/vcm_os.db"
+
+
+def _get_store(project_path: str = "."):
+    db_path = Path(project_path) / DEFAULT_DB
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    store = SQLiteStore(str(db_path))
+    vec = VectorIndex()
+    sparse = SparseIndex()
+    writer = MemoryWriter(store, vec, sparse)
+    return store, vec, sparse, writer
+
+
+def _detect_project_id(project_path: str = ".") -> str:
+    """Detect project ID from git remote or directory name."""
+    try:
+        result = subprocess.run(
+            ["git", "remote", "get-url", "origin"],
+            cwd=project_path,
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+        if result.returncode == 0:
+            url = result.stdout.strip()
+            # Extract repo name from URL
+            name = url.split("/")[-1].replace(".git", "")
+            return f"proj_{name}"
+    except Exception:
+        pass
+    return f"proj_{Path(project_path).resolve().name}"
+
+
+def cmd_serve(args):
+    """Start the VCM-OS API server."""
+    import uvicorn
+    from vcm_os.app.api import app
+
+    port = args.port or 8123
+    print(f"Starting VCM-OS server on port {port}...")
+    uvicorn.run(app, host="0.0.0.0", port=port, log_level="info")
+
+
+def cmd_run(args):
+    """Run a command with VCM event capture."""
+    project_id = args.project or _detect_project_id(args.project_path)
+    session_id = args.session or f"sess_{uuid.uuid4().hex[:8]}"
+    command = args.command
+
+    store, vec, sparse, writer = _get_store(args.project_path)
+
+    print(f"VCM run: project={project_id} session={session_id}")
+    print(f"Command: {' '.join(command)}")
+    print("-" * 60)
+
+    # Ingest: command start
+    writer.capture_event(EventRecord(
+        event_id=f"evt_cmd_start_{uuid.uuid4().hex[:6]}",
+        project_id=project_id,
+        session_id=session_id,
+        event_type="tool_call",
+        payload={"command": " ".join(command), "tool_name": command[0] if command else "unknown"},
+        raw_text=f"Running command: {' '.join(command)}",
+    ))
+
+    proc = subprocess.Popen(
+        command,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        cwd=args.project_path,
+    )
+
+    output_lines = []
+    for line in proc.stdout:
+        print(line, end="")
+        output_lines.append(line)
+
+    proc.wait()
+
+    output_text = "".join(output_lines)
+
+    # Ingest: command output
+    writer.capture_event(EventRecord(
+        event_id=f"evt_cmd_out_{uuid.uuid4().hex[:6]}",
+        project_id=project_id,
+        session_id=session_id,
+        event_type="tool_call",
+        payload={
+            "command": " ".join(command),
+            "exit_code": proc.returncode,
+            "tool_name": command[0] if command else "unknown",
+        },
+        raw_text=output_text[:5000],  # Limit raw text
+    ))
+
+    # Save indexes
+    vec.save()
+    sparse.save()
+
+    print("-" * 60)
+    print(f"VCM: captured {len(output_text)} chars, exit code {proc.returncode}")
+    print(f"VCM: data saved to {Path(args.project_path) / DEFAULT_DB}")
+    sys.exit(proc.returncode)
+
+
+def cmd_ingest(args):
+    """Ingest a file into VCM memory."""
+    project_id = args.project or _detect_project_id(args.project_path)
+    session_id = args.session or f"sess_{uuid.uuid4().hex[:8]}"
+    file_path = Path(args.file)
+
+    if not file_path.exists():
+        print(f"Error: file not found: {file_path}")
+        sys.exit(1)
+
+    raw_text = file_path.read_text(encoding="utf-8", errors="replace")
+
+    # Auto-detect type
+    event_type = args.type
+    if event_type == "auto":
+        name = file_path.name.lower()
+        if "git" in name or "diff" in name:
+            event_type = "code_change"
+        elif "test" in name or "pytest" in name or "jest" in name:
+            event_type = "tool_call"
+        elif "session" in name or "log" in name:
+            event_type = "event"
+        elif "error" in name:
+            event_type = "error"
+        else:
+            event_type = "event"
+
+    store, vec, sparse, writer = _get_store(args.project_path)
+
+    writer.capture_event(EventRecord(
+        event_id=f"evt_ingest_{uuid.uuid4().hex[:6]}",
+        project_id=project_id,
+        session_id=session_id,
+        event_type=event_type,
+        payload={"source_file": str(file_path), "event_type": event_type},
+        raw_text=raw_text[:10000],  # Limit
+    ))
+
+    vec.save()
+    sparse.save()
+
+    print(f"Ingested: {file_path} ({len(raw_text)} chars) as {event_type}")
+    print(f"Project: {project_id}")
+
+
+def cmd_ingest_git(args):
+    """Ingest git diff and status into VCM memory."""
+    project_id = args.project or _detect_project_id(args.project_path)
+    session_id = args.session or f"sess_{uuid.uuid4().hex[:8]}"
+    store, vec, sparse, writer = _get_store(args.project_path)
+
+    # Git diff
+    result = subprocess.run(
+        ["git", "diff", "HEAD"],
+        cwd=args.project_path,
+        capture_output=True,
+        text=True,
+        timeout=30,
+    )
+    diff_text = result.stdout or ""
+    if diff_text:
+        writer.capture_event(EventRecord(
+            event_id=f"evt_git_diff_{uuid.uuid4().hex[:6]}",
+            project_id=project_id,
+            session_id=session_id,
+            event_type="code_change",
+            payload={"source": "git_diff", "files_changed": len([l for l in diff_text.split('\n') if l.startswith('diff --git')])},
+            raw_text=diff_text[:10000],
+        ))
+
+    # Git status
+    result2 = subprocess.run(
+        ["git", "status", "--short"],
+        cwd=args.project_path,
+        capture_output=True,
+        text=True,
+        timeout=30,
+    )
+    status_text = result2.stdout or ""
+    if status_text:
+        writer.capture_event(EventRecord(
+            event_id=f"evt_git_status_{uuid.uuid4().hex[:6]}",
+            project_id=project_id,
+            session_id=session_id,
+            event_type="event",
+            payload={"source": "git_status"},
+            raw_text=status_text[:5000],
+        ))
+
+    vec.save()
+    sparse.save()
+
+    print(f"Git diff: {len(diff_text)} chars")
+    print(f"Git status: {len(status_text)} chars")
+    print(f"Project: {project_id}")
+
+
+def cmd_status(args):
+    """Show project memory status."""
+    project_id = args.project or _detect_project_id(args.project_path)
+    store, vec, sparse, writer = _get_store(args.project_path)
+
+    mems = store.get_memories(project_id=project_id, limit=1000)
+    events = store.get_events(project_id=project_id, limit=1000)
+
+    by_type = {}
+    for m in mems:
+        t = m.memory_type.value if hasattr(m.memory_type, "value") else str(m.memory_type)
+        by_type[t] = by_type.get(t, 0) + 1
+
+    print(f"Project: {project_id}")
+    print(f"Memories: {len(mems)}")
+    print(f"Events: {len(events)}")
+    print("By type:")
+    for t, c in sorted(by_type.items(), key=lambda x: -x[1]):
+        print(f"  {t}: {c}")
+
+
+def cmd_memory_search(args):
+    """Search project memory."""
+    project_id = args.project or _detect_project_id(args.project_path)
+    store, vec, sparse, writer = _get_store(args.project_path)
+    runner = ExperimentRunner(store, vec, sparse, writer)
+
+    request = MemoryRequest(
+        project_id=project_id,
+        query=args.query,
+        task_type="general",
+        token_budget=8192,
+        max_pack_tokens=500,
+    )
+    plan = runner.router.make_plan(request)
+    candidates = runner.reader.retrieve(request, plan)
+    scored = runner.scorer.rerank(candidates, request)
+
+    print(f"Search: '{args.query}'")
+    print(f"Results: {min(len(scored), args.limit)}")
+    print("-" * 60)
+    for mem, score in scored[:args.limit]:
+        text = (mem.raw_text or mem.compressed_summary or "")[:120]
+        print(f"  [{mem.memory_type}] score={score:.3f}")
+        print(f"    {text}...")
+        print()
+
+
+def cmd_memory_correct(args):
+    """Apply a correction to a memory."""
+    store, vec, sparse, writer = _get_store(args.project_path)
+
+    from vcm_os.memory.correction import CorrectionService, MemoryCorrection
+    service = CorrectionService(store)
+
+    result = service.apply(MemoryCorrection(args.memory_id, args.action, args.reason or ""))
+    print(f"Correction applied: {result}")
+
+
+def cmd_benchmark(args):
+    """Run a benchmark suite."""
+    if args.suite == "e2e":
+        script = Path(__file__).parent / "e2e_benchmark.py"
+    elif args.suite == "budget":
+        script = Path(__file__).parent / "token_budget_curve.py"
+    elif args.suite == "load":
+        script = Path(__file__).parent / "load_test.py"
+    else:
+        print(f"Unknown suite: {args.suite}")
+        sys.exit(1)
+
+    subprocess.run([sys.executable, str(script)])
+
+
+def main():
+    parser = argparse.ArgumentParser(prog="vcm", description="VCM-OS CLI")
+    parser.add_argument("--project-path", default=".", help="Project directory")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    # serve
+    p_serve = subparsers.add_parser("serve", help="Start VCM-OS API server")
+    p_serve.add_argument("--port", type=int, default=8123)
+    p_serve.set_defaults(func=cmd_serve)
+
+    # run
+    p_run = subparsers.add_parser("run", help="Run a command with VCM capture")
+    p_run.add_argument("command", nargs=argparse.REMAINDER, help="Command to run")
+    p_run.add_argument("--project", default=None, help="Project ID")
+    p_run.add_argument("--session", default=None, help="Session ID")
+    p_run.set_defaults(func=cmd_run)
+
+    # ingest
+    p_ingest = subparsers.add_parser("ingest", help="Ingest a file into memory")
+    p_ingest.add_argument("file", help="File path")
+    p_ingest.add_argument("--project", default=None, help="Project ID")
+    p_ingest.add_argument("--session", default=None, help="Session ID")
+    p_ingest.add_argument("--type", default="auto", choices=["auto", "git_diff", "test", "session_log", "error", "code_change", "event"])
+    p_ingest.set_defaults(func=cmd_ingest)
+
+    # status
+    p_status = subparsers.add_parser("status", help="Show project memory status")
+    p_status.add_argument("--project", default=None, help="Project ID")
+    p_status.set_defaults(func=cmd_status)
+
+    # memory search
+    p_search = subparsers.add_parser("memory", help="Memory operations")
+    mem_sub = p_search.add_subparsers(dest="mem_cmd", required=True)
+
+    p_mem_search = mem_sub.add_parser("search", help="Search memory")
+    p_mem_search.add_argument("query", help="Search query")
+    p_mem_search.add_argument("--project", default=None)
+    p_mem_search.add_argument("--limit", type=int, default=10)
+    p_mem_search.set_defaults(func=cmd_memory_search)
+
+    p_mem_correct = mem_sub.add_parser("correct", help="Correct a memory")
+    p_mem_correct.add_argument("memory_id", help="Memory ID")
+    p_mem_correct.add_argument("action", help="Action (stale, incorrect, important, duplicate, pin, unpin, delete)")
+    p_mem_correct.add_argument("--reason", default="")
+    p_mem_correct.set_defaults(func=cmd_memory_correct)
+
+    # ingest-git
+    p_ingest_git = subparsers.add_parser("ingest-git", help="Ingest git diff and status")
+    p_ingest_git.add_argument("--project", default=None, help="Project ID")
+    p_ingest_git.add_argument("--session", default=None, help="Session ID")
+    p_ingest_git.set_defaults(func=cmd_ingest_git)
+
+    # benchmark
+    p_bench = subparsers.add_parser("benchmark", help="Run benchmark suite")
+    p_bench.add_argument("--suite", default="e2e", choices=["e2e", "budget", "load"])
+    p_bench.set_defaults(func=cmd_benchmark)
+
+    args = parser.parse_args()
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()

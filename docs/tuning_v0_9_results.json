@@ -1,0 +1,727 @@
+[
+  {
+    "scenario": "auth_refresh_loop",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 129,
+      "stale": 0.0,
+      "quality": 0.6809108527131783
+    },
+    "raw_verbatim": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 135,
+      "stale": 0.0,
+      "quality": 0.6414814814814815
+    },
+    "strong_rag": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 319,
+      "stale": 0.0,
+      "quality": 0.6175548589341693
+    }
+  },
+  {
+    "scenario": "payment_rewrite",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 81,
+      "stale": 0.0,
+      "quality": 0.6666666666666666
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 77,
+      "stale": 0.0,
+      "quality": 0.7
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 182,
+      "stale": 0.0,
+      "quality": 0.6461538461538462
+    }
+  },
+  {
+    "scenario": "db_migration",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 111,
+      "stale": 0.0,
+      "quality": 0.6879504504504504
+    },
+    "raw_verbatim": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 99,
+      "stale": 0.0,
+      "quality": 0.6565656565656566
+    },
+    "strong_rag": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 198,
+      "stale": 0.0,
+      "quality": 0.6282828282828283
+    }
+  },
+  {
+    "scenario": "api_versioning",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 0.5,
+      "tokens": 108,
+      "stale": 0.0,
+      "quality": 0.6518518518518519
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 100,
+      "stale": 0.0,
+      "quality": 0.609
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 251,
+      "stale": 0.0,
+      "quality": 0.5584661354581674
+    }
+  },
+  {
+    "scenario": "microservices_decomposition",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 0.5,
+      "tokens": 96,
+      "stale": 0.0,
+      "quality": 0.6583333333333333
+    },
+    "raw_verbatim": {
+      "restore": 0.5,
+      "restore_verbatim": 0.5,
+      "tokens": 63,
+      "stale": 0.0,
+      "quality": 0.575
+    },
+    "strong_rag": {
+      "restore": 0.5,
+      "restore_verbatim": 0.5,
+      "tokens": 147,
+      "stale": 0.0,
+      "quality": 0.5535714285714286
+    }
+  },
+  {
+    "scenario": "cache_invalidation",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 72,
+      "stale": 0.0,
+      "quality": 0.7166666666666667
+    },
+    "raw_verbatim": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 73,
+      "stale": 0.0,
+      "quality": 0.6666666666666666
+    },
+    "strong_rag": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 176,
+      "stale": 0.0,
+      "quality": 0.6318181818181818
+    }
+  },
+  {
+    "scenario": "race_condition",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 0.6666666666666666,
+      "tokens": 77,
+      "stale": 0.0,
+      "quality": 0.7166666666666667
+    },
+    "raw_verbatim": {
+      "restore": 0.3333333333333333,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 27,
+      "stale": 0.0,
+      "quality": 0.5333333333333333
+    },
+    "strong_rag": {
+      "restore": 0.3333333333333333,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 56,
+      "stale": 0.0,
+      "quality": 0.5333333333333333
+    }
+  },
+  {
+    "scenario": "security_patch",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 130,
+      "stale": 0.0,
+      "quality": 0.6805769230769231
+    },
+    "raw_verbatim": {
+      "restore": 0.8333333333333334,
+      "restore_verbatim": 0.5,
+      "tokens": 53,
+      "stale": 0.0,
+      "quality": 0.5
+    },
+    "strong_rag": {
+      "restore": 0.8333333333333334,
+      "restore_verbatim": 0.5,
+      "tokens": 92,
+      "stale": 0.0,
+      "quality": 0.4956521739130435
+    }
+  },
+  {
+    "scenario": "feature_flags",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 1.0,
+      "tokens": 104,
+      "stale": 0.0,
+      "quality": 0.7307692307692307
+    },
+    "raw_verbatim": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 47,
+      "stale": 0.0,
+      "quality": 0.6666666666666666
+    },
+    "strong_rag": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 87,
+      "stale": 0.0,
+      "quality": 0.664367816091954
+    }
+  },
+  {
+    "scenario": "cicd_migration",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 1.0,
+      "tokens": 118,
+      "stale": 0.0,
+      "quality": 0.6711864406779662
+    },
+    "raw_verbatim": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 64,
+      "stale": 0.0,
+      "quality": 0.5166666666666667
+    },
+    "strong_rag": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 152,
+      "stale": 0.0,
+      "quality": 0.4868421052631579
+    }
+  },
+  {
+    "scenario": "frontend_migration",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 0.6666666666666666,
+      "tokens": 109,
+      "stale": 0.0,
+      "quality": 0.6770642201834862
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 75,
+      "stale": 0.0,
+      "quality": 0.7
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 209,
+      "stale": 0.0,
+      "quality": 0.6401913875598086
+    }
+  },
+  {
+    "scenario": "logging_overhaul",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 0.6666666666666666,
+      "tokens": 73,
+      "stale": 0.0,
+      "quality": 0.7166666666666667
+    },
+    "raw_verbatim": {
+      "restore": 0.3333333333333333,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 23,
+      "stale": 0.0,
+      "quality": 0.5333333333333333
+    },
+    "strong_rag": {
+      "restore": 0.3333333333333333,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 69,
+      "stale": 0.0,
+      "quality": 0.5333333333333333
+    }
+  },
+  {
+    "scenario": "config_management",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 1.0,
+      "tokens": 103,
+      "stale": 0.0,
+      "quality": 0.6815533980582524
+    },
+    "raw_verbatim": {
+      "restore": 0.3333333333333333,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 26,
+      "stale": 0.0,
+      "quality": 0.5333333333333333
+    },
+    "strong_rag": {
+      "restore": 0.3333333333333333,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 64,
+      "stale": 0.0,
+      "quality": 0.5333333333333333
+    }
+  },
+  {
+    "scenario": "oauth_to_saml",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 0.8333333333333334,
+      "tokens": 91,
+      "stale": 0.0,
+      "quality": 0.6615384615384615
+    },
+    "raw_verbatim": {
+      "restore": 0.5,
+      "restore_verbatim": 0.5,
+      "tokens": 53,
+      "stale": 0.0,
+      "quality": 0.475
+    },
+    "strong_rag": {
+      "restore": 0.5,
+      "restore_verbatim": 0.5,
+      "tokens": 124,
+      "stale": 0.0,
+      "quality": 0.4588709677419355
+    }
+  },
+  {
+    "scenario": "rate_limiting",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 1.0,
+      "tokens": 71,
+      "stale": 0.0,
+      "quality": 0.75
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 37,
+      "stale": 0.0,
+      "quality": 0.7
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 85,
+      "stale": 0.0,
+      "quality": 0.6988235294117647
+    }
+  },
+  {
+    "scenario": "data_export",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 107,
+      "stale": 0.0,
+      "quality": 0.7023364485981308
+    },
+    "raw_verbatim": {
+      "restore": 0.3333333333333333,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 38,
+      "stale": 0.0,
+      "quality": 0.5333333333333333
+    },
+    "strong_rag": {
+      "restore": 0.3333333333333333,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 81,
+      "stale": 0.0,
+      "quality": 0.5333333333333333
+    }
+  },
+  {
+    "scenario": "search_optimization",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 0.6666666666666666,
+      "tokens": 109,
+      "stale": 0.0,
+      "quality": 0.7013761467889909
+    },
+    "raw_verbatim": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 38,
+      "stale": 0.0,
+      "quality": 0.6666666666666666
+    },
+    "strong_rag": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 94,
+      "stale": 0.0,
+      "quality": 0.6595744680851063
+    }
+  },
+  {
+    "scenario": "search_optimization_regression",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 113,
+      "stale": 0.0,
+      "quality": 0.6995575221238938
+    },
+    "raw_verbatim": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 22,
+      "stale": 0.0,
+      "quality": 0.48333333333333334
+    },
+    "strong_rag": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.3333333333333333,
+      "tokens": 43,
+      "stale": 0.0,
+      "quality": 0.48333333333333334
+    }
+  },
+  {
+    "scenario": "job_queue_migration",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 0.6666666666666666,
+      "tokens": 85,
+      "stale": 0.0,
+      "quality": 0.6658823529411765
+    },
+    "raw_verbatim": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 36,
+      "stale": 0.0,
+      "quality": 0.6666666666666666
+    },
+    "strong_rag": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 109,
+      "stale": 0.0,
+      "quality": 0.6513761467889908
+    }
+  },
+  {
+    "scenario": "multi_tenancy",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 0.6666666666666666,
+      "tokens": 103,
+      "stale": 0.0,
+      "quality": 0.654368932038835
+    },
+    "raw_verbatim": {
+      "restore": 0.5,
+      "restore_verbatim": 0.5,
+      "tokens": 49,
+      "stale": 0.0,
+      "quality": 0.575
+    },
+    "strong_rag": {
+      "restore": 0.5,
+      "restore_verbatim": 0.5,
+      "tokens": 147,
+      "stale": 0.0,
+      "quality": 0.5535714285714286
+    }
+  },
+  {
+    "scenario": "false_memory_s05",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 71,
+      "stale": 0.0,
+      "quality": 0.7416666666666667
+    },
+    "raw_verbatim": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 46,
+      "stale": 0.0,
+      "quality": 0.6666666666666666
+    },
+    "strong_rag": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "tokens": 118,
+      "stale": 0.0,
+      "quality": 0.6474576271186441
+    }
+  },
+  {
+    "scenario": "superseded_decision",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 1.0,
+      "tokens": 74,
+      "stale": 0.0,
+      "quality": 0.7
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 91,
+      "stale": 0.0,
+      "quality": 0.6923076923076923
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 174,
+      "stale": 0.0,
+      "quality": 0.6482758620689655
+    }
+  },
+  {
+    "scenario": "exact_config_key",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 96,
+      "stale": 0.0,
+      "quality": 0.5583333333333333
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 71,
+      "stale": 0.0,
+      "quality": 0.75
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 198,
+      "stale": 0.0,
+      "quality": 0.6924242424242424
+    }
+  },
+  {
+    "scenario": "exact_api_endpoint",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 1.0,
+      "tokens": 78,
+      "stale": 0.0,
+      "quality": 0.7166666666666667
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 68,
+      "stale": 0.0,
+      "quality": 0.75
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 163,
+      "stale": 0.0,
+      "quality": 0.7015337423312884
+    }
+  },
+  {
+    "scenario": "exact_cicd_job",
+    "vcm": {
+      "restore": 0.6666666666666666,
+      "restore_verbatim": 0.6666666666666666,
+      "restore_semantic_75": 0.6666666666666666,
+      "tokens": 97,
+      "stale": 0.0,
+      "quality": 0.6077319587628867
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 89,
+      "stale": 0.0,
+      "quality": 0.6943820224719102
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 228,
+      "stale": 0.0,
+      "quality": 0.6368421052631579
+    }
+  },
+  {
+    "scenario": "exact_cve",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 1.0,
+      "tokens": 92,
+      "stale": 0.0,
+      "quality": 0.691304347826087
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 53,
+      "stale": 0.0,
+      "quality": 0.7
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 173,
+      "stale": 0.0,
+      "quality": 0.6485549132947976
+    }
+  },
+  {
+    "scenario": "h03_project_A",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 1.0,
+      "tokens": 48,
+      "stale": 0.0,
+      "quality": 0.775
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 17,
+      "stale": 0.0,
+      "quality": 0.7
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 52,
+      "stale": 0.0,
+      "quality": 0.7
+    }
+  },
+  {
+    "scenario": "h03_project_B",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 1.0,
+      "tokens": 40,
+      "stale": 0.0,
+      "quality": 0.775
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 14,
+      "stale": 0.0,
+      "quality": 0.7
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 39,
+      "stale": 0.0,
+      "quality": 0.7
+    }
+  },
+  {
+    "scenario": "h03_project_C",
+    "vcm": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "restore_semantic_75": 1.0,
+      "tokens": 44,
+      "stale": 0.0,
+      "quality": 0.775
+    },
+    "raw_verbatim": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 9,
+      "stale": 0.0,
+      "quality": 0.7
+    },
+    "strong_rag": {
+      "restore": 1.0,
+      "restore_verbatim": 1.0,
+      "tokens": 34,
+      "stale": 0.0,
+      "quality": 0.7
+    }
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "config": {
+    "memories": 10000,
+    "projects": 50,
+    "queries": 30
+  },
+  "ingestion_time_sec": 2310.2,
+  "ingestion_rate_mem_per_sec": 4.3,
+  "query_avg_ms": 106.6,
+  "health_score": 1.0,
+  "total_memories": 20047,
+  "total_projects": 50,
+  "orphan_ratio": 0.0,
+  "db_size_mb": 99.8
+}

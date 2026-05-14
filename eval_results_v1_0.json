@@ -1,0 +1,1154 @@
+{
+  "T10": {
+    "vcm": {
+      "restore": 0.7933333333333333,
+      "tokens": 72.6,
+      "keywords": 0.38,
+      "stale": 0.0,
+      "quality": 1.1733333333333333
+    },
+    "full": {
+      "restore": 0.92,
+      "tokens": 311.16,
+      "keywords": 0.38,
+      "stale": 0.0,
+      "quality": 1.3
+    },
+    "summary": {
+      "restore": 0.7066666666666666,
+      "tokens": 36.2,
+      "keywords": 0.38,
+      "stale": 0.0,
+      "quality": 1.0866666666666667
+    },
+    "rag": {
+      "restore": 0.5666666666666667,
+      "tokens": 37.6,
+      "keywords": 0.28,
+      "stale": 0.0,
+      "quality": 0.8466666666666666
+    },
+    "per_scenario": [
+      {
+        "scenario": "auth_refresh_loop",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 112,
+        "full_restore": 0.6666666666666666,
+        "full_tokens": 560,
+        "summary_restore": 0.5,
+        "summary_tokens": 52,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 80,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 1.1666666666666665
+      },
+      {
+        "scenario": "payment_rewrite",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 63,
+        "full_restore": 1.0,
+        "full_tokens": 258,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 29,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 47,
+        "vcm_quality": 0.6666666666666666,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "db_migration",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 74,
+        "full_restore": 0.6666666666666666,
+        "full_tokens": 377,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 43,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 51,
+        "vcm_quality": 1.6666666666666665,
+        "full_quality": 1.6666666666666665
+      },
+      {
+        "scenario": "api_versioning",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 82,
+        "full_restore": 1.0,
+        "full_tokens": 365,
+        "summary_restore": 1.0,
+        "summary_tokens": 43,
+        "rag_restore": 1.0,
+        "rag_tokens": 54,
+        "vcm_quality": 1.0,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "microservices_decomposition",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 77,
+        "full_restore": 1.0,
+        "full_tokens": 350,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 53,
+        "rag_restore": 0.5,
+        "rag_tokens": 46,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 1.5
+      },
+      {
+        "scenario": "cache_invalidation",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 65,
+        "full_restore": 0.6666666666666666,
+        "full_tokens": 252,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 30,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 49,
+        "vcm_quality": 0.6666666666666666,
+        "full_quality": 0.6666666666666666
+      },
+      {
+        "scenario": "race_condition",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 60,
+        "full_restore": 0.6666666666666666,
+        "full_tokens": 264,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 30,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 17,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 1.1666666666666665
+      },
+      {
+        "scenario": "security_patch",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 83,
+        "full_restore": 1.0,
+        "full_tokens": 421,
+        "summary_restore": 1.0,
+        "summary_tokens": 70,
+        "rag_restore": 0.16666666666666666,
+        "rag_tokens": 19,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "feature_flags",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 66,
+        "full_restore": 1.0,
+        "full_tokens": 287,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 31,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 20,
+        "vcm_quality": 1.5,
+        "full_quality": 1.5
+      },
+      {
+        "scenario": "cicd_migration",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 75,
+        "full_restore": 1.0,
+        "full_tokens": 312,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 31,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 30,
+        "vcm_quality": 0.6666666666666666,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "frontend_migration",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 66,
+        "full_restore": 1.0,
+        "full_tokens": 304,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 30,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 54,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 1.5
+      },
+      {
+        "scenario": "logging_overhaul",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 76,
+        "full_restore": 1.0,
+        "full_tokens": 262,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 32,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 29,
+        "vcm_quality": 1.5,
+        "full_quality": 1.5
+      },
+      {
+        "scenario": "config_management",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 64,
+        "full_restore": 1.0,
+        "full_tokens": 305,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 32,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 19,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 1.5
+      },
+      {
+        "scenario": "oauth_to_saml",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 76,
+        "full_restore": 1.0,
+        "full_tokens": 322,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 50,
+        "rag_restore": 0.16666666666666666,
+        "rag_tokens": 28,
+        "vcm_quality": 0.6666666666666666,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "rate_limiting",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 73,
+        "full_restore": 1.0,
+        "full_tokens": 240,
+        "summary_restore": 1.0,
+        "summary_tokens": 26,
+        "rag_restore": 1.0,
+        "rag_tokens": 31,
+        "vcm_quality": 1.5,
+        "full_quality": 1.5
+      },
+      {
+        "scenario": "data_export",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 68,
+        "full_restore": 0.6666666666666666,
+        "full_tokens": 306,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 32,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 22,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 1.1666666666666665
+      },
+      {
+        "scenario": "search_optimization",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 71,
+        "full_restore": 0.6666666666666666,
+        "full_tokens": 297,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 31,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 34,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 1.1666666666666665
+      },
+      {
+        "scenario": "search_optimization_regression",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 70,
+        "full_restore": 1.0,
+        "full_tokens": 286,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 27,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 29,
+        "vcm_quality": 1.5,
+        "full_quality": 1.5
+      },
+      {
+        "scenario": "job_queue_migration",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 67,
+        "full_restore": 1.0,
+        "full_tokens": 291,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 32,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 20,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 1.5
+      },
+      {
+        "scenario": "multi_tenancy",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 83,
+        "full_restore": 1.0,
+        "full_tokens": 411,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 45,
+        "rag_restore": 0.16666666666666666,
+        "rag_tokens": 25,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 1.5
+      },
+      {
+        "scenario": "superseded_decision",
+        "vcm_restore": 0.8333333333333334,
+        "vcm_tokens": 55,
+        "full_restore": 1.0,
+        "full_tokens": 288,
+        "summary_restore": 0.8333333333333334,
+        "summary_tokens": 50,
+        "rag_restore": 0.5,
+        "rag_tokens": 36,
+        "vcm_quality": 1.8333333333333335,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "exact_config_key",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 67,
+        "full_restore": 1.0,
+        "full_tokens": 284,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 22,
+        "rag_restore": 1.0,
+        "rag_tokens": 34,
+        "vcm_quality": 1.0,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "exact_api_endpoint",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 67,
+        "full_restore": 1.0,
+        "full_tokens": 216,
+        "summary_restore": 0.3333333333333333,
+        "summary_tokens": 32,
+        "rag_restore": 1.0,
+        "rag_tokens": 54,
+        "vcm_quality": 1.0,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "exact_cicd_job",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 78,
+        "full_restore": 1.0,
+        "full_tokens": 281,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 33,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 66,
+        "vcm_quality": 0.6666666666666666,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "exact_cve",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 77,
+        "full_restore": 1.0,
+        "full_tokens": 240,
+        "summary_restore": 1.0,
+        "summary_tokens": 19,
+        "rag_restore": 1.0,
+        "rag_tokens": 46,
+        "vcm_quality": 1.0,
+        "full_quality": 1.0
+      }
+    ]
+  },
+  "H03": {
+    "total_cross_project_memories": 0,
+    "avg_cross_per_scenario": 0.0,
+    "contamination_rate": 0.0,
+    "details": [
+      0,
+      0,
+      0
+    ]
+  },
+  "S05": {
+    "false_decisions_found": 0,
+    "false_decisions_rejected": 0,
+    "sqlite_active": true,
+    "false_memory_rate": 0.0
+  },
+  "F03": [
+    {
+      "scenario": "auth_refresh_loop",
+      "hybrid_restore": 0.6666666666666666,
+      "vector_only_restore": 0.6666666666666666,
+      "hybrid_quality": 1.1666666666666665,
+      "vector_only_quality": 1.1666666666666665,
+      "hybrid_tokens": 112,
+      "vector_only_tokens": 80,
+      "hybrid_stale": 0.0,
+      "vector_only_stale": 0.0,
+      "restore_improvement": 0.0,
+      "quality_improvement": 0.0,
+      "stale_reduction": 0.0
+    },
+    {
+      "scenario": "payment_rewrite",
+      "hybrid_restore": 0.6666666666666666,
+      "vector_only_restore": 0.6666666666666666,
+      "hybrid_quality": 0.6666666666666666,
+      "vector_only_quality": 0.6666666666666666,
+      "hybrid_tokens": 63,
+      "vector_only_tokens": 47,
+      "hybrid_stale": 0.0,
+      "vector_only_stale": 0.0,
+      "restore_improvement": 0.0,
+      "quality_improvement": 0.0,
+      "stale_reduction": 0.0
+    },
+    {
+      "scenario": "db_migration",
+      "hybrid_restore": 0.6666666666666666,
+      "vector_only_restore": 0.6666666666666666,
+      "hybrid_quality": 1.6666666666666665,
+      "vector_only_quality": 1.6666666666666665,
+      "hybrid_tokens": 74,
+      "vector_only_tokens": 51,
+      "hybrid_stale": 0.0,
+      "vector_only_stale": 0.0,
+      "restore_improvement": 0.0,
+      "quality_improvement": 0.0,
+      "stale_reduction": 0.0
+    },
+    {
+      "scenario": "superseded_decision",
+      "hybrid_restore": 0.8333333333333334,
+      "vector_only_restore": 0.5,
+      "hybrid_quality": 1.8333333333333335,
+      "vector_only_quality": 0.5,
+      "hybrid_tokens": 55,
+      "vector_only_tokens": 36,
+      "hybrid_stale": 0.0,
+      "vector_only_stale": 0.0,
+      "restore_improvement": 0.33333333333333337,
+      "quality_improvement": 1.3333333333333335,
+      "stale_reduction": 0.0
+    },
+    {
+      "scenario": "exact_config_key",
+      "hybrid_restore": 1.0,
+      "vector_only_restore": 1.0,
+      "hybrid_quality": 1.0,
+      "vector_only_quality": 1.0,
+      "hybrid_tokens": 67,
+      "vector_only_tokens": 34,
+      "hybrid_stale": 0.0,
+      "vector_only_stale": 0.0,
+      "restore_improvement": 0.0,
+      "quality_improvement": 0.0,
+      "stale_reduction": 0.0
+    },
+    {
+      "scenario": "exact_api_endpoint",
+      "hybrid_restore": 1.0,
+      "vector_only_restore": 1.0,
+      "hybrid_quality": 1.0,
+      "vector_only_quality": 1.0,
+      "hybrid_tokens": 67,
+      "vector_only_tokens": 54,
+      "hybrid_stale": 0.0,
+      "vector_only_stale": 0.0,
+      "restore_improvement": 0.0,
+      "quality_improvement": 0.0,
+      "stale_reduction": 0.0
+    },
+    {
+      "scenario": "exact_cicd_job",
+      "hybrid_restore": 0.6666666666666666,
+      "vector_only_restore": 0.6666666666666666,
+      "hybrid_quality": 0.6666666666666666,
+      "vector_only_quality": 0.6666666666666666,
+      "hybrid_tokens": 78,
+      "vector_only_tokens": 59,
+      "hybrid_stale": 0.0,
+      "vector_only_stale": 0.0,
+      "restore_improvement": 0.0,
+      "quality_improvement": 0.0,
+      "stale_reduction": 0.0
+    },
+    {
+      "scenario": "exact_cve",
+      "hybrid_restore": 1.0,
+      "vector_only_restore": 1.0,
+      "hybrid_quality": 1.0,
+      "vector_only_quality": 1.0,
+      "hybrid_tokens": 77,
+      "vector_only_tokens": 55,
+      "hybrid_stale": 0.0,
+      "vector_only_stale": 0.0,
+      "restore_improvement": 0.0,
+      "quality_improvement": 0.0,
+      "stale_reduction": 0.0
+    }
+  ],
+  "I01": [
+    {
+      "restore_accuracy": 0.6666666666666666,
+      "decision_recall": 1.0,
+      "error_recall": 1.0,
+      "token_usage": 112,
+      "sufficiency": 1.0
+    },
+    {
+      "restore_accuracy": 0.6666666666666666,
+      "decision_recall": 1.0,
+      "error_recall": 1.0,
+      "token_usage": 63,
+      "sufficiency": 1.0
+    },
+    {
+      "restore_accuracy": 0.6666666666666666,
+      "decision_recall": 1.0,
+      "error_recall": 1.0,
+      "token_usage": 74,
+      "sufficiency": 1.0
+    },
+    {
+      "restore_accuracy": 1.0,
+      "decision_recall": 1.0,
+      "error_recall": 1.0,
+      "token_usage": 82,
+      "sufficiency": 1.0
+    },
+    {
+      "restore_accuracy": 0.6666666666666666,
+      "decision_recall": 1.0,
+      "error_recall": 1.0,
+      "token_usage": 77,
+      "sufficiency": 1.0
+    }
+  ],
+  "adversarial": {
+    "vcm": {
+      "restore": 1.0,
+      "tokens": 63.0,
+      "keywords": 1.0,
+      "stale": 0.0,
+      "quality": 2.0
+    },
+    "full": {
+      "restore": 1.0,
+      "tokens": 402.3333333333333,
+      "keywords": 1.0,
+      "stale": 0.0,
+      "quality": 2.0
+    },
+    "summary": {
+      "restore": 1.0,
+      "tokens": 62.0,
+      "keywords": 1.0,
+      "stale": 0.0,
+      "quality": 2.0
+    },
+    "rag": {
+      "restore": 0.8888888888888888,
+      "tokens": 51.0,
+      "keywords": 0.6666666666666666,
+      "stale": 0.16666666666666666,
+      "quality": 1.388888888888889
+    },
+    "per_scenario": [
+      {
+        "scenario": "adversarial_feature_flags",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 54,
+        "full_restore": 1.0,
+        "full_tokens": 482,
+        "summary_restore": 1.0,
+        "summary_tokens": 76,
+        "rag_restore": 1.0,
+        "rag_tokens": 63,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "adversarial_api_routes",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 69,
+        "full_restore": 1.0,
+        "full_tokens": 339,
+        "summary_restore": 1.0,
+        "summary_tokens": 54,
+        "rag_restore": 1.0,
+        "rag_tokens": 59,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "adversarial_job_names",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 66,
+        "full_restore": 1.0,
+        "full_tokens": 386,
+        "summary_restore": 1.0,
+        "summary_tokens": 56,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 31,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      }
+    ]
+  },
+  "adversarial_hard": {
+    "vcm": {
+      "restore": 1.0,
+      "tokens": 56.0,
+      "keywords": 1.0,
+      "stale": 0.0,
+      "quality": 2.0
+    },
+    "full": {
+      "restore": 1.0,
+      "tokens": 2477.4,
+      "keywords": 1.0,
+      "stale": 0.0,
+      "quality": 2.0
+    },
+    "summary": {
+      "restore": 0.4,
+      "tokens": 271.8,
+      "keywords": 0.2,
+      "stale": 0.0,
+      "quality": 0.6
+    },
+    "rag": {
+      "restore": 0.5333333333333333,
+      "tokens": 31.8,
+      "keywords": 0.4,
+      "stale": 0.0,
+      "quality": 0.9333333333333332
+    },
+    "per_scenario": [
+      {
+        "scenario": "adversarial_hard_export_endpoint",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 62,
+        "full_restore": 1.0,
+        "full_tokens": 2394,
+        "summary_restore": 0.3333333333333333,
+        "summary_tokens": 255,
+        "rag_restore": 1.0,
+        "rag_tokens": 50,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "adversarial_hard_primary_database_host",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 63,
+        "full_restore": 1.0,
+        "full_tokens": 2377,
+        "summary_restore": 0.3333333333333333,
+        "summary_tokens": 257,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 44,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "adversarial_hard_checkout_flow_feature_flag",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 46,
+        "full_restore": 1.0,
+        "full_tokens": 2934,
+        "summary_restore": 0.3333333333333333,
+        "summary_tokens": 351,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 27,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "adversarial_hard_latest_migration",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 37,
+        "full_restore": 1.0,
+        "full_tokens": 2512,
+        "summary_restore": 0.3333333333333333,
+        "summary_tokens": 274,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 10,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "adversarial_hard_api_client_version",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 72,
+        "full_restore": 1.0,
+        "full_tokens": 2170,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 222,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 28,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      }
+    ]
+  },
+  "real_codebase": {
+    "vcm": {
+      "restore": 0.888888888888889,
+      "tokens": 108.0,
+      "keywords": 0.7222222222222222,
+      "stale": 0.0,
+      "quality": 1.6111111111111114
+    },
+    "full": {
+      "restore": 1.0,
+      "tokens": 632.0,
+      "keywords": 1.0,
+      "stale": 0.0,
+      "quality": 2.0
+    },
+    "summary": {
+      "restore": 1.0,
+      "tokens": 98.0,
+      "keywords": 0.7777777777777777,
+      "stale": 0.0,
+      "quality": 1.7777777777777777
+    },
+    "rag": {
+      "restore": 0.5555555555555556,
+      "tokens": 33.666666666666664,
+      "keywords": 0.4444444444444444,
+      "stale": 0.0,
+      "quality": 1.0
+    },
+    "per_scenario": [
+      {
+        "scenario": "vcm_os_dev_session_1",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 101,
+        "full_restore": 1.0,
+        "full_tokens": 305,
+        "summary_restore": 1.0,
+        "summary_tokens": 52,
+        "rag_restore": 0.5,
+        "rag_tokens": 49,
+        "vcm_quality": 1.6666666666666665,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "vcm_os_dev_session_2",
+        "vcm_restore": 0.8333333333333334,
+        "vcm_tokens": 112,
+        "full_restore": 1.0,
+        "full_tokens": 644,
+        "summary_restore": 1.0,
+        "summary_tokens": 101,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 9,
+        "vcm_quality": 1.3333333333333335,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "vcm_os_dev_session_3",
+        "vcm_restore": 0.8333333333333334,
+        "vcm_tokens": 111,
+        "full_restore": 1.0,
+        "full_tokens": 947,
+        "summary_restore": 1.0,
+        "summary_tokens": 141,
+        "rag_restore": 0.8333333333333334,
+        "rag_tokens": 43,
+        "vcm_quality": 1.8333333333333335,
+        "full_quality": 2.0
+      }
+    ]
+  },
+  "multi_repo": {
+    "vcm": {
+      "restore": 0.9111111111111111,
+      "tokens": 77.6,
+      "keywords": 0.7766666666666666,
+      "stale": 0.0,
+      "quality": 1.6877777777777776
+    },
+    "full": {
+      "restore": 0.9666666666666666,
+      "tokens": 292.2,
+      "keywords": 1.0,
+      "stale": 0.0,
+      "quality": 1.9666666666666668
+    },
+    "summary": {
+      "restore": 0.9333333333333333,
+      "tokens": 48.8,
+      "keywords": 0.7533333333333333,
+      "stale": 0.0,
+      "quality": 1.6866666666666668
+    },
+    "rag": {
+      "restore": 0.45555555555555555,
+      "tokens": 31.2,
+      "keywords": 0.47000000000000003,
+      "stale": 0.0,
+      "quality": 0.9255555555555557
+    },
+    "per_scenario": [
+      {
+        "scenario": "repo_fastapi_auth",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 87,
+        "full_restore": 1.0,
+        "full_tokens": 326,
+        "summary_restore": 1.0,
+        "summary_tokens": 50,
+        "rag_restore": 0.5,
+        "rag_tokens": 27,
+        "vcm_quality": 1.8,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "repo_cli_tool_config",
+        "vcm_restore": 0.8333333333333334,
+        "vcm_tokens": 80,
+        "full_restore": 0.8333333333333334,
+        "full_tokens": 290,
+        "summary_restore": 0.8333333333333334,
+        "summary_tokens": 48,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 31,
+        "vcm_quality": 1.8333333333333335,
+        "full_quality": 1.8333333333333335
+      },
+      {
+        "scenario": "repo_data_pipeline",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 79,
+        "full_restore": 1.0,
+        "full_tokens": 285,
+        "summary_restore": 1.0,
+        "summary_tokens": 50,
+        "rag_restore": 0.8333333333333334,
+        "rag_tokens": 43,
+        "vcm_quality": 1.75,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "repo_docker_deploy",
+        "vcm_restore": 0.8888888888888888,
+        "vcm_tokens": 68,
+        "full_restore": 1.0,
+        "full_tokens": 293,
+        "summary_restore": 1.0,
+        "summary_tokens": 47,
+        "rag_restore": 0.4444444444444444,
+        "rag_tokens": 29,
+        "vcm_quality": 1.5555555555555554,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "repo_testing_pytest",
+        "vcm_restore": 0.8333333333333334,
+        "vcm_tokens": 74,
+        "full_restore": 1.0,
+        "full_tokens": 267,
+        "summary_restore": 0.8333333333333334,
+        "summary_tokens": 49,
+        "rag_restore": 0.16666666666666666,
+        "rag_tokens": 26,
+        "vcm_quality": 1.5,
+        "full_quality": 2.0
+      }
+    ]
+  },
+  "holdout": {
+    "vcm": {
+      "restore": 0.9583333333333334,
+      "tokens": 63.35,
+      "keywords": 0.9583333333333334,
+      "stale": 0.0,
+      "quality": 1.9166666666666667
+    },
+    "full": {
+      "restore": 1.0,
+      "tokens": 225.25,
+      "keywords": 1.0,
+      "stale": 0.3,
+      "quality": 1.7
+    },
+    "summary": {
+      "restore": 0.9083333333333334,
+      "tokens": 37.05,
+      "keywords": 0.825,
+      "stale": 0.2,
+      "quality": 1.5333333333333334
+    },
+    "rag": {
+      "restore": 0.6916666666666667,
+      "tokens": 33.65,
+      "keywords": 0.6666666666666667,
+      "stale": 0.05,
+      "quality": 1.3083333333333331
+    },
+    "per_scenario": [
+      {
+        "scenario": "holdout_stale_migration",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 59,
+        "full_restore": 1.0,
+        "full_tokens": 212,
+        "summary_restore": 1.0,
+        "summary_tokens": 46,
+        "rag_restore": 0.3333333333333333,
+        "rag_tokens": 18,
+        "vcm_quality": 2.0,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "holdout_exact_env_var",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 59,
+        "full_restore": 1.0,
+        "full_tokens": 219,
+        "summary_restore": 1.0,
+        "summary_tokens": 38,
+        "rag_restore": 1.0,
+        "rag_tokens": 20,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_superseded_cache",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 59,
+        "full_restore": 1.0,
+        "full_tokens": 222,
+        "summary_restore": 1.0,
+        "summary_tokens": 40,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 41,
+        "vcm_quality": 2.0,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "holdout_exact_function_name",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 62,
+        "full_restore": 1.0,
+        "full_tokens": 223,
+        "summary_restore": 1.0,
+        "summary_tokens": 33,
+        "rag_restore": 1.0,
+        "rag_tokens": 40,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_multi_session_auth",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 57,
+        "full_restore": 1.0,
+        "full_tokens": 201,
+        "summary_restore": 1.0,
+        "summary_tokens": 34,
+        "rag_restore": 0.0,
+        "rag_tokens": 10,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_exact_cve_patch",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 33,
+        "full_restore": 1.0,
+        "full_tokens": 120,
+        "summary_restore": 0.3333333333333333,
+        "summary_tokens": 0,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 23,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_code_change_only",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 56,
+        "full_restore": 1.0,
+        "full_tokens": 140,
+        "summary_restore": 0.3333333333333333,
+        "summary_tokens": 0,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 32,
+        "vcm_quality": 1.3333333333333333,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_error_only_debugging",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 77,
+        "full_restore": 1.0,
+        "full_tokens": 195,
+        "summary_restore": 1.0,
+        "summary_tokens": 54,
+        "rag_restore": 1.0,
+        "rag_tokens": 54,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_long_text_budget_stress",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 94,
+        "full_restore": 1.0,
+        "full_tokens": 500,
+        "summary_restore": 1.0,
+        "summary_tokens": 52,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 25,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_contradiction_same_file",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 55,
+        "full_restore": 1.0,
+        "full_tokens": 217,
+        "summary_restore": 1.0,
+        "summary_tokens": 42,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 42,
+        "vcm_quality": 2.0,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "holdout_exact_version",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 55,
+        "full_restore": 1.0,
+        "full_tokens": 162,
+        "summary_restore": 1.0,
+        "summary_tokens": 23,
+        "rag_restore": 1.0,
+        "rag_tokens": 17,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_multi_tenant_config",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 60,
+        "full_restore": 1.0,
+        "full_tokens": 223,
+        "summary_restore": 1.0,
+        "summary_tokens": 42,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 36,
+        "vcm_quality": 2.0,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "holdout_migration_rollback",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 62,
+        "full_restore": 1.0,
+        "full_tokens": 239,
+        "summary_restore": 1.0,
+        "summary_tokens": 46,
+        "rag_restore": 0.0,
+        "rag_tokens": 20,
+        "vcm_quality": 2.0,
+        "full_quality": 1.0
+      },
+      {
+        "scenario": "holdout_exact_api_version",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 47,
+        "full_restore": 1.0,
+        "full_tokens": 154,
+        "summary_restore": 1.0,
+        "summary_tokens": 28,
+        "rag_restore": 1.0,
+        "rag_tokens": 40,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_test_flake",
+        "vcm_restore": 0.8333333333333334,
+        "vcm_tokens": 104,
+        "full_restore": 1.0,
+        "full_tokens": 287,
+        "summary_restore": 0.8333333333333334,
+        "summary_tokens": 61,
+        "rag_restore": 0.16666666666666666,
+        "rag_tokens": 40,
+        "vcm_quality": 1.8333333333333335,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_config_key_stress",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 68,
+        "full_restore": 1.0,
+        "full_tokens": 345,
+        "summary_restore": 1.0,
+        "summary_tokens": 59,
+        "rag_restore": 1.0,
+        "rag_tokens": 31,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_dependency_conflict",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 67,
+        "full_restore": 1.0,
+        "full_tokens": 150,
+        "summary_restore": 1.0,
+        "summary_tokens": 36,
+        "rag_restore": 1.0,
+        "rag_tokens": 47,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_security_remediation",
+        "vcm_restore": 0.6666666666666666,
+        "vcm_tokens": 45,
+        "full_restore": 1.0,
+        "full_tokens": 165,
+        "summary_restore": 0.6666666666666666,
+        "summary_tokens": 17,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 35,
+        "vcm_quality": 1.1666666666666665,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_schema_evolution",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 88,
+        "full_restore": 1.0,
+        "full_tokens": 296,
+        "summary_restore": 1.0,
+        "summary_tokens": 45,
+        "rag_restore": 0.6666666666666666,
+        "rag_tokens": 52,
+        "vcm_quality": 2.0,
+        "full_quality": 2.0
+      },
+      {
+        "scenario": "holdout_exact_package_name",
+        "vcm_restore": 1.0,
+        "vcm_tokens": 60,
+        "full_restore": 1.0,
+        "full_tokens": 235,
+        "summary_restore": 1.0,
+        "summary_tokens": 45,
+        "rag_restore": 1.0,
+        "rag_tokens": 50,
+        "vcm_quality": 2.0,
+        "full_quality": 1.0
+      }
+    ]
+  }
+}
