@@ -5,6 +5,7 @@ from vcm_os.app.routers import (
     admin,
     codebase,
     context,
+    dashboard,
     events,
     gateway,
     memory,
@@ -27,4 +28,5 @@ app.include_router(codebase.router)
 app.include_router(verify.router)
 app.include_router(summaries.router)
 app.include_router(admin.router)
+app.include_router(dashboard.router)
 app.include_router(gateway.router)
